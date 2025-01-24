@@ -1,2 +1,1 @@
-# Lab-de-AOC1
-Projeto de processador
+Projeto de processador MIPS de 32 bits em Verilog HDL
