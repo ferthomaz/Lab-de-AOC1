@@ -1,0 +1,435 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Fernanda Thomaz\Desktop\cefet\2024.2\Lab de AOC\pratica6 github\Lab-de-Aoc1\simulation\modelsim
+vALUcontrol
+InJ?4>O@7IP;n`N>IQeeWh0
+VZYNokN0_gT_>HgdOa]W[Y1
+Z1 dC:\Users\Fernanda Thomaz\Desktop\cefet\2024.2\Lab de AOC\pratica6 github\Lab-de-Aoc1\simulation\modelsim
+Z2 w1738115396
+8C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/alucontrol.v
+FC:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/alucontrol.v
+L0 2
+Z3 OV;L;10.1d;51
+r1
+31
+Z4 o-vlog01compat -work work -O0
+Z5 !s92 -vlog01compat -work work {+incdir+C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1} -O0
+n@a@l@ucontrol
+!i10b 1
+!s100 QLEJPzKJLk^8<^jokQnaH2
+!s85 0
+!s108 1738118253.758000
+!s107 C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/alucontrol.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1|C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/alucontrol.v|
+!s101 -O0
+vbanco
+I^iU5^B2>1[]7o[^F><a]>1
+V_DaYUVZ;R3@09O7L^Q;DE0
+R1
+w1738117892
+8C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/banco.v
+FC:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/banco.v
+L0 1
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 E_@7h;`>;9QAzV]5`mD?E2
+!s85 0
+!s108 1738118253.648000
+!s107 C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/banco.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1|C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/banco.v|
+!s101 -O0
+vcontrolePrincipal
+IkDcM>5DmU2^1i>e[04L4J3
+VemS3A00D6hBBE_M^3WNjA2
+R1
+R2
+8C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/controlePrincipal.v
+FC:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/controlePrincipal.v
+L0 1
+R3
+r1
+31
+R4
+R5
+ncontrole@principal
+!i10b 1
+!s100 N4AfjiMnkl5gWLCf?fCW[1
+!s85 0
+!s108 1738118253.338000
+!s107 C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/controlePrincipal.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1|C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/controlePrincipal.v|
+!s101 -O0
+vcountPC
+I]5;a3kAC1ISi:ZSCA49Sk2
+V]0KgENn]goA75BTii@A0k3
+R1
+R2
+8C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/countpc.v
+FC:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/countpc.v
+L0 1
+R3
+r1
+31
+R4
+R5
+ncount@p@c
+!i10b 1
+!s100 Yjfgj`[6Vm=]7l?5UY?EI0
+!s85 0
+!s108 1738118253.428000
+!s107 C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/countpc.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1|C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/countpc.v|
+!s101 -O0
+vdecod
+!i10b 1
+!s100 b?Z:6nEFHf=;7B=7cJT3E3
+I?0FJoOHKTa^:jKMNghaDU3
+V=0TEIal9dSBf4GO;>z0YD3
+R1
+R2
+8C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/decod.v
+FC:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/decod.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1738118254.265000
+!s107 C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/decod.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1|C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/decod.v|
+!s101 -O0
+R4
+R5
+vdeslocador
+I7PkDH^2ziElM0>8]UAh];1
+V:J40o=RG@2iYL9=[k_D@Q3
+R1
+R2
+8C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/deslocador.v
+FC:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/deslocador.v
+L0 1
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 f3V[bXKUFVO1JDji<>Tg]1
+!s85 0
+!s108 1738118253.569000
+!s107 C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/deslocador.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1|C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/deslocador.v|
+!s101 -O0
+vextensor
+IMd7_7AZonLRc2f[:_W64m3
+VIJc2Y<CL3c>L@]7:z<e?S1
+R1
+R2
+8C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/extensor.v
+FC:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/extensor.v
+L0 1
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 fD[R3W]>N5^GVL^W3`z3H2
+!s85 0
+!s108 1738118253.617000
+!s107 C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/extensor.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1|C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/extensor.v|
+!s101 -O0
+vmemoriaDados
+I4D;S^SPNGP1Q?gYje@=iN2
+VVZHeL=jHmNJ]AVj384a<C1
+R1
+w1738118240
+8C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/memoriadados.v
+FC:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/memoriadados.v
+L0 1
+R3
+r1
+31
+R4
+R5
+nmemoria@dados
+!i10b 1
+!s100 O=9[j]@nAK09SnF]@nQ0k3
+!s85 0
+!s108 1738118254.151000
+!s107 C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/memoriadados.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1|C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/memoriadados.v|
+!s101 -O0
+vmemoriaInstrucoes
+IeFeZ5Bfo;M_JIB]Z4e6Pi1
+V8Sk:@dYPL=bVb=X3A7el<1
+R1
+w1738118119
+8C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/memoriainstrucoes.v
+FC:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/memoriainstrucoes.v
+L0 1
+R3
+r1
+31
+R4
+R5
+nmemoria@instrucoes
+!i10b 1
+!s100 nS=hDTI69JVh:ZC8[;I762
+!s85 0
+!s108 1738118253.478000
+!s107 C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/memoriainstrucoes.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1|C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/memoriainstrucoes.v|
+!s101 -O0
+vmultiplexador
+I8]b=^F2U0K^IF8Jn]maH41
+VRhkj1d3Xg@R@9IXQ9bW7l3
+R1
+R2
+8C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/multiplexador.v
+FC:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/multiplexador.v
+L0 2
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 4AiiP]QK42c];0SWjN4080
+!s85 0
+!s108 1738118253.523000
+!s107 C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/multiplexador.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1|C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/multiplexador.v|
+!s101 -O0
+vmultiplexador32
+IoSFWFSfe0bhNiJI3ccG6:1
+Voze4fXlnJ[RKPX;hhj6jo1
+R1
+R2
+8C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/multiplexador32.v
+FC:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/multiplexador32.v
+L0 1
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 ]jl3@F:^4aT6z0X]=2UnH2
+!s85 0
+!s108 1738118253.711000
+!s107 C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/multiplexador32.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1|C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/multiplexador32.v|
+!s101 -O0
+vmux2
+IAK]bIU`^Ifz3cWmYM34KQ3
+Vzc5lo2M[7Fk43:>Z9@@:b2
+R1
+R2
+8C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/mux2.v
+FC:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/mux2.v
+L0 1
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 8KM^PAo[Jg?en61IFSfH30
+!s85 0
+!s108 1738118253.947000
+!s107 C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/mux2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1|C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/mux2.v|
+!s101 -O0
+vmuxBinvert
+I3jBJ65REFP6:`ASgP97Sk2
+V;Zfn61K[TanDB]L4Cz4F?3
+R1
+R2
+8C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/muxbinvert.v
+FC:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/muxbinvert.v
+L0 1
+R3
+r1
+31
+R4
+R5
+nmux@binvert
+!i10b 1
+!s100 1Bg9gDAO=N441JiJ`Jg_23
+!s85 0
+!s108 1738118253.852000
+!s107 C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/muxbinvert.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1|C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/muxbinvert.v|
+!s101 -O0
+vmuxULA
+Ic=;OSTVa=h9<Y4SlaW;RE1
+Vj?o`HRo3QoR3d]MaMez=11
+R1
+R2
+8C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/muxula.v
+FC:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/muxula.v
+L0 1
+R3
+r1
+31
+R4
+R5
+nmux@u@l@a
+!i10b 1
+!s100 VXC72PR>m]6RQWa<5c=VX1
+!s85 0
+!s108 1738118254.072000
+!s107 C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/muxula.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1|C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/muxula.v|
+!s101 -O0
+voverflow
+IDWFIJ47P=M19N4nZcj>_C1
+VFe3fgn9>OYKLZa9djg`M51
+R1
+R2
+8C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/overflow.v
+FC:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/overflow.v
+L0 4
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 9KE`66h;UDWT0oIAVD[J`0
+!s85 0
+!s108 1738118254.119000
+!s107 C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/overflow.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1|C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/overflow.v|
+!s101 -O0
+vprocessador
+I7Q[A7eJ>fIfUPMa^IVW[;2
+VDAhiJ@0m1d><deVgGM[W=0
+R1
+w1738116534
+8C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/processador.v
+FC:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/processador.v
+L0 1
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 ?3]];nVTj1E?AYkDeKeJ40
+!s85 0
+!s108 1738118253.393000
+!s107 C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/processador.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1|C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/processador.v|
+!s101 -O0
+vprocessadorPinagem
+InWaIhICU:z8d:n0SWf]CU2
+VcM6OGHZXg`i_e9O:?=ShR2
+R1
+R2
+8C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/processadorPinagem.v
+FC:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/processadorPinagem.v
+L0 1
+R3
+r1
+31
+R4
+nprocessador@pinagem
+R5
+!i10b 1
+!s100 5CD8P7XDBCd]T9ia[j<c73
+!s85 0
+!s108 1738118253.268000
+!s107 C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/processadorPinagem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1|C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/processadorPinagem.v|
+!s101 -O0
+vsomador1bit
+IAm41lCf=JWglOMo068YFZ3
+VLoXK^>ajlOlQ7<>g_=0aS0
+R1
+R2
+8C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/somador1bit.v
+FC:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/somador1bit.v
+L0 2
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 KL41QoAD[[8a_TALVb2L@2
+!s85 0
+!s108 1738118254.009000
+!s107 C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/somador1bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1|C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/somador1bit.v|
+!s101 -O0
+vsomador5bits
+I9`hHj8@h85PbiJ0e?DLC:0
+Vldf`=J[0>R@g;MR2LG]MP1
+R1
+R2
+8C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/somador5bits.v
+FC:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/somador5bits.v
+L0 1
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 MgRf6Y8VWVSgPOA7K55Ao0
+!s85 0
+!s108 1738118254.209000
+!s107 C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/somador5bits.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1|C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/somador5bits.v|
+!s101 -O0
+vULA
+ITe7Xd3_TdjP7HbC@^HLe?1
+VjgI9J9c`BAO_VQC1K8WYG2
+R1
+R2
+8C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/ula.v
+FC:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/ula.v
+L0 3
+R3
+r1
+31
+R4
+R5
+n@u@l@a
+!i10b 1
+!s100 o`J?@5odf;JleAf?]_PD;2
+!s85 0
+!s108 1738118253.899000
+!s107 C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/ula.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1|C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/ula.v|
+!s101 -O0
+vULA32bits
+In6UY4gdieQER1[T3@?Sj:1
+V1bVj3PdPGmJ>d76Gk^RKi3
+R1
+R2
+8C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/ula32bits.v
+FC:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/ula32bits.v
+L0 2
+R3
+r1
+31
+R4
+R5
+n@u@l@a32bits
+!i10b 1
+!s100 nOaz30K7Cf=zAid:=XUcH1
+!s85 0
+!s108 1738118253.805000
+!s107 C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/ula32bits.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1|C:/Users/Fernanda Thomaz/Desktop/cefet/2024.2/Lab de AOC/pratica6 github/Lab-de-Aoc1/ula32bits.v|
+!s101 -O0
