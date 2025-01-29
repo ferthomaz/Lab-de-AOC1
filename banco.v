@@ -16,6 +16,7 @@ always @(posedge clock) begin
         registradores[8] <= 32'b0;
         registradores[9] <= 32'b0;
         registradores[10] <= 32'b0;
+		  registradores[16] <= 32'b1;		//endereço
         registradores[17] <= 32'b11;
         registradores[18] <= 32'b1;
         inicializa <= 1;  //depois que inicializa coloca como 1 para n entrar no if de novo

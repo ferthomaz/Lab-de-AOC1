@@ -1,0 +1,1209 @@
+TimeQuest Timing Analyzer report for processadorPinagem
+Tue Jan 28 23:35:31 2025
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'SW[17]'
+ 12. Slow Model Hold: 'SW[17]'
+ 13. Slow Model Minimum Pulse Width: 'SW[17]'
+ 14. Clock to Output Times
+ 15. Minimum Clock to Output Times
+ 16. Fast Model Setup Summary
+ 17. Fast Model Hold Summary
+ 18. Fast Model Recovery Summary
+ 19. Fast Model Removal Summary
+ 20. Fast Model Minimum Pulse Width Summary
+ 21. Fast Model Setup: 'SW[17]'
+ 22. Fast Model Hold: 'SW[17]'
+ 23. Fast Model Minimum Pulse Width: 'SW[17]'
+ 24. Clock to Output Times
+ 25. Minimum Clock to Output Times
+ 26. Multicorner Timing Analysis Summary
+ 27. Clock to Output Times
+ 28. Minimum Clock to Output Times
+ 29. Setup Transfers
+ 30. Hold Transfers
+ 31. Report TCCS
+ 32. Report RSKM
+ 33. Unconstrained Paths
+ 34. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; processadorPinagem                                                ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 16     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                             ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets    ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; SW[17]     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { SW[17] } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 154.46 MHz ; 154.46 MHz      ; SW[17]     ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------+
+; Slow Model Setup Summary        ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; SW[17] ; -5.474 ; -99.593       ;
++--------+--------+---------------+
+
+
++--------------------------------+
+; Slow Model Hold Summary        ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; SW[17] ; 0.391 ; 0.000         ;
++--------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; SW[17] ; -1.222 ; -30.222              ;
++--------+--------+----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'SW[17]'                                                                                                                                                                                   ;
++--------+---------------------------------------------------------------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                     ; To Node                                                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------------------------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -5.474 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.103      ; 6.613      ;
+; -5.446 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.103      ; 6.585      ;
+; -5.430 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.103      ; 6.569      ;
+; -5.402 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.103      ; 6.541      ;
+; -5.349 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.103      ; 6.488      ;
+; -5.347 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.103      ; 6.486      ;
+; -5.321 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.103      ; 6.460      ;
+; -5.319 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.103      ; 6.458      ;
+; -5.269 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.103      ; 6.408      ;
+; -5.241 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.103      ; 6.380      ;
+; -5.091 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.099      ; 6.226      ;
+; -5.047 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.099      ; 6.182      ;
+; -4.996 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][4] ; SW[17]       ; SW[17]      ; 1.000        ; -0.220     ; 5.812      ;
+; -4.966 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.099      ; 6.101      ;
+; -4.964 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.099      ; 6.099      ;
+; -4.952 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][4] ; SW[17]       ; SW[17]      ; 1.000        ; -0.220     ; 5.768      ;
+; -4.886 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.099      ; 6.021      ;
+; -4.871 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][4] ; SW[17]       ; SW[17]      ; 1.000        ; -0.220     ; 5.687      ;
+; -4.869 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][4] ; SW[17]       ; SW[17]      ; 1.000        ; -0.220     ; 5.685      ;
+; -4.862 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][1] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.323      ; 6.221      ;
+; -4.834 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][1] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.323      ; 6.193      ;
+; -4.812 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][4] ; SW[17]       ; SW[17]      ; 1.000        ; 0.099      ; 5.947      ;
+; -4.791 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][4] ; SW[17]       ; SW[17]      ; 1.000        ; -0.220     ; 5.607      ;
+; -4.768 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][4] ; SW[17]       ; SW[17]      ; 1.000        ; 0.099      ; 5.903      ;
+; -4.764 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][3] ; SW[17]       ; SW[17]      ; 1.000        ; -0.220     ; 5.580      ;
+; -4.763 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.098      ; 5.897      ;
+; -4.760 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.098      ; 5.894      ;
+; -4.720 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][3] ; SW[17]       ; SW[17]      ; 1.000        ; -0.220     ; 5.536      ;
+; -4.719 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.098      ; 5.853      ;
+; -4.716 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.098      ; 5.850      ;
+; -4.693 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.323      ; 6.052      ;
+; -4.687 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][4] ; SW[17]       ; SW[17]      ; 1.000        ; 0.099      ; 5.822      ;
+; -4.685 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][4] ; SW[17]       ; SW[17]      ; 1.000        ; 0.099      ; 5.820      ;
+; -4.665 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.323      ; 6.024      ;
+; -4.639 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][3] ; SW[17]       ; SW[17]      ; 1.000        ; -0.220     ; 5.455      ;
+; -4.638 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.098      ; 5.772      ;
+; -4.637 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][3] ; SW[17]       ; SW[17]      ; 1.000        ; -0.220     ; 5.453      ;
+; -4.636 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.098      ; 5.770      ;
+; -4.635 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.098      ; 5.769      ;
+; -4.633 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.098      ; 5.767      ;
+; -4.607 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][4] ; SW[17]       ; SW[17]      ; 1.000        ; 0.099      ; 5.742      ;
+; -4.559 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][3] ; SW[17]       ; SW[17]      ; 1.000        ; -0.220     ; 5.375      ;
+; -4.558 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.098      ; 5.692      ;
+; -4.555 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.098      ; 5.689      ;
+; -4.549 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.103      ; 5.688      ;
+; -4.505 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.103      ; 5.644      ;
+; -4.479 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][1] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.319      ; 5.834      ;
+; -4.424 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.103      ; 5.563      ;
+; -4.422 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.103      ; 5.561      ;
+; -4.384 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][1] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][4] ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 5.420      ;
+; -4.358 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][3] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.004      ; 5.398      ;
+; -4.352 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.101      ; 5.489      ;
+; -4.344 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.103      ; 5.483      ;
+; -4.330 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][3] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.004      ; 5.370      ;
+; -4.317 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][3] ; SW[17]       ; SW[17]      ; 1.000        ; 0.099      ; 5.452      ;
+; -4.310 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.319      ; 5.665      ;
+; -4.308 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.101      ; 5.445      ;
+; -4.273 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][3] ; SW[17]       ; SW[17]      ; 1.000        ; 0.099      ; 5.408      ;
+; -4.227 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.101      ; 5.364      ;
+; -4.225 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.101      ; 5.362      ;
+; -4.223 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][2] ; SW[17]       ; SW[17]      ; 1.000        ; -0.220     ; 5.039      ;
+; -4.215 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][4] ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 5.251      ;
+; -4.214 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][1] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.095      ; 5.345      ;
+; -4.200 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][1] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][4] ; SW[17]       ; SW[17]      ; 1.000        ; 0.319      ; 5.555      ;
+; -4.194 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][2] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.323      ; 5.553      ;
+; -4.192 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][3] ; SW[17]       ; SW[17]      ; 1.000        ; 0.099      ; 5.327      ;
+; -4.190 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][3] ; SW[17]       ; SW[17]      ; 1.000        ; 0.099      ; 5.325      ;
+; -4.186 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][1] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.095      ; 5.317      ;
+; -4.179 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][2] ; SW[17]       ; SW[17]      ; 1.000        ; -0.220     ; 4.995      ;
+; -4.166 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][2] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.323      ; 5.525      ;
+; -4.152 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][1] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][3] ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 5.188      ;
+; -4.151 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][1] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.318      ; 5.505      ;
+; -4.148 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][1] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.318      ; 5.502      ;
+; -4.147 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.101      ; 5.284      ;
+; -4.112 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][3] ; SW[17]       ; SW[17]      ; 1.000        ; 0.099      ; 5.247      ;
+; -4.098 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][2] ; SW[17]       ; SW[17]      ; 1.000        ; -0.220     ; 4.914      ;
+; -4.096 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][2] ; SW[17]       ; SW[17]      ; 1.000        ; -0.220     ; 4.912      ;
+; -4.044 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][1] ; SW[17]       ; SW[17]      ; 1.000        ; 0.008      ; 5.088      ;
+; -4.031 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][4] ; SW[17]       ; SW[17]      ; 1.000        ; 0.319      ; 5.386      ;
+; -4.018 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][2] ; SW[17]       ; SW[17]      ; 1.000        ; -0.220     ; 4.834      ;
+; -4.000 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][1] ; SW[17]       ; SW[17]      ; 1.000        ; 0.008      ; 5.044      ;
+; -3.983 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][3] ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 5.019      ;
+; -3.982 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.318      ; 5.336      ;
+; -3.979 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.318      ; 5.333      ;
+; -3.975 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][3] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 5.011      ;
+; -3.964 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.101      ; 5.101      ;
+; -3.937 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][1] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.323      ; 5.296      ;
+; -3.920 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.101      ; 5.057      ;
+; -3.919 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][1] ; SW[17]       ; SW[17]      ; 1.000        ; 0.008      ; 4.963      ;
+; -3.917 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][1] ; SW[17]       ; SW[17]      ; 1.000        ; 0.008      ; 4.961      ;
+; -3.905 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][2] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.004      ; 4.945      ;
+; -3.880 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][3] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][4] ; SW[17]       ; SW[17]      ; 1.000        ; -0.319     ; 4.597      ;
+; -3.877 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][2] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.004      ; 4.917      ;
+; -3.858 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.317      ; 5.211      ;
+; -3.839 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][1] ; SW[17]       ; SW[17]      ; 1.000        ; 0.008      ; 4.883      ;
+; -3.839 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.101      ; 4.976      ;
+; -3.837 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.101      ; 4.974      ;
+; -3.831 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][1] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.091      ; 4.958      ;
+; -3.830 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.317      ; 5.183      ;
+; -3.811 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][2] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.319      ; 5.166      ;
++--------+---------------------------------------------------------------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'SW[17]'                                                                                                                                                                                   ;
++-------+---------------------------------------------------------------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                     ; To Node                                                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------------------------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|countPC:blocodopc|pcout[1]                ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|countPC:blocodopc|pcout[2]                ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|countPC:blocodopc|pcout[3]                ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|countPC:blocodopc|pcout[4]                ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0] ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2] ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][3] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][3] ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5] ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.422 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[8][0] ; SW[17]       ; SW[17]      ; 0.000        ; 0.555      ; 1.243      ;
+; 0.440 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[9][5] ; SW[17]       ; SW[17]      ; 0.000        ; 0.560      ; 1.266      ;
+; 0.663 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[8][6] ; SW[17]       ; SW[17]      ; 0.000        ; 0.555      ; 1.484      ;
+; 0.676 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][0] ; SW[17]       ; SW[17]      ; 0.000        ; 0.312      ; 1.254      ;
+; 0.694 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[8][7] ; SW[17]       ; SW[17]      ; 0.000        ; 0.555      ; 1.515      ;
+; 0.842 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[8][2] ; SW[17]       ; SW[17]      ; 0.000        ; 0.556      ; 1.664      ;
+; 0.948 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[9][1] ; SW[17]       ; SW[17]      ; 0.000        ; 0.237      ; 1.451      ;
+; 0.975 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|countPC:blocodopc|pcout[3]                ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 1.241      ;
+; 0.976 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][5] ; SW[17]       ; SW[17]      ; 0.000        ; 0.002      ; 1.244      ;
+; 0.977 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|countPC:blocodopc|pcout[2]                ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 1.243      ;
+; 0.982 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[8][5] ; SW[17]       ; SW[17]      ; 0.000        ; 0.556      ; 1.804      ;
+; 1.002 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[9][6] ; SW[17]       ; SW[17]      ; 0.000        ; 0.560      ; 1.828      ;
+; 1.002 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[9][7] ; SW[17]       ; SW[17]      ; 0.000        ; 0.560      ; 1.828      ;
+; 1.010 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|countPC:blocodopc|pcout[3]                ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 1.276      ;
+; 1.035 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[8][3] ; SW[17]       ; SW[17]      ; 0.000        ; 0.556      ; 1.857      ;
+; 1.132 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[8][4] ; SW[17]       ; SW[17]      ; 0.000        ; 0.556      ; 1.954      ;
+; 1.202 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][6] ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 1.468      ;
+; 1.236 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|countPC:blocodopc|pcout[1]                ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 1.502      ;
+; 1.237 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|countPC:blocodopc|pcout[2]                ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 1.503      ;
+; 1.239 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|countPC:blocodopc|pcout[4]                ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 1.505      ;
+; 1.243 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][1] ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 1.509      ;
+; 1.255 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|countPC:blocodopc|pcout[3]                ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 1.521      ;
+; 1.284 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[8][1] ; SW[17]       ; SW[17]      ; 0.000        ; 0.465      ; 2.015      ;
+; 1.289 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[9][0] ; SW[17]       ; SW[17]      ; 0.000        ; 0.237      ; 1.792      ;
+; 1.289 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[9][2] ; SW[17]       ; SW[17]      ; 0.000        ; 0.237      ; 1.792      ;
+; 1.289 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[9][3] ; SW[17]       ; SW[17]      ; 0.000        ; 0.237      ; 1.792      ;
+; 1.289 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[9][4] ; SW[17]       ; SW[17]      ; 0.000        ; 0.237      ; 1.792      ;
+; 1.331 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][4] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][4] ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 1.597      ;
+; 1.341 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][2] ; SW[17]       ; SW[17]      ; 0.000        ; -0.002     ; 1.605      ;
+; 1.373 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][7] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][7] ; SW[17]       ; SW[17]      ; 0.000        ; -0.005     ; 1.634      ;
+; 1.508 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][1] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][1] ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 1.774      ;
+; 1.513 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2] ; SW[17]       ; SW[17]      ; 0.000        ; 0.558      ; 2.337      ;
+; 1.513 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[0][3] ; SW[17]       ; SW[17]      ; 0.000        ; 0.558      ; 2.337      ;
+; 1.513 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[0][4] ; SW[17]       ; SW[17]      ; 0.000        ; 0.558      ; 2.337      ;
+; 1.513 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5] ; SW[17]       ; SW[17]      ; 0.000        ; 0.558      ; 2.337      ;
+; 1.513 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[0][6] ; SW[17]       ; SW[17]      ; 0.000        ; 0.558      ; 2.337      ;
+; 1.517 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2] ; SW[17]       ; SW[17]      ; 0.000        ; 0.315      ; 2.098      ;
+; 1.518 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][5] ; SW[17]       ; SW[17]      ; 0.000        ; -0.002     ; 1.782      ;
+; 1.535 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][6] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][6] ; SW[17]       ; SW[17]      ; 0.000        ; -0.002     ; 1.799      ;
+; 1.544 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][3] ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 1.810      ;
+; 1.555 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0] ; SW[17]       ; SW[17]      ; 0.000        ; -0.214     ; 1.607      ;
+; 1.569 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][6] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][6] ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 1.835      ;
+; 1.571 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][3] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][3] ; SW[17]       ; SW[17]      ; 0.000        ; -0.002     ; 1.835      ;
+; 1.610 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][6] ; SW[17]       ; SW[17]      ; 0.000        ; -0.003     ; 1.873      ;
+; 1.613 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][7] ; SW[17]       ; SW[17]      ; 0.000        ; -0.003     ; 1.876      ;
+; 1.633 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][4] ; SW[17]       ; SW[17]      ; 0.000        ; 0.101      ; 2.000      ;
+; 1.657 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][4] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][4] ; SW[17]       ; SW[17]      ; 0.000        ; 0.002      ; 1.925      ;
+; 1.684 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][1] ; SW[17]       ; SW[17]      ; 0.000        ; -0.214     ; 1.736      ;
+; 1.692 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0] ; SW[17]       ; SW[17]      ; 0.000        ; -0.214     ; 1.744      ;
+; 1.703 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0] ; SW[17]       ; SW[17]      ; 0.000        ; -0.214     ; 1.755      ;
+; 1.709 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][3] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][4] ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 1.975      ;
+; 1.720 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|countPC:blocodopc|pcout[4]                ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 1.986      ;
+; 1.739 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][0] ; SW[17]       ; SW[17]      ; 0.000        ; 0.098      ; 2.103      ;
+; 1.745 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][4] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5] ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 2.011      ;
+; 1.750 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][0] ; SW[17]       ; SW[17]      ; 0.000        ; -0.006     ; 2.010      ;
+; 1.771 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][6] ; SW[17]       ; SW[17]      ; 0.000        ; 0.101      ; 2.138      ;
+; 1.775 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5] ; SW[17]       ; SW[17]      ; 0.000        ; 0.101      ; 2.142      ;
+; 1.781 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2] ; SW[17]       ; SW[17]      ; 0.000        ; 0.101      ; 2.148      ;
+; 1.781 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][3] ; SW[17]       ; SW[17]      ; 0.000        ; 0.101      ; 2.148      ;
+; 1.783 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][1] ; SW[17]       ; SW[17]      ; 0.000        ; 0.008      ; 2.057      ;
+; 1.786 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][1] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2] ; SW[17]       ; SW[17]      ; 0.000        ; 0.315      ; 2.367      ;
+; 1.786 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0] ; SW[17]       ; SW[17]      ; 0.000        ; -0.214     ; 1.838      ;
+; 1.822 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|countPC:blocodopc|pcout[4]                ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 2.088      ;
+; 1.826 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][1] ; SW[17]       ; SW[17]      ; 0.000        ; -0.214     ; 1.878      ;
+; 1.841 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][1] ; SW[17]       ; SW[17]      ; 0.000        ; -0.214     ; 1.893      ;
+; 1.849 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][2] ; SW[17]       ; SW[17]      ; 0.000        ; -0.321     ; 1.794      ;
+; 1.869 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][1] ; SW[17]       ; SW[17]      ; 0.000        ; -0.214     ; 1.921      ;
+; 1.874 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][1] ; SW[17]       ; SW[17]      ; 0.000        ; -0.214     ; 1.926      ;
+; 1.876 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][0] ; SW[17]       ; SW[17]      ; 0.000        ; 0.098      ; 2.240      ;
+; 1.887 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][0] ; SW[17]       ; SW[17]      ; 0.000        ; 0.098      ; 2.251      ;
+; 1.889 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][3] ; SW[17]       ; SW[17]      ; 0.000        ; 0.315      ; 2.470      ;
+; 1.912 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5] ; SW[17]       ; SW[17]      ; 0.000        ; 0.101      ; 2.279      ;
+; 1.913 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0] ; SW[17]       ; SW[17]      ; 0.000        ; -0.214     ; 1.965      ;
+; 1.918 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2] ; SW[17]       ; SW[17]      ; 0.000        ; 0.101      ; 2.285      ;
+; 1.918 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][3] ; SW[17]       ; SW[17]      ; 0.000        ; 0.101      ; 2.285      ;
+; 1.923 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5] ; SW[17]       ; SW[17]      ; 0.000        ; 0.101      ; 2.290      ;
+; 1.926 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][4] ; SW[17]       ; SW[17]      ; 0.000        ; 0.101      ; 2.293      ;
+; 1.929 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2] ; SW[17]       ; SW[17]      ; 0.000        ; 0.101      ; 2.296      ;
+; 1.929 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][3] ; SW[17]       ; SW[17]      ; 0.000        ; 0.101      ; 2.296      ;
+; 1.936 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][6] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][7] ; SW[17]       ; SW[17]      ; 0.000        ; -0.005     ; 2.197      ;
+; 1.943 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][6] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][6] ; SW[17]       ; SW[17]      ; 0.000        ; -0.005     ; 2.204      ;
+; 1.943 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][4] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][4] ; SW[17]       ; SW[17]      ; 0.000        ; 0.321      ; 2.530      ;
+; 1.956 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][4] ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 2.222      ;
+; 1.970 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][0] ; SW[17]       ; SW[17]      ; 0.000        ; 0.098      ; 2.334      ;
+; 1.970 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][6] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][7] ; SW[17]       ; SW[17]      ; 0.000        ; -0.003     ; 2.233      ;
+; 1.977 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][6] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][6] ; SW[17]       ; SW[17]      ; 0.000        ; -0.003     ; 2.240      ;
+; 2.000 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][3] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][3] ; SW[17]       ; SW[17]      ; 0.000        ; 0.321      ; 2.587      ;
+; 2.003 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][1] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][1] ; SW[17]       ; SW[17]      ; 0.000        ; -0.222     ; 2.047      ;
+; 2.006 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5] ; SW[17]       ; SW[17]      ; 0.000        ; 0.101      ; 2.373      ;
+; 2.012 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2] ; SW[17]       ; SW[17]      ; 0.000        ; 0.101      ; 2.379      ;
+; 2.012 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][3] ; SW[17]       ; SW[17]      ; 0.000        ; 0.101      ; 2.379      ;
+; 2.018 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][6] ; SW[17]       ; SW[17]      ; 0.000        ; 0.101      ; 2.385      ;
++-------+---------------------------------------------------------------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'SW[17]'                                                                                                        ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                                                        ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; SW[17] ; Rise       ; SW[17]                                                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|inicializa          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|inicializa          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[0][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[0][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[0][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[0][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[0][4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[0][4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[0][6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[0][6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[8][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[8][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[8][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[8][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[8][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[8][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[8][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[8][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[8][4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[8][4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[8][5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[8][5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[8][6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[8][6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[8][7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[8][7] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[9][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[9][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[9][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[9][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[9][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[9][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[9][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[9][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[9][4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[9][4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[9][5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[9][5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[9][6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[9][6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[9][7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[9][7] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|countPC:blocodopc|pcout[0]                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|countPC:blocodopc|pcout[0]                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|countPC:blocodopc|pcout[1]                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|countPC:blocodopc|pcout[1]                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|countPC:blocodopc|pcout[2]                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|countPC:blocodopc|pcout[2]                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|countPC:blocodopc|pcout[3]                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|countPC:blocodopc|pcout[3]                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|countPC:blocodopc|pcout[4]                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|countPC:blocodopc|pcout[4]                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; SW[17]|combout                                                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; SW[17]|combout                                                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|inicializa|clk                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|inicializa|clk                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[0][0]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[0][0]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[0][1]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[0][1]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[0][2]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[0][2]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[0][3]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[0][3]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[0][4]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[0][4]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[0][5]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[0][5]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[0][6]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[0][6]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[8][0]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[8][0]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[8][1]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[8][1]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[8][2]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[8][2]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[8][3]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[8][3]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[8][4]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[8][4]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[8][5]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[8][5]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[8][6]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[8][6]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[8][7]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[8][7]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[9][0]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[9][0]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[9][1]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[9][1]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[9][2]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[9][2]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[9][3]|clk               ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; HEX0[*]   ; SW[17]     ; 24.506 ; 24.506 ; Rise       ; SW[17]          ;
+;  HEX0[0]  ; SW[17]     ; 24.258 ; 24.258 ; Rise       ; SW[17]          ;
+;  HEX0[1]  ; SW[17]     ; 24.226 ; 24.226 ; Rise       ; SW[17]          ;
+;  HEX0[2]  ; SW[17]     ; 24.231 ; 24.231 ; Rise       ; SW[17]          ;
+;  HEX0[3]  ; SW[17]     ; 24.506 ; 24.506 ; Rise       ; SW[17]          ;
+;  HEX0[4]  ; SW[17]     ; 24.497 ; 24.497 ; Rise       ; SW[17]          ;
+;  HEX0[5]  ; SW[17]     ; 24.486 ; 24.486 ; Rise       ; SW[17]          ;
+;  HEX0[6]  ; SW[17]     ; 24.491 ; 24.491 ; Rise       ; SW[17]          ;
+; HEX1[*]   ; SW[17]     ; 20.445 ; 20.445 ; Rise       ; SW[17]          ;
+;  HEX1[0]  ; SW[17]     ; 20.445 ; 20.445 ; Rise       ; SW[17]          ;
+;  HEX1[1]  ; SW[17]     ; 19.945 ; 19.945 ; Rise       ; SW[17]          ;
+;  HEX1[2]  ; SW[17]     ; 19.480 ; 19.480 ; Rise       ; SW[17]          ;
+;  HEX1[3]  ; SW[17]     ; 19.819 ; 19.819 ; Rise       ; SW[17]          ;
+;  HEX1[4]  ; SW[17]     ; 19.273 ; 19.273 ; Rise       ; SW[17]          ;
+;  HEX1[5]  ; SW[17]     ; 18.735 ; 18.735 ; Rise       ; SW[17]          ;
+;  HEX1[6]  ; SW[17]     ; 19.405 ; 19.405 ; Rise       ; SW[17]          ;
+; HEX2[*]   ; SW[17]     ; 25.447 ; 25.447 ; Rise       ; SW[17]          ;
+;  HEX2[0]  ; SW[17]     ; 25.397 ; 25.397 ; Rise       ; SW[17]          ;
+;  HEX2[1]  ; SW[17]     ; 25.400 ; 25.400 ; Rise       ; SW[17]          ;
+;  HEX2[2]  ; SW[17]     ; 25.447 ; 25.447 ; Rise       ; SW[17]          ;
+;  HEX2[3]  ; SW[17]     ; 25.403 ; 25.403 ; Rise       ; SW[17]          ;
+;  HEX2[4]  ; SW[17]     ; 25.150 ; 25.150 ; Rise       ; SW[17]          ;
+;  HEX2[5]  ; SW[17]     ; 25.106 ; 25.106 ; Rise       ; SW[17]          ;
+;  HEX2[6]  ; SW[17]     ; 25.133 ; 25.133 ; Rise       ; SW[17]          ;
+; LEDG[*]   ; SW[17]     ; 8.967  ; 8.967  ; Rise       ; SW[17]          ;
+;  LEDG[0]  ; SW[17]     ; 8.967  ; 8.967  ; Rise       ; SW[17]          ;
+;  LEDG[1]  ; SW[17]     ; 8.861  ; 8.861  ; Rise       ; SW[17]          ;
+;  LEDG[2]  ; SW[17]     ; 8.803  ; 8.803  ; Rise       ; SW[17]          ;
+;  LEDG[3]  ; SW[17]     ; 8.608  ; 8.608  ; Rise       ; SW[17]          ;
+;  LEDG[4]  ; SW[17]     ; 8.646  ; 8.646  ; Rise       ; SW[17]          ;
+; LEDR[*]   ; SW[17]     ; 10.873 ; 10.873 ; Rise       ; SW[17]          ;
+;  LEDR[2]  ; SW[17]     ; 10.236 ; 10.236 ; Rise       ; SW[17]          ;
+;  LEDR[5]  ; SW[17]     ; 10.873 ; 10.873 ; Rise       ; SW[17]          ;
+;  LEDR[14] ; SW[17]     ; 10.293 ; 10.293 ; Rise       ; SW[17]          ;
+;  LEDR[16] ; SW[17]     ; 8.678  ; 8.678  ; Rise       ; SW[17]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; HEX0[*]   ; SW[17]     ; 8.680  ; 8.680  ; Rise       ; SW[17]          ;
+;  HEX0[0]  ; SW[17]     ; 8.708  ; 8.708  ; Rise       ; SW[17]          ;
+;  HEX0[1]  ; SW[17]     ; 8.680  ; 8.680  ; Rise       ; SW[17]          ;
+;  HEX0[2]  ; SW[17]     ; 8.685  ; 8.685  ; Rise       ; SW[17]          ;
+;  HEX0[3]  ; SW[17]     ; 8.955  ; 8.955  ; Rise       ; SW[17]          ;
+;  HEX0[4]  ; SW[17]     ; 8.955  ; 8.955  ; Rise       ; SW[17]          ;
+;  HEX0[5]  ; SW[17]     ; 8.942  ; 8.942  ; Rise       ; SW[17]          ;
+;  HEX0[6]  ; SW[17]     ; 8.938  ; 8.938  ; Rise       ; SW[17]          ;
+; HEX1[*]   ; SW[17]     ; 11.195 ; 11.195 ; Rise       ; SW[17]          ;
+;  HEX1[0]  ; SW[17]     ; 12.162 ; 12.162 ; Rise       ; SW[17]          ;
+;  HEX1[1]  ; SW[17]     ; 12.397 ; 12.397 ; Rise       ; SW[17]          ;
+;  HEX1[2]  ; SW[17]     ; 11.195 ; 11.195 ; Rise       ; SW[17]          ;
+;  HEX1[3]  ; SW[17]     ; 12.353 ; 12.353 ; Rise       ; SW[17]          ;
+;  HEX1[4]  ; SW[17]     ; 12.514 ; 12.514 ; Rise       ; SW[17]          ;
+;  HEX1[5]  ; SW[17]     ; 11.200 ; 11.200 ; Rise       ; SW[17]          ;
+;  HEX1[6]  ; SW[17]     ; 11.254 ; 11.254 ; Rise       ; SW[17]          ;
+; HEX2[*]   ; SW[17]     ; 10.117 ; 10.117 ; Rise       ; SW[17]          ;
+;  HEX2[0]  ; SW[17]     ; 10.409 ; 10.409 ; Rise       ; SW[17]          ;
+;  HEX2[1]  ; SW[17]     ; 10.412 ; 10.412 ; Rise       ; SW[17]          ;
+;  HEX2[2]  ; SW[17]     ; 10.460 ; 10.460 ; Rise       ; SW[17]          ;
+;  HEX2[3]  ; SW[17]     ; 10.421 ; 10.421 ; Rise       ; SW[17]          ;
+;  HEX2[4]  ; SW[17]     ; 10.129 ; 10.129 ; Rise       ; SW[17]          ;
+;  HEX2[5]  ; SW[17]     ; 10.117 ; 10.117 ; Rise       ; SW[17]          ;
+;  HEX2[6]  ; SW[17]     ; 10.155 ; 10.155 ; Rise       ; SW[17]          ;
+; LEDG[*]   ; SW[17]     ; 8.608  ; 8.608  ; Rise       ; SW[17]          ;
+;  LEDG[0]  ; SW[17]     ; 8.967  ; 8.967  ; Rise       ; SW[17]          ;
+;  LEDG[1]  ; SW[17]     ; 8.861  ; 8.861  ; Rise       ; SW[17]          ;
+;  LEDG[2]  ; SW[17]     ; 8.803  ; 8.803  ; Rise       ; SW[17]          ;
+;  LEDG[3]  ; SW[17]     ; 8.608  ; 8.608  ; Rise       ; SW[17]          ;
+;  LEDG[4]  ; SW[17]     ; 8.646  ; 8.646  ; Rise       ; SW[17]          ;
+; LEDR[*]   ; SW[17]     ; 8.313  ; 8.313  ; Rise       ; SW[17]          ;
+;  LEDR[2]  ; SW[17]     ; 9.870  ; 9.870  ; Rise       ; SW[17]          ;
+;  LEDR[5]  ; SW[17]     ; 9.916  ; 9.916  ; Rise       ; SW[17]          ;
+;  LEDR[14] ; SW[17]     ; 9.336  ; 9.336  ; Rise       ; SW[17]          ;
+;  LEDR[16] ; SW[17]     ; 8.313  ; 8.313  ; Rise       ; SW[17]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------+
+; Fast Model Setup Summary        ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; SW[17] ; -1.815 ; -29.286       ;
++--------+--------+---------------+
+
+
++--------------------------------+
+; Fast Model Hold Summary        ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; SW[17] ; 0.192 ; 0.000         ;
++--------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; SW[17] ; -1.222 ; -30.222              ;
++--------+--------+----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'SW[17]'                                                                                                                                                                                   ;
++--------+---------------------------------------------------------------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                     ; To Node                                                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------------------------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.815 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.053      ; 2.900      ;
+; -1.811 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.053      ; 2.896      ;
+; -1.805 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.053      ; 2.890      ;
+; -1.801 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.053      ; 2.886      ;
+; -1.784 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.053      ; 2.869      ;
+; -1.780 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.053      ; 2.865      ;
+; -1.766 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.053      ; 2.851      ;
+; -1.762 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.053      ; 2.847      ;
+; -1.715 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.053      ; 2.800      ;
+; -1.711 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.053      ; 2.796      ;
+; -1.653 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.053      ; 2.738      ;
+; -1.643 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.053      ; 2.728      ;
+; -1.622 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.053      ; 2.707      ;
+; -1.611 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][4] ; SW[17]       ; SW[17]      ; 1.000        ; -0.099     ; 2.544      ;
+; -1.604 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.053      ; 2.689      ;
+; -1.601 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][4] ; SW[17]       ; SW[17]      ; 1.000        ; -0.099     ; 2.534      ;
+; -1.580 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][4] ; SW[17]       ; SW[17]      ; 1.000        ; -0.099     ; 2.513      ;
+; -1.562 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][4] ; SW[17]       ; SW[17]      ; 1.000        ; -0.099     ; 2.495      ;
+; -1.554 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][1] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.152      ; 2.738      ;
+; -1.553 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.053      ; 2.638      ;
+; -1.550 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][1] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.152      ; 2.734      ;
+; -1.541 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][4] ; SW[17]       ; SW[17]      ; 1.000        ; 0.053      ; 2.626      ;
+; -1.532 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][3] ; SW[17]       ; SW[17]      ; 1.000        ; -0.099     ; 2.465      ;
+; -1.531 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][4] ; SW[17]       ; SW[17]      ; 1.000        ; 0.053      ; 2.616      ;
+; -1.522 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][3] ; SW[17]       ; SW[17]      ; 1.000        ; -0.099     ; 2.455      ;
+; -1.511 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][4] ; SW[17]       ; SW[17]      ; 1.000        ; -0.099     ; 2.444      ;
+; -1.510 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][4] ; SW[17]       ; SW[17]      ; 1.000        ; 0.053      ; 2.595      ;
+; -1.501 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][3] ; SW[17]       ; SW[17]      ; 1.000        ; -0.099     ; 2.434      ;
+; -1.492 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][4] ; SW[17]       ; SW[17]      ; 1.000        ; 0.053      ; 2.577      ;
+; -1.487 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.051      ; 2.570      ;
+; -1.485 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.051      ; 2.568      ;
+; -1.483 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][3] ; SW[17]       ; SW[17]      ; 1.000        ; -0.099     ; 2.416      ;
+; -1.477 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.051      ; 2.560      ;
+; -1.475 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.051      ; 2.558      ;
+; -1.474 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.152      ; 2.658      ;
+; -1.470 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.152      ; 2.654      ;
+; -1.456 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.051      ; 2.539      ;
+; -1.454 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.051      ; 2.537      ;
+; -1.441 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][4] ; SW[17]       ; SW[17]      ; 1.000        ; 0.053      ; 2.526      ;
+; -1.438 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.051      ; 2.521      ;
+; -1.436 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.051      ; 2.519      ;
+; -1.432 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][3] ; SW[17]       ; SW[17]      ; 1.000        ; -0.099     ; 2.365      ;
+; -1.401 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.053      ; 2.486      ;
+; -1.392 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][1] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.152      ; 2.576      ;
+; -1.391 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.053      ; 2.476      ;
+; -1.387 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.051      ; 2.470      ;
+; -1.385 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.051      ; 2.468      ;
+; -1.382 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][3] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 2.414      ;
+; -1.378 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][3] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 2.410      ;
+; -1.370 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.053      ; 2.455      ;
+; -1.352 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.053      ; 2.437      ;
+; -1.350 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][1] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][4] ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 2.382      ;
+; -1.313 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.051      ; 2.396      ;
+; -1.312 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.152      ; 2.496      ;
+; -1.304 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][1] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.047      ; 2.383      ;
+; -1.303 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.051      ; 2.386      ;
+; -1.302 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][3] ; SW[17]       ; SW[17]      ; 1.000        ; 0.053      ; 2.387      ;
+; -1.301 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.053      ; 2.386      ;
+; -1.300 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][1] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.047      ; 2.379      ;
+; -1.292 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][3] ; SW[17]       ; SW[17]      ; 1.000        ; 0.053      ; 2.377      ;
+; -1.282 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.051      ; 2.365      ;
+; -1.280 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][1] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][4] ; SW[17]       ; SW[17]      ; 1.000        ; 0.152      ; 2.464      ;
+; -1.277 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][2] ; SW[17]       ; SW[17]      ; 1.000        ; -0.099     ; 2.210      ;
+; -1.271 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][2] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.152      ; 2.455      ;
+; -1.271 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][1] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][3] ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 2.303      ;
+; -1.271 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][3] ; SW[17]       ; SW[17]      ; 1.000        ; 0.053      ; 2.356      ;
+; -1.270 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][4] ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 2.302      ;
+; -1.267 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][2] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.152      ; 2.451      ;
+; -1.267 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][2] ; SW[17]       ; SW[17]      ; 1.000        ; -0.099     ; 2.200      ;
+; -1.264 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.051      ; 2.347      ;
+; -1.253 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][3] ; SW[17]       ; SW[17]      ; 1.000        ; 0.053      ; 2.338      ;
+; -1.246 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][2] ; SW[17]       ; SW[17]      ; 1.000        ; -0.099     ; 2.179      ;
+; -1.228 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][2] ; SW[17]       ; SW[17]      ; 1.000        ; -0.099     ; 2.161      ;
+; -1.226 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][1] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.150      ; 2.408      ;
+; -1.224 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][1] ; SW[17]       ; SW[17]      ; 1.000        ; 0.006      ; 2.262      ;
+; -1.224 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][1] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.150      ; 2.406      ;
+; -1.220 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][3] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 2.252      ;
+; -1.214 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][1] ; SW[17]       ; SW[17]      ; 1.000        ; 0.006      ; 2.252      ;
+; -1.213 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.051      ; 2.296      ;
+; -1.202 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][3] ; SW[17]       ; SW[17]      ; 1.000        ; 0.053      ; 2.287      ;
+; -1.200 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][4] ; SW[17]       ; SW[17]      ; 1.000        ; 0.152      ; 2.384      ;
+; -1.193 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][1] ; SW[17]       ; SW[17]      ; 1.000        ; 0.006      ; 2.231      ;
+; -1.191 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][3] ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 2.223      ;
+; -1.178 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][3] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][4] ; SW[17]       ; SW[17]      ; 1.000        ; -0.152     ; 2.058      ;
+; -1.177 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[9][2] ; SW[17]       ; SW[17]      ; 1.000        ; -0.099     ; 2.110      ;
+; -1.175 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][1] ; SW[17]       ; SW[17]      ; 1.000        ; 0.006      ; 2.213      ;
+; -1.169 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][3] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][3] ; SW[17]       ; SW[17]      ; 1.000        ; -0.152     ; 2.049      ;
+; -1.156 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][2] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 2.188      ;
+; -1.154 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.051      ; 2.237      ;
+; -1.152 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][2] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 2.184      ;
+; -1.146 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.150      ; 2.328      ;
+; -1.144 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.150      ; 2.326      ;
+; -1.144 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.051      ; 2.227      ;
+; -1.142 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][1] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.047      ; 2.221      ;
+; -1.140 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][1] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.152      ; 2.324      ;
+; -1.127 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][6] ; SW[17]       ; SW[17]      ; 1.000        ; 0.147      ; 2.306      ;
+; -1.124 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][1] ; SW[17]       ; SW[17]      ; 1.000        ; 0.006      ; 2.162      ;
+; -1.123 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][7] ; SW[17]       ; SW[17]      ; 1.000        ; 0.147      ; 2.302      ;
+; -1.123 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.051      ; 2.206      ;
+; -1.109 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][2] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][5] ; SW[17]       ; SW[17]      ; 1.000        ; 0.152      ; 2.293      ;
++--------+---------------------------------------------------------------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'SW[17]'                                                                                                                                                                                   ;
++-------+---------------------------------------------------------------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                     ; To Node                                                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------------------------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.192 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[8][0] ; SW[17]       ; SW[17]      ; 0.000        ; 0.254      ; 0.598      ;
+; 0.213 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[9][5] ; SW[17]       ; SW[17]      ; 0.000        ; 0.256      ; 0.621      ;
+; 0.215 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|countPC:blocodopc|pcout[1]                ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|countPC:blocodopc|pcout[2]                ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|countPC:blocodopc|pcout[3]                ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|countPC:blocodopc|pcout[4]                ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0] ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2] ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][3] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][3] ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5] ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.307 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][0] ; SW[17]       ; SW[17]      ; 0.000        ; 0.145      ; 0.604      ;
+; 0.310 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[8][6] ; SW[17]       ; SW[17]      ; 0.000        ; 0.254      ; 0.716      ;
+; 0.314 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[8][7] ; SW[17]       ; SW[17]      ; 0.000        ; 0.254      ; 0.720      ;
+; 0.379 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[8][2] ; SW[17]       ; SW[17]      ; 0.000        ; 0.256      ; 0.787      ;
+; 0.434 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[9][1] ; SW[17]       ; SW[17]      ; 0.000        ; 0.104      ; 0.690      ;
+; 0.444 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|countPC:blocodopc|pcout[3]                ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.596      ;
+; 0.446 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|countPC:blocodopc|pcout[2]                ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.598      ;
+; 0.455 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|countPC:blocodopc|pcout[3]                ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.607      ;
+; 0.462 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][5] ; SW[17]       ; SW[17]      ; 0.000        ; 0.002      ; 0.616      ;
+; 0.465 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[8][3] ; SW[17]       ; SW[17]      ; 0.000        ; 0.256      ; 0.873      ;
+; 0.465 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[8][5] ; SW[17]       ; SW[17]      ; 0.000        ; 0.256      ; 0.873      ;
+; 0.533 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][6] ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.685      ;
+; 0.540 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[8][4] ; SW[17]       ; SW[17]      ; 0.000        ; 0.256      ; 0.948      ;
+; 0.542 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[9][6] ; SW[17]       ; SW[17]      ; 0.000        ; 0.256      ; 0.950      ;
+; 0.542 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[9][7] ; SW[17]       ; SW[17]      ; 0.000        ; 0.256      ; 0.950      ;
+; 0.556 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|countPC:blocodopc|pcout[1]                ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.708      ;
+; 0.556 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|countPC:blocodopc|pcout[3]                ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.708      ;
+; 0.558 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][1] ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.710      ;
+; 0.558 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|countPC:blocodopc|pcout[2]                ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.710      ;
+; 0.574 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][4] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][4] ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.726      ;
+; 0.574 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|countPC:blocodopc|pcout[4]                ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.726      ;
+; 0.602 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[8][1] ; SW[17]       ; SW[17]      ; 0.000        ; 0.209      ; 0.963      ;
+; 0.608 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][7] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][7] ; SW[17]       ; SW[17]      ; 0.000        ; -0.002     ; 0.758      ;
+; 0.610 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[9][4] ; SW[17]       ; SW[17]      ; 0.000        ; 0.104      ; 0.866      ;
+; 0.616 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[9][2] ; SW[17]       ; SW[17]      ; 0.000        ; 0.104      ; 0.872      ;
+; 0.617 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][2] ; SW[17]       ; SW[17]      ; 0.000        ; 0.002      ; 0.771      ;
+; 0.662 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2] ; SW[17]       ; SW[17]      ; 0.000        ; 0.145      ; 0.959      ;
+; 0.662 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][1] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][1] ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.814      ;
+; 0.671 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[9][0] ; SW[17]       ; SW[17]      ; 0.000        ; 0.104      ; 0.927      ;
+; 0.676 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[9][3] ; SW[17]       ; SW[17]      ; 0.000        ; 0.104      ; 0.932      ;
+; 0.683 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][6] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][6] ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.835      ;
+; 0.692 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0] ; SW[17]       ; SW[17]      ; 0.000        ; -0.094     ; 0.750      ;
+; 0.695 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][3] ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.847      ;
+; 0.699 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][6] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][6] ; SW[17]       ; SW[17]      ; 0.000        ; -0.002     ; 0.849      ;
+; 0.705 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][6] ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.857      ;
+; 0.707 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][7] ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.859      ;
+; 0.714 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][5] ; SW[17]       ; SW[17]      ; 0.000        ; 0.002      ; 0.868      ;
+; 0.716 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][3] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][3] ; SW[17]       ; SW[17]      ; 0.000        ; 0.002      ; 0.870      ;
+; 0.732 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][4] ; SW[17]       ; SW[17]      ; 0.000        ; 0.051      ; 0.935      ;
+; 0.739 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][1] ; SW[17]       ; SW[17]      ; 0.000        ; -0.094     ; 0.797      ;
+; 0.752 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][4] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5] ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.904      ;
+; 0.752 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0] ; SW[17]       ; SW[17]      ; 0.000        ; -0.094     ; 0.810      ;
+; 0.753 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0] ; SW[17]       ; SW[17]      ; 0.000        ; -0.094     ; 0.811      ;
+; 0.755 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][4] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][4] ; SW[17]       ; SW[17]      ; 0.000        ; -0.002     ; 0.905      ;
+; 0.759 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2] ; SW[17]       ; SW[17]      ; 0.000        ; 0.254      ; 1.165      ;
+; 0.759 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[0][3] ; SW[17]       ; SW[17]      ; 0.000        ; 0.254      ; 1.165      ;
+; 0.759 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[0][4] ; SW[17]       ; SW[17]      ; 0.000        ; 0.254      ; 1.165      ;
+; 0.759 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5] ; SW[17]       ; SW[17]      ; 0.000        ; 0.254      ; 1.165      ;
+; 0.759 ; processador:bloco20|banco:bancoRegLeitura|inicializa          ; processador:bloco20|banco:bancoRegLeitura|registradores[0][6] ; SW[17]       ; SW[17]      ; 0.000        ; 0.254      ; 1.165      ;
+; 0.759 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][3] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][4] ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.911      ;
+; 0.774 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][1] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2] ; SW[17]       ; SW[17]      ; 0.000        ; 0.145      ; 1.071      ;
+; 0.776 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|countPC:blocodopc|pcout[4]                ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.928      ;
+; 0.779 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2] ; SW[17]       ; SW[17]      ; 0.000        ; 0.051      ; 0.982      ;
+; 0.779 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][3] ; SW[17]       ; SW[17]      ; 0.000        ; 0.051      ; 0.982      ;
+; 0.782 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][0] ; SW[17]       ; SW[17]      ; 0.000        ; 0.051      ; 0.985      ;
+; 0.786 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][0] ; SW[17]       ; SW[17]      ; 0.000        ; -0.005     ; 0.933      ;
+; 0.787 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5] ; SW[17]       ; SW[17]      ; 0.000        ; 0.051      ; 0.990      ;
+; 0.794 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][6] ; SW[17]       ; SW[17]      ; 0.000        ; 0.051      ; 0.997      ;
+; 0.803 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|countPC:blocodopc|pcout[4]                ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.955      ;
+; 0.804 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][1] ; SW[17]       ; SW[17]      ; 0.000        ; -0.094     ; 0.862      ;
+; 0.806 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][1] ; SW[17]       ; SW[17]      ; 0.000        ; -0.094     ; 0.864      ;
+; 0.808 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0] ; SW[17]       ; SW[17]      ; 0.000        ; -0.094     ; 0.866      ;
+; 0.825 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][3] ; SW[17]       ; SW[17]      ; 0.000        ; 0.145      ; 1.122      ;
+; 0.830 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][1] ; SW[17]       ; SW[17]      ; 0.000        ; -0.094     ; 0.888      ;
+; 0.832 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][1] ; SW[17]       ; SW[17]      ; 0.000        ; -0.094     ; 0.890      ;
+; 0.837 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][4] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][4] ; SW[17]       ; SW[17]      ; 0.000        ; 0.150      ; 1.139      ;
+; 0.839 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2] ; SW[17]       ; SW[17]      ; 0.000        ; 0.051      ; 1.042      ;
+; 0.839 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][3] ; SW[17]       ; SW[17]      ; 0.000        ; 0.051      ; 1.042      ;
+; 0.840 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2] ; SW[17]       ; SW[17]      ; 0.000        ; 0.051      ; 1.043      ;
+; 0.840 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][3] ; SW[17]       ; SW[17]      ; 0.000        ; 0.051      ; 1.043      ;
+; 0.841 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][4] ; SW[17]       ; SW[17]      ; 0.000        ; 0.051      ; 1.044      ;
+; 0.842 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][0] ; SW[17]       ; SW[17]      ; 0.000        ; 0.051      ; 1.045      ;
+; 0.843 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][0] ; SW[17]       ; SW[17]      ; 0.000        ; 0.051      ; 1.046      ;
+; 0.847 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][6] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][7] ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.999      ;
+; 0.847 ; processador:bloco20|countPC:blocodopc|pcout[0]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5] ; SW[17]       ; SW[17]      ; 0.000        ; 0.051      ; 1.050      ;
+; 0.848 ; processador:bloco20|countPC:blocodopc|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5] ; SW[17]       ; SW[17]      ; 0.000        ; 0.051      ; 1.051      ;
+; 0.854 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2] ; processador:bloco20|banco:bancoRegLeitura|registradores[9][2] ; SW[17]       ; SW[17]      ; 0.000        ; -0.150     ; 0.856      ;
+; 0.855 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][6] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][6] ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 1.007      ;
+; 0.857 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0] ; SW[17]       ; SW[17]      ; 0.000        ; -0.094     ; 0.915      ;
+; 0.863 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][6] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][7] ; SW[17]       ; SW[17]      ; 0.000        ; -0.002     ; 1.013      ;
+; 0.870 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][4] ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 1.022      ;
+; 0.871 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][3] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][3] ; SW[17]       ; SW[17]      ; 0.000        ; 0.150      ; 1.173      ;
+; 0.871 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][6] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][6] ; SW[17]       ; SW[17]      ; 0.000        ; -0.002     ; 1.021      ;
+; 0.875 ; processador:bloco20|countPC:blocodopc|pcout[2]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][6] ; SW[17]       ; SW[17]      ; 0.000        ; 0.051      ; 1.078      ;
+; 0.879 ; processador:bloco20|countPC:blocodopc|pcout[3]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][1] ; SW[17]       ; SW[17]      ; 0.000        ; 0.006      ; 1.037      ;
+; 0.892 ; processador:bloco20|banco:bancoRegLeitura|registradores[9][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][0] ; SW[17]       ; SW[17]      ; 0.000        ; 0.150      ; 1.194      ;
+; 0.895 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2] ; SW[17]       ; SW[17]      ; 0.000        ; 0.051      ; 1.098      ;
+; 0.895 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][3] ; SW[17]       ; SW[17]      ; 0.000        ; 0.051      ; 1.098      ;
+; 0.898 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][0] ; SW[17]       ; SW[17]      ; 0.000        ; 0.051      ; 1.101      ;
+; 0.903 ; processador:bloco20|countPC:blocodopc|pcout[4]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5] ; SW[17]       ; SW[17]      ; 0.000        ; 0.051      ; 1.106      ;
++-------+---------------------------------------------------------------+---------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'SW[17]'                                                                                                        ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                                                        ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; SW[17] ; Rise       ; SW[17]                                                        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|inicializa          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|inicializa          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[0][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[0][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[0][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[0][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[0][4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[0][4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[0][6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[0][6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[8][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[8][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[8][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[8][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[8][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[8][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[8][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[8][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[8][4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[8][4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[8][5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[8][5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[8][6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[8][6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[8][7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[8][7] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[9][0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[9][0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[9][1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[9][1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[9][2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[9][2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[9][3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[9][3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[9][4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[9][4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[9][5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[9][5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[9][6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[9][6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[9][7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|banco:bancoRegLeitura|registradores[9][7] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|countPC:blocodopc|pcout[0]                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|countPC:blocodopc|pcout[0]                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|countPC:blocodopc|pcout[1]                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|countPC:blocodopc|pcout[1]                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|countPC:blocodopc|pcout[2]                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|countPC:blocodopc|pcout[2]                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|countPC:blocodopc|pcout[3]                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|countPC:blocodopc|pcout[3]                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|countPC:blocodopc|pcout[4]                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|countPC:blocodopc|pcout[4]                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; SW[17]|combout                                                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; SW[17]|combout                                                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|inicializa|clk                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|inicializa|clk                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[0][0]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[0][0]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[0][1]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[0][1]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[0][2]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[0][2]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[0][3]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[0][3]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[0][4]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[0][4]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[0][5]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[0][5]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[0][6]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[0][6]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[8][0]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[8][0]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[8][1]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[8][1]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[8][2]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[8][2]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[8][3]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[8][3]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[8][4]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[8][4]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[8][5]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[8][5]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[8][6]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[8][6]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[8][7]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[8][7]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[9][0]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[9][0]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[9][1]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[9][1]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[9][2]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[9][2]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; SW[17] ; Rise       ; bloco20|bancoRegLeitura|registradores[9][3]|clk               ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; HEX0[*]   ; SW[17]     ; 11.310 ; 11.310 ; Rise       ; SW[17]          ;
+;  HEX0[0]  ; SW[17]     ; 11.191 ; 11.191 ; Rise       ; SW[17]          ;
+;  HEX0[1]  ; SW[17]     ; 11.160 ; 11.160 ; Rise       ; SW[17]          ;
+;  HEX0[2]  ; SW[17]     ; 11.168 ; 11.168 ; Rise       ; SW[17]          ;
+;  HEX0[3]  ; SW[17]     ; 11.310 ; 11.310 ; Rise       ; SW[17]          ;
+;  HEX0[4]  ; SW[17]     ; 11.306 ; 11.306 ; Rise       ; SW[17]          ;
+;  HEX0[5]  ; SW[17]     ; 11.295 ; 11.295 ; Rise       ; SW[17]          ;
+;  HEX0[6]  ; SW[17]     ; 11.298 ; 11.298 ; Rise       ; SW[17]          ;
+; HEX1[*]   ; SW[17]     ; 9.654  ; 9.654  ; Rise       ; SW[17]          ;
+;  HEX1[0]  ; SW[17]     ; 9.654  ; 9.654  ; Rise       ; SW[17]          ;
+;  HEX1[1]  ; SW[17]     ; 9.432  ; 9.432  ; Rise       ; SW[17]          ;
+;  HEX1[2]  ; SW[17]     ; 9.204  ; 9.204  ; Rise       ; SW[17]          ;
+;  HEX1[3]  ; SW[17]     ; 9.314  ; 9.314  ; Rise       ; SW[17]          ;
+;  HEX1[4]  ; SW[17]     ; 9.141  ; 9.141  ; Rise       ; SW[17]          ;
+;  HEX1[5]  ; SW[17]     ; 8.881  ; 8.881  ; Rise       ; SW[17]          ;
+;  HEX1[6]  ; SW[17]     ; 9.160  ; 9.160  ; Rise       ; SW[17]          ;
+; HEX2[*]   ; SW[17]     ; 11.729 ; 11.729 ; Rise       ; SW[17]          ;
+;  HEX2[0]  ; SW[17]     ; 11.705 ; 11.705 ; Rise       ; SW[17]          ;
+;  HEX2[1]  ; SW[17]     ; 11.689 ; 11.689 ; Rise       ; SW[17]          ;
+;  HEX2[2]  ; SW[17]     ; 11.729 ; 11.729 ; Rise       ; SW[17]          ;
+;  HEX2[3]  ; SW[17]     ; 11.711 ; 11.711 ; Rise       ; SW[17]          ;
+;  HEX2[4]  ; SW[17]     ; 11.591 ; 11.591 ; Rise       ; SW[17]          ;
+;  HEX2[5]  ; SW[17]     ; 11.566 ; 11.566 ; Rise       ; SW[17]          ;
+;  HEX2[6]  ; SW[17]     ; 11.578 ; 11.578 ; Rise       ; SW[17]          ;
+; LEDG[*]   ; SW[17]     ; 4.790  ; 4.790  ; Rise       ; SW[17]          ;
+;  LEDG[0]  ; SW[17]     ; 4.790  ; 4.790  ; Rise       ; SW[17]          ;
+;  LEDG[1]  ; SW[17]     ; 4.674  ; 4.674  ; Rise       ; SW[17]          ;
+;  LEDG[2]  ; SW[17]     ; 4.622  ; 4.622  ; Rise       ; SW[17]          ;
+;  LEDG[3]  ; SW[17]     ; 4.545  ; 4.545  ; Rise       ; SW[17]          ;
+;  LEDG[4]  ; SW[17]     ; 4.587  ; 4.587  ; Rise       ; SW[17]          ;
+; LEDR[*]   ; SW[17]     ; 5.525  ; 5.525  ; Rise       ; SW[17]          ;
+;  LEDR[2]  ; SW[17]     ; 5.333  ; 5.333  ; Rise       ; SW[17]          ;
+;  LEDR[5]  ; SW[17]     ; 5.525  ; 5.525  ; Rise       ; SW[17]          ;
+;  LEDR[14] ; SW[17]     ; 5.210  ; 5.210  ; Rise       ; SW[17]          ;
+;  LEDR[16] ; SW[17]     ; 4.519  ; 4.519  ; Rise       ; SW[17]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; SW[17]     ; 4.531 ; 4.531 ; Rise       ; SW[17]          ;
+;  HEX0[0]  ; SW[17]     ; 4.556 ; 4.556 ; Rise       ; SW[17]          ;
+;  HEX0[1]  ; SW[17]     ; 4.531 ; 4.531 ; Rise       ; SW[17]          ;
+;  HEX0[2]  ; SW[17]     ; 4.537 ; 4.537 ; Rise       ; SW[17]          ;
+;  HEX0[3]  ; SW[17]     ; 4.674 ; 4.674 ; Rise       ; SW[17]          ;
+;  HEX0[4]  ; SW[17]     ; 4.676 ; 4.676 ; Rise       ; SW[17]          ;
+;  HEX0[5]  ; SW[17]     ; 4.662 ; 4.662 ; Rise       ; SW[17]          ;
+;  HEX0[6]  ; SW[17]     ; 4.658 ; 4.658 ; Rise       ; SW[17]          ;
+; HEX1[*]   ; SW[17]     ; 5.622 ; 5.622 ; Rise       ; SW[17]          ;
+;  HEX1[0]  ; SW[17]     ; 6.102 ; 6.102 ; Rise       ; SW[17]          ;
+;  HEX1[1]  ; SW[17]     ; 6.177 ; 6.177 ; Rise       ; SW[17]          ;
+;  HEX1[2]  ; SW[17]     ; 5.622 ; 5.622 ; Rise       ; SW[17]          ;
+;  HEX1[3]  ; SW[17]     ; 6.127 ; 6.127 ; Rise       ; SW[17]          ;
+;  HEX1[4]  ; SW[17]     ; 6.168 ; 6.168 ; Rise       ; SW[17]          ;
+;  HEX1[5]  ; SW[17]     ; 5.631 ; 5.631 ; Rise       ; SW[17]          ;
+;  HEX1[6]  ; SW[17]     ; 5.647 ; 5.647 ; Rise       ; SW[17]          ;
+; HEX2[*]   ; SW[17]     ; 5.117 ; 5.117 ; Rise       ; SW[17]          ;
+;  HEX2[0]  ; SW[17]     ; 5.250 ; 5.250 ; Rise       ; SW[17]          ;
+;  HEX2[1]  ; SW[17]     ; 5.235 ; 5.235 ; Rise       ; SW[17]          ;
+;  HEX2[2]  ; SW[17]     ; 5.278 ; 5.278 ; Rise       ; SW[17]          ;
+;  HEX2[3]  ; SW[17]     ; 5.263 ; 5.263 ; Rise       ; SW[17]          ;
+;  HEX2[4]  ; SW[17]     ; 5.135 ; 5.135 ; Rise       ; SW[17]          ;
+;  HEX2[5]  ; SW[17]     ; 5.117 ; 5.117 ; Rise       ; SW[17]          ;
+;  HEX2[6]  ; SW[17]     ; 5.133 ; 5.133 ; Rise       ; SW[17]          ;
+; LEDG[*]   ; SW[17]     ; 4.545 ; 4.545 ; Rise       ; SW[17]          ;
+;  LEDG[0]  ; SW[17]     ; 4.790 ; 4.790 ; Rise       ; SW[17]          ;
+;  LEDG[1]  ; SW[17]     ; 4.674 ; 4.674 ; Rise       ; SW[17]          ;
+;  LEDG[2]  ; SW[17]     ; 4.622 ; 4.622 ; Rise       ; SW[17]          ;
+;  LEDG[3]  ; SW[17]     ; 4.545 ; 4.545 ; Rise       ; SW[17]          ;
+;  LEDG[4]  ; SW[17]     ; 4.587 ; 4.587 ; Rise       ; SW[17]          ;
+; LEDR[*]   ; SW[17]     ; 4.350 ; 4.350 ; Rise       ; SW[17]          ;
+;  LEDR[2]  ; SW[17]     ; 5.159 ; 5.159 ; Rise       ; SW[17]          ;
+;  LEDR[5]  ; SW[17]     ; 5.112 ; 5.112 ; Rise       ; SW[17]          ;
+;  LEDR[14] ; SW[17]     ; 4.797 ; 4.797 ; Rise       ; SW[17]          ;
+;  LEDR[16] ; SW[17]     ; 4.350 ; 4.350 ; Rise       ; SW[17]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -5.474  ; 0.192 ; N/A      ; N/A     ; -1.222              ;
+;  SW[17]          ; -5.474  ; 0.192 ; N/A      ; N/A     ; -1.222              ;
+; Design-wide TNS  ; -99.593 ; 0.0   ; 0.0      ; 0.0     ; -30.222             ;
+;  SW[17]          ; -99.593 ; 0.000 ; N/A      ; N/A     ; -30.222             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; HEX0[*]   ; SW[17]     ; 24.506 ; 24.506 ; Rise       ; SW[17]          ;
+;  HEX0[0]  ; SW[17]     ; 24.258 ; 24.258 ; Rise       ; SW[17]          ;
+;  HEX0[1]  ; SW[17]     ; 24.226 ; 24.226 ; Rise       ; SW[17]          ;
+;  HEX0[2]  ; SW[17]     ; 24.231 ; 24.231 ; Rise       ; SW[17]          ;
+;  HEX0[3]  ; SW[17]     ; 24.506 ; 24.506 ; Rise       ; SW[17]          ;
+;  HEX0[4]  ; SW[17]     ; 24.497 ; 24.497 ; Rise       ; SW[17]          ;
+;  HEX0[5]  ; SW[17]     ; 24.486 ; 24.486 ; Rise       ; SW[17]          ;
+;  HEX0[6]  ; SW[17]     ; 24.491 ; 24.491 ; Rise       ; SW[17]          ;
+; HEX1[*]   ; SW[17]     ; 20.445 ; 20.445 ; Rise       ; SW[17]          ;
+;  HEX1[0]  ; SW[17]     ; 20.445 ; 20.445 ; Rise       ; SW[17]          ;
+;  HEX1[1]  ; SW[17]     ; 19.945 ; 19.945 ; Rise       ; SW[17]          ;
+;  HEX1[2]  ; SW[17]     ; 19.480 ; 19.480 ; Rise       ; SW[17]          ;
+;  HEX1[3]  ; SW[17]     ; 19.819 ; 19.819 ; Rise       ; SW[17]          ;
+;  HEX1[4]  ; SW[17]     ; 19.273 ; 19.273 ; Rise       ; SW[17]          ;
+;  HEX1[5]  ; SW[17]     ; 18.735 ; 18.735 ; Rise       ; SW[17]          ;
+;  HEX1[6]  ; SW[17]     ; 19.405 ; 19.405 ; Rise       ; SW[17]          ;
+; HEX2[*]   ; SW[17]     ; 25.447 ; 25.447 ; Rise       ; SW[17]          ;
+;  HEX2[0]  ; SW[17]     ; 25.397 ; 25.397 ; Rise       ; SW[17]          ;
+;  HEX2[1]  ; SW[17]     ; 25.400 ; 25.400 ; Rise       ; SW[17]          ;
+;  HEX2[2]  ; SW[17]     ; 25.447 ; 25.447 ; Rise       ; SW[17]          ;
+;  HEX2[3]  ; SW[17]     ; 25.403 ; 25.403 ; Rise       ; SW[17]          ;
+;  HEX2[4]  ; SW[17]     ; 25.150 ; 25.150 ; Rise       ; SW[17]          ;
+;  HEX2[5]  ; SW[17]     ; 25.106 ; 25.106 ; Rise       ; SW[17]          ;
+;  HEX2[6]  ; SW[17]     ; 25.133 ; 25.133 ; Rise       ; SW[17]          ;
+; LEDG[*]   ; SW[17]     ; 8.967  ; 8.967  ; Rise       ; SW[17]          ;
+;  LEDG[0]  ; SW[17]     ; 8.967  ; 8.967  ; Rise       ; SW[17]          ;
+;  LEDG[1]  ; SW[17]     ; 8.861  ; 8.861  ; Rise       ; SW[17]          ;
+;  LEDG[2]  ; SW[17]     ; 8.803  ; 8.803  ; Rise       ; SW[17]          ;
+;  LEDG[3]  ; SW[17]     ; 8.608  ; 8.608  ; Rise       ; SW[17]          ;
+;  LEDG[4]  ; SW[17]     ; 8.646  ; 8.646  ; Rise       ; SW[17]          ;
+; LEDR[*]   ; SW[17]     ; 10.873 ; 10.873 ; Rise       ; SW[17]          ;
+;  LEDR[2]  ; SW[17]     ; 10.236 ; 10.236 ; Rise       ; SW[17]          ;
+;  LEDR[5]  ; SW[17]     ; 10.873 ; 10.873 ; Rise       ; SW[17]          ;
+;  LEDR[14] ; SW[17]     ; 10.293 ; 10.293 ; Rise       ; SW[17]          ;
+;  LEDR[16] ; SW[17]     ; 8.678  ; 8.678  ; Rise       ; SW[17]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; SW[17]     ; 4.531 ; 4.531 ; Rise       ; SW[17]          ;
+;  HEX0[0]  ; SW[17]     ; 4.556 ; 4.556 ; Rise       ; SW[17]          ;
+;  HEX0[1]  ; SW[17]     ; 4.531 ; 4.531 ; Rise       ; SW[17]          ;
+;  HEX0[2]  ; SW[17]     ; 4.537 ; 4.537 ; Rise       ; SW[17]          ;
+;  HEX0[3]  ; SW[17]     ; 4.674 ; 4.674 ; Rise       ; SW[17]          ;
+;  HEX0[4]  ; SW[17]     ; 4.676 ; 4.676 ; Rise       ; SW[17]          ;
+;  HEX0[5]  ; SW[17]     ; 4.662 ; 4.662 ; Rise       ; SW[17]          ;
+;  HEX0[6]  ; SW[17]     ; 4.658 ; 4.658 ; Rise       ; SW[17]          ;
+; HEX1[*]   ; SW[17]     ; 5.622 ; 5.622 ; Rise       ; SW[17]          ;
+;  HEX1[0]  ; SW[17]     ; 6.102 ; 6.102 ; Rise       ; SW[17]          ;
+;  HEX1[1]  ; SW[17]     ; 6.177 ; 6.177 ; Rise       ; SW[17]          ;
+;  HEX1[2]  ; SW[17]     ; 5.622 ; 5.622 ; Rise       ; SW[17]          ;
+;  HEX1[3]  ; SW[17]     ; 6.127 ; 6.127 ; Rise       ; SW[17]          ;
+;  HEX1[4]  ; SW[17]     ; 6.168 ; 6.168 ; Rise       ; SW[17]          ;
+;  HEX1[5]  ; SW[17]     ; 5.631 ; 5.631 ; Rise       ; SW[17]          ;
+;  HEX1[6]  ; SW[17]     ; 5.647 ; 5.647 ; Rise       ; SW[17]          ;
+; HEX2[*]   ; SW[17]     ; 5.117 ; 5.117 ; Rise       ; SW[17]          ;
+;  HEX2[0]  ; SW[17]     ; 5.250 ; 5.250 ; Rise       ; SW[17]          ;
+;  HEX2[1]  ; SW[17]     ; 5.235 ; 5.235 ; Rise       ; SW[17]          ;
+;  HEX2[2]  ; SW[17]     ; 5.278 ; 5.278 ; Rise       ; SW[17]          ;
+;  HEX2[3]  ; SW[17]     ; 5.263 ; 5.263 ; Rise       ; SW[17]          ;
+;  HEX2[4]  ; SW[17]     ; 5.135 ; 5.135 ; Rise       ; SW[17]          ;
+;  HEX2[5]  ; SW[17]     ; 5.117 ; 5.117 ; Rise       ; SW[17]          ;
+;  HEX2[6]  ; SW[17]     ; 5.133 ; 5.133 ; Rise       ; SW[17]          ;
+; LEDG[*]   ; SW[17]     ; 4.545 ; 4.545 ; Rise       ; SW[17]          ;
+;  LEDG[0]  ; SW[17]     ; 4.790 ; 4.790 ; Rise       ; SW[17]          ;
+;  LEDG[1]  ; SW[17]     ; 4.674 ; 4.674 ; Rise       ; SW[17]          ;
+;  LEDG[2]  ; SW[17]     ; 4.622 ; 4.622 ; Rise       ; SW[17]          ;
+;  LEDG[3]  ; SW[17]     ; 4.545 ; 4.545 ; Rise       ; SW[17]          ;
+;  LEDG[4]  ; SW[17]     ; 4.587 ; 4.587 ; Rise       ; SW[17]          ;
+; LEDR[*]   ; SW[17]     ; 4.350 ; 4.350 ; Rise       ; SW[17]          ;
+;  LEDR[2]  ; SW[17]     ; 5.159 ; 5.159 ; Rise       ; SW[17]          ;
+;  LEDR[5]  ; SW[17]     ; 5.112 ; 5.112 ; Rise       ; SW[17]          ;
+;  LEDR[14] ; SW[17]     ; 4.797 ; 4.797 ; Rise       ; SW[17]          ;
+;  LEDR[16] ; SW[17]     ; 4.350 ; 4.350 ; Rise       ; SW[17]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; SW[17]     ; SW[17]   ; 2842     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; SW[17]     ; SW[17]   ; 2842     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 5     ; 5    ;
+; Unconstrained Output Ports      ; 30    ; 30   ;
+; Unconstrained Output Port Paths ; 192   ; 192  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Jan 28 23:35:30 2025
+Info: Command: quartus_sta processadorPinagem -c processadorPinagem
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'processadorPinagem.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name SW[17] SW[17]
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -5.474
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -5.474       -99.593 SW[17] 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 SW[17] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.222       -30.222 SW[17] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.815
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.815       -29.286 SW[17] 
+Info (332146): Worst-case hold slack is 0.192
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.192         0.000 SW[17] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.222       -30.222 SW[17] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4560 megabytes
+    Info: Processing ended: Tue Jan 28 23:35:31 2025
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

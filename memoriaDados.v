@@ -4,14 +4,14 @@ module memoriaDados #(parameter memSize = 32)
 	input clock, memWrite, memRead;
 	input [memSize-1:0] writeData;
 	output reg [memSize-1:0] readData;
-	reg [memSize-1:0] memory [4:0];
+	reg [memSize-1:0] memory [31:0];
 	
 	initial
 	begin		//carrega os dados do arquivo para a memoria
-		memory[0] = 'b0;
-		memory[1] = 'b1;
-		memory[2] = 'b10;
-		memory[3] = 'b11;
+		memory[0] = 32'b0;
+		memory[1] = 32'b100;
+		memory[2] = 32'b10;
+		memory[3] = 32'b11;
 	end
 	
 	//bloco de memoria so é ativado quando o clock esta em borda de subida

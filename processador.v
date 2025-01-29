@@ -1,10 +1,11 @@
-module processador(clock, reset, result, zero, overflow, PC, instruction, Data1, saidaMUX);
+module processador(clock, reset, result, zero, overflow, PC, instruction, Data1, saidaMUX,  registrador8, registrador9, registrador10, registrador17, registrador18);
 
 input clock, reset;				
 
 output[31:0] result;	//saida da ULA que entra no banco de registradores como writeData		
 output zero, overflow;
 output [4:0] PC;		 
+output [31:0] registrador8, registrador9, registrador10, registrador17, registrador18;
 wire [4:0] proxPC;
 output [31:0] instruction;        //saida da memória de instrucoes
 
@@ -43,8 +44,8 @@ deslocador correcaoImmediate(instruction[31:26], instruction[15:0], immediate);
 extensor blocoextensor(immediate, saidaExtensor);
  
 //instanciar o banco de registradores -> 5 bits para Read register 1, 5 para Read register 2, 5 para Write register e 16 bits para o extensor de sinal
-//banco #(parameter size = 32)	 (Read1   , Read2   , WriteReg	  , WriteData, RegWrite, clock, Data1, Data2);
-banco #(.size(32)) bancoRegLeitura(ReadReg1, ReadReg2, WriteRegister, result	 , RegWrite, clock, Data1, Data2);
+//banco #(parameter size = 32)	 (Read1   , Read2   , WriteReg	  , WriteData, RegWrite, clock, Data1, Data2, registrador8, registrador9, registrador10, registrador17, registrador18);
+banco #(.size(32)) bancoRegLeitura(ReadReg1, ReadReg2, WriteRegister, result	 , RegWrite, clock, Data1, Data2, registrador8, registrador9, registrador10, registrador17, registrador18);
 
 //pegar a saidaExtensor e o Data2 e mandar pro mux pra entrar na ula
 // multiplexador32(A, B, seletora, saida)
