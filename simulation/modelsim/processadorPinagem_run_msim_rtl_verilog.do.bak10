@@ -1,0 +1,28 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/processadorPinagem.v}
+vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/processador.v}
+vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/memoriainstrucoes.v}
+vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/controleprincipal.v}
+vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/multiplexador.v}
+vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/deslocador.v}
+vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/extensor.v}
+vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/banco.v}
+vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/multiplexador32.v}
+vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/alucontrol.v}
+vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/ula32bits.v}
+vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/muxbinvert.v}
+vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/ula.v}
+vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/mux2.v}
+vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/somador1bit.v}
+vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/muxula.v}
+vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/overflow.v}
+vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/memoriadados.v}
+vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/somador5bits.v}
+vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/decod.v}
+

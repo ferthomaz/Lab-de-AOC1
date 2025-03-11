@@ -1,0 +1,456 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\lanza\Documents\pratica6\simulation\modelsim
+vALUcontrol
+IE=EI>9MAkAA43fazl`U;E3
+VZYNokN0_gT_>HgdOa]W[Y1
+Z1 dC:\Users\lanza\Documents\pratica6\simulation\modelsim
+Z2 w1739488664
+8C:/Users/lanza/Documents/pratica6/alucontrol.v
+FC:/Users/lanza/Documents/pratica6/alucontrol.v
+L0 2
+Z3 OV;L;10.1d;51
+r1
+31
+Z4 o-vlog01compat -work work -O0
+Z5 !s92 -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 -O0
+n@a@l@ucontrol
+!i10b 1
+!s100 F[[nobg9A<bJ19e;eTi7K3
+!s85 0
+!s108 1739572992.355000
+!s107 C:/Users/lanza/Documents/pratica6/alucontrol.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/lanza/Documents/pratica6|C:/Users/lanza/Documents/pratica6/alucontrol.v|
+!s101 -O0
+vbanco
+IZ:ACWC1kX^>dJQMVMN0BJ0
+Vm_=UAh]1?72I]e<B7O2Hk1
+R1
+w1739488322
+8C:/Users/lanza/Documents/pratica6/banco.v
+FC:/Users/lanza/Documents/pratica6/banco.v
+L0 1
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 mmL^UC_FPReF;WYDo9]fo0
+!s85 0
+!s108 1739572992.168000
+!s107 C:/Users/lanza/Documents/pratica6/banco.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/lanza/Documents/pratica6|C:/Users/lanza/Documents/pratica6/banco.v|
+!s101 -O0
+vcontrolePrincipal
+IY8CnEPi>V49SRCG9af9W=1
+VQEVVbP2ka5bhE0Oe7ONX`3
+R1
+w1739488328
+8C:/Users/lanza/Documents/pratica6/controleprincipal.v
+FC:/Users/lanza/Documents/pratica6/controleprincipal.v
+L0 1
+R3
+r1
+31
+R4
+R5
+ncontrole@principal
+!i10b 1
+!s100 57T9fG^5=9n>V]hH88RCP1
+!s85 0
+!s108 1739572991.550000
+!s107 C:/Users/lanza/Documents/pratica6/controleprincipal.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/lanza/Documents/pratica6|C:/Users/lanza/Documents/pratica6/controleprincipal.v|
+!s101 -O0
+vcountPC
+I@TYezMj5E_ZYMY=zm23=Y0
+V]0KgENn]goA75BTii@A0k3
+R1
+w1739572600
+8C:/Users/lanza/Documents/pratica6/countpc.v
+FC:/Users/lanza/Documents/pratica6/countpc.v
+L0 1
+R3
+r1
+31
+R4
+R5
+ncount@p@c
+!i10b 1
+!s100 A;W[zkSAY_cDoZVgKl^n:1
+!s85 0
+!s108 1739572991.004000
+!s107 C:/Users/lanza/Documents/pratica6/countpc.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/lanza/Documents/pratica6|C:/Users/lanza/Documents/pratica6/countpc.v|
+!s101 -O0
+vdecod
+!i10b 1
+!s100 znN7=NNT<UN:2>Ja[aXj_2
+IKQjP9E_NoHmE5VTlahgVH1
+V=0TEIal9dSBf4GO;>z0YD3
+R1
+R2
+8C:/Users/lanza/Documents/pratica6/decod.v
+FC:/Users/lanza/Documents/pratica6/decod.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1739572993.183000
+!s107 C:/Users/lanza/Documents/pratica6/decod.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/lanza/Documents/pratica6|C:/Users/lanza/Documents/pratica6/decod.v|
+!s101 -O0
+R4
+R5
+vdeslocador
+IF?FSzm41MKU6^9hhf;6_11
+V:J40o=RG@2iYL9=[k_D@Q3
+R1
+R2
+8C:/Users/lanza/Documents/pratica6/deslocador.v
+FC:/Users/lanza/Documents/pratica6/deslocador.v
+L0 1
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 B[?8GDEEPR:RkCJFP9Tbf3
+!s85 0
+!s108 1739572991.803000
+!s107 C:/Users/lanza/Documents/pratica6/deslocador.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/lanza/Documents/pratica6|C:/Users/lanza/Documents/pratica6/deslocador.v|
+!s101 -O0
+vextensor
+IVJN`iDX[S?IbL2_oBURoO2
+VIJc2Y<CL3c>L@]7:z<e?S1
+R1
+R2
+8C:/Users/lanza/Documents/pratica6/extensor.v
+FC:/Users/lanza/Documents/pratica6/extensor.v
+L0 1
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 GCOfhJIQjS7Jo5S?LHIe?0
+!s85 0
+!s108 1739572992.022000
+!s107 C:/Users/lanza/Documents/pratica6/extensor.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/lanza/Documents/pratica6|C:/Users/lanza/Documents/pratica6/extensor.v|
+!s101 -O0
+vmemoriaDados
+IaaWL]kR@O:Z7I_zn0`20S3
+VVZHeL=jHmNJ]AVj384a<C1
+R1
+R2
+8C:/Users/lanza/Documents/pratica6/memoriadados.v
+FC:/Users/lanza/Documents/pratica6/memoriadados.v
+L0 1
+R3
+r1
+31
+R4
+R5
+nmemoria@dados
+!i10b 1
+!s100 e6ol@j_>blo<e1O8ahQda3
+!s85 0
+!s108 1739572992.996000
+!s107 C:/Users/lanza/Documents/pratica6/memoriadados.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/lanza/Documents/pratica6|C:/Users/lanza/Documents/pratica6/memoriadados.v|
+!s101 -O0
+vmemoriaInstrucoes
+IYfLOoG7W9mI=4E6ABV^=22
+Vk`;9k9bA_3hT<c:VJ<fYi1
+R1
+w1739572956
+8C:/Users/lanza/Documents/pratica6/memoriainstrucoes.v
+FC:/Users/lanza/Documents/pratica6/memoriainstrucoes.v
+L0 1
+R3
+r1
+31
+R4
+R5
+nmemoria@instrucoes
+!i10b 1
+!s100 WdBDe>KMCG?hBBmd7Q>kh3
+!s85 0
+!s108 1739572991.402000
+!s107 C:/Users/lanza/Documents/pratica6/memoriainstrucoes.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/lanza/Documents/pratica6|C:/Users/lanza/Documents/pratica6/memoriainstrucoes.v|
+!s101 -O0
+vmultiplexador
+IL1I^QgFMUh[IcnC@9h`bh0
+VRhkj1d3Xg@R@9IXQ9bW7l3
+R1
+R2
+8C:/Users/lanza/Documents/pratica6/multiplexador.v
+FC:/Users/lanza/Documents/pratica6/multiplexador.v
+L0 2
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 VTS6K9489fk4D7l`Zo0AE1
+!s85 0
+!s108 1739572991.709000
+!s107 C:/Users/lanza/Documents/pratica6/multiplexador.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/lanza/Documents/pratica6|C:/Users/lanza/Documents/pratica6/multiplexador.v|
+!s101 -O0
+vmultiplexador32
+Ie;GRY5h=SXWdMna7>[je>3
+Voze4fXlnJ[RKPX;hhj6jo1
+R1
+R2
+8C:/Users/lanza/Documents/pratica6/multiplexador32.v
+FC:/Users/lanza/Documents/pratica6/multiplexador32.v
+L0 1
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 5@lPPKGWTH<RQ>CjYKFoT0
+!s85 0
+!s108 1739572992.261000
+!s107 C:/Users/lanza/Documents/pratica6/multiplexador32.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/lanza/Documents/pratica6|C:/Users/lanza/Documents/pratica6/multiplexador32.v|
+!s101 -O0
+vmux2
+IT4GADcRYDkXiD5kTagX0=2
+Vzc5lo2M[7Fk43:>Z9@@:b2
+R1
+R2
+8C:/Users/lanza/Documents/pratica6/mux2.v
+FC:/Users/lanza/Documents/pratica6/mux2.v
+L0 1
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 YL_8odI[YzhaNzGNmH_aO2
+!s85 0
+!s108 1739572992.683000
+!s107 C:/Users/lanza/Documents/pratica6/mux2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/lanza/Documents/pratica6|C:/Users/lanza/Documents/pratica6/mux2.v|
+!s101 -O0
+vmuxAddress
+IEBXZFd400NKJQbJIkYFcM2
+VhhVSKFhhnc7gEQ3T9?Xmi2
+R1
+w1739494808
+8C:/Users/lanza/Documents/pratica6/muxaddress.v
+FC:/Users/lanza/Documents/pratica6/muxaddress.v
+L0 1
+R3
+r1
+31
+R4
+R5
+nmux@address
+!i10b 1
+!s100 MVQEG;0JN<o7;9`LZnZXS1
+!s85 0
+!s108 1739572992.918000
+!s107 C:/Users/lanza/Documents/pratica6/muxaddress.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/lanza/Documents/pratica6|C:/Users/lanza/Documents/pratica6/muxaddress.v|
+!s101 -O0
+vmuxBinvert
+IUNf5gk[?^74]WzdmiSHa60
+V;Zfn61K[TanDB]L4Cz4F?3
+R1
+R2
+8C:/Users/lanza/Documents/pratica6/muxbinvert.v
+FC:/Users/lanza/Documents/pratica6/muxbinvert.v
+L0 1
+R3
+r1
+31
+R4
+R5
+nmux@binvert
+!i10b 1
+!s100 S`gAI0Va3HRU;P_7ZgD<R2
+!s85 0
+!s108 1739572992.511000
+!s107 C:/Users/lanza/Documents/pratica6/muxbinvert.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/lanza/Documents/pratica6|C:/Users/lanza/Documents/pratica6/muxbinvert.v|
+!s101 -O0
+vmuxULA
+IjgMHQKS^I`EUk8<Ii@WlB0
+Vj?o`HRo3QoR3d]MaMez=11
+R1
+R2
+8C:/Users/lanza/Documents/pratica6/muxula.v
+FC:/Users/lanza/Documents/pratica6/muxula.v
+L0 1
+R3
+r1
+31
+R4
+R5
+nmux@u@l@a
+!i10b 1
+!s100 c:_7Fe9O^BEPW]4`k?@ej0
+!s85 0
+!s108 1739572992.761000
+!s107 C:/Users/lanza/Documents/pratica6/muxula.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/lanza/Documents/pratica6|C:/Users/lanza/Documents/pratica6/muxula.v|
+!s101 -O0
+voverflow
+IW=`l?Z`ITlXKl3TCgL`SC1
+VFe3fgn9>OYKLZa9djg`M51
+R1
+R2
+8C:/Users/lanza/Documents/pratica6/overflow.v
+FC:/Users/lanza/Documents/pratica6/overflow.v
+L0 4
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 UT=FXMPMcg3H[PK7QSX7S2
+!s85 0
+!s108 1739572992.839000
+!s107 C:/Users/lanza/Documents/pratica6/overflow.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/lanza/Documents/pratica6|C:/Users/lanza/Documents/pratica6/overflow.v|
+!s101 -O0
+vprocessador
+Ied1?0ZkH2MEe<GcXfgdAb2
+VhNjk_M;CGBPNGlf^j07Dj1
+R1
+w1739572596
+8C:/Users/lanza/Documents/pratica6/processador.v
+FC:/Users/lanza/Documents/pratica6/processador.v
+L0 1
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 YkT:lS3IE;4PShJASYz7;1
+!s85 0
+!s108 1739572990.926000
+!s107 C:/Users/lanza/Documents/pratica6/processador.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/lanza/Documents/pratica6|C:/Users/lanza/Documents/pratica6/processador.v|
+!s101 -O0
+vprocessadorPinagem
+I4ldEI:f:e^S9:b4XdnmlG0
+VcM6OGHZXg`i_e9O:?=ShR2
+R1
+w1739567817
+8C:/Users/lanza/Documents/pratica6/processadorPinagem.v
+FC:/Users/lanza/Documents/pratica6/processadorPinagem.v
+L0 1
+R3
+r1
+31
+R4
+nprocessador@pinagem
+R5
+!i10b 1
+!s100 8^egNTiPd2GQE?5`<lh=@1
+!s85 0
+!s108 1739572990.864000
+!s107 C:/Users/lanza/Documents/pratica6/processadorPinagem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/lanza/Documents/pratica6|C:/Users/lanza/Documents/pratica6/processadorPinagem.v|
+!s101 -O0
+vsomador1bit
+I;?iI2;ghn`f>B5UAzA]K>1
+VLoXK^>ajlOlQ7<>g_=0aS0
+R1
+R2
+8C:/Users/lanza/Documents/pratica6/somador1bit.v
+FC:/Users/lanza/Documents/pratica6/somador1bit.v
+L0 2
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 N6`:UI7kNgk5h<9@?O]UX1
+!s85 0
+!s108 1739572991.235000
+!s107 C:/Users/lanza/Documents/pratica6/somador1bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/lanza/Documents/pratica6|C:/Users/lanza/Documents/pratica6/somador1bit.v|
+!s101 -O0
+vsomador5bits
+I2D=@JgFiF0[IIZ7a^OMg_1
+Vldf`=J[0>R@g;MR2LG]MP1
+R1
+R2
+8C:/Users/lanza/Documents/pratica6/somador5bits.v
+FC:/Users/lanza/Documents/pratica6/somador5bits.v
+L0 1
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 331>RRe3Y8OKoV5M9ee3h3
+!s85 0
+!s108 1739572991.067000
+!s107 C:/Users/lanza/Documents/pratica6/somador5bits.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/lanza/Documents/pratica6|C:/Users/lanza/Documents/pratica6/somador5bits.v|
+!s101 -O0
+vULA
+IgXN6KbVS1hLX033@;XH033
+VjgI9J9c`BAO_VQC1K8WYG2
+R1
+R2
+8C:/Users/lanza/Documents/pratica6/ula.v
+FC:/Users/lanza/Documents/pratica6/ula.v
+L0 3
+R3
+r1
+31
+R4
+R5
+n@u@l@a
+!i10b 1
+!s100 azMcSPYnP_`e[kiTkU`cE1
+!s85 0
+!s108 1739572992.589000
+!s107 C:/Users/lanza/Documents/pratica6/ula.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/lanza/Documents/pratica6|C:/Users/lanza/Documents/pratica6/ula.v|
+!s101 -O0
+vULA32bits
+IKgg]]:R[[Ge=A4Pn<P@HN2
+V1bVj3PdPGmJ>d76Gk^RKi3
+R1
+R2
+8C:/Users/lanza/Documents/pratica6/ula32bits.v
+FC:/Users/lanza/Documents/pratica6/ula32bits.v
+L0 2
+R3
+r1
+31
+R4
+R5
+n@u@l@a32bits
+!i10b 1
+!s100 0o_2kz>2K@`S5d[zCbElS1
+!s85 0
+!s108 1739572992.433000
+!s107 C:/Users/lanza/Documents/pratica6/ula32bits.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/lanza/Documents/pratica6|C:/Users/lanza/Documents/pratica6/ula32bits.v|
+!s101 -O0

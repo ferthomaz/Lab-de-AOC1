@@ -1,0 +1,1227 @@
+TimeQuest Timing Analyzer report for processadorPinagem
+Fri Feb 14 17:48:13 2025
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'SW[17]'
+ 12. Slow Model Hold: 'SW[17]'
+ 13. Slow Model Minimum Pulse Width: 'SW[17]'
+ 14. Clock to Output Times
+ 15. Minimum Clock to Output Times
+ 16. Fast Model Setup Summary
+ 17. Fast Model Hold Summary
+ 18. Fast Model Recovery Summary
+ 19. Fast Model Removal Summary
+ 20. Fast Model Minimum Pulse Width Summary
+ 21. Fast Model Setup: 'SW[17]'
+ 22. Fast Model Hold: 'SW[17]'
+ 23. Fast Model Minimum Pulse Width: 'SW[17]'
+ 24. Clock to Output Times
+ 25. Minimum Clock to Output Times
+ 26. Multicorner Timing Analysis Summary
+ 27. Clock to Output Times
+ 28. Minimum Clock to Output Times
+ 29. Setup Transfers
+ 30. Hold Transfers
+ 31. Report TCCS
+ 32. Report RSKM
+ 33. Unconstrained Paths
+ 34. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; processadorPinagem                                                ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 16     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                             ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets    ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; SW[17]     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { SW[17] } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+
+
++-------------------------------------------------+
+; Slow Model Fmax Summary                         ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 49.54 MHz ; 49.54 MHz       ; SW[17]     ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++----------------------------------+
+; Slow Model Setup Summary         ;
++--------+---------+---------------+
+; Clock  ; Slack   ; End Point TNS ;
++--------+---------+---------------+
+; SW[17] ; -19.186 ; -1849.919     ;
++--------+---------+---------------+
+
+
++--------------------------------+
+; Slow Model Hold Summary        ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; SW[17] ; 0.391 ; 0.000         ;
++--------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; SW[17] ; -1.880 ; -417.222             ;
++--------+--------+----------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'SW[17]'                                                                                                                                                                                       ;
++---------+----------------------------------------------------------------+-----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node                                                      ; To Node                                                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+----------------------------------------------------------------+-----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -19.186 ; processador:bloco20|countPC:alteracaoPC|pcout[4]               ; processador:bloco20|countPC:alteracaoPC|pcout[2]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.025     ; 20.197     ;
+; -19.186 ; processador:bloco20|countPC:alteracaoPC|pcout[4]               ; processador:bloco20|countPC:alteracaoPC|pcout[3]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.025     ; 20.197     ;
+; -19.160 ; processador:bloco20|countPC:alteracaoPC|pcout[0]               ; processador:bloco20|countPC:alteracaoPC|pcout[2]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.025     ; 20.171     ;
+; -19.160 ; processador:bloco20|countPC:alteracaoPC|pcout[0]               ; processador:bloco20|countPC:alteracaoPC|pcout[3]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.025     ; 20.171     ;
+; -19.135 ; processador:bloco20|countPC:alteracaoPC|pcout[1]               ; processador:bloco20|countPC:alteracaoPC|pcout[2]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.025     ; 20.146     ;
+; -19.135 ; processador:bloco20|countPC:alteracaoPC|pcout[1]               ; processador:bloco20|countPC:alteracaoPC|pcout[3]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.025     ; 20.146     ;
+; -19.084 ; processador:bloco20|countPC:alteracaoPC|pcout[3]               ; processador:bloco20|countPC:alteracaoPC|pcout[2]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 20.120     ;
+; -19.084 ; processador:bloco20|countPC:alteracaoPC|pcout[3]               ; processador:bloco20|countPC:alteracaoPC|pcout[3]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 20.120     ;
+; -19.042 ; processador:bloco20|countPC:alteracaoPC|pcout[2]               ; processador:bloco20|countPC:alteracaoPC|pcout[2]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 20.078     ;
+; -19.042 ; processador:bloco20|countPC:alteracaoPC|pcout[2]               ; processador:bloco20|countPC:alteracaoPC|pcout[3]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 20.078     ;
+; -18.950 ; processador:bloco20|countPC:alteracaoPC|pcout[4]               ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 19.986     ;
+; -18.948 ; processador:bloco20|countPC:alteracaoPC|pcout[4]               ; processador:bloco20|countPC:alteracaoPC|pcout[4]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 19.984     ;
+; -18.924 ; processador:bloco20|countPC:alteracaoPC|pcout[0]               ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 19.960     ;
+; -18.922 ; processador:bloco20|countPC:alteracaoPC|pcout[0]               ; processador:bloco20|countPC:alteracaoPC|pcout[4]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 19.958     ;
+; -18.899 ; processador:bloco20|countPC:alteracaoPC|pcout[1]               ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 19.935     ;
+; -18.897 ; processador:bloco20|countPC:alteracaoPC|pcout[1]               ; processador:bloco20|countPC:alteracaoPC|pcout[4]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 19.933     ;
+; -18.848 ; processador:bloco20|countPC:alteracaoPC|pcout[3]               ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.025      ; 19.909     ;
+; -18.846 ; processador:bloco20|countPC:alteracaoPC|pcout[3]               ; processador:bloco20|countPC:alteracaoPC|pcout[4]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.025      ; 19.907     ;
+; -18.806 ; processador:bloco20|countPC:alteracaoPC|pcout[2]               ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.025      ; 19.867     ;
+; -18.804 ; processador:bloco20|countPC:alteracaoPC|pcout[2]               ; processador:bloco20|countPC:alteracaoPC|pcout[4]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.025      ; 19.865     ;
+; -18.733 ; processador:bloco20|countPC:alteracaoPC|pcout[4]               ; processador:bloco20|banco:bancoRegLeitura|registradores[16][31] ; SW[17]       ; SW[17]      ; 1.000        ; 0.162      ; 19.931     ;
+; -18.707 ; processador:bloco20|countPC:alteracaoPC|pcout[0]               ; processador:bloco20|banco:bancoRegLeitura|registradores[16][31] ; SW[17]       ; SW[17]      ; 1.000        ; 0.162      ; 19.905     ;
+; -18.682 ; processador:bloco20|countPC:alteracaoPC|pcout[1]               ; processador:bloco20|banco:bancoRegLeitura|registradores[16][31] ; SW[17]       ; SW[17]      ; 1.000        ; 0.162      ; 19.880     ;
+; -18.631 ; processador:bloco20|countPC:alteracaoPC|pcout[3]               ; processador:bloco20|banco:bancoRegLeitura|registradores[16][31] ; SW[17]       ; SW[17]      ; 1.000        ; 0.187      ; 19.854     ;
+; -18.592 ; processador:bloco20|countPC:alteracaoPC|pcout[4]               ; processador:bloco20|banco:bancoRegLeitura|registradores[10][31] ; SW[17]       ; SW[17]      ; 1.000        ; 0.211      ; 19.839     ;
+; -18.589 ; processador:bloco20|countPC:alteracaoPC|pcout[2]               ; processador:bloco20|banco:bancoRegLeitura|registradores[16][31] ; SW[17]       ; SW[17]      ; 1.000        ; 0.187      ; 19.812     ;
+; -18.566 ; processador:bloco20|countPC:alteracaoPC|pcout[0]               ; processador:bloco20|banco:bancoRegLeitura|registradores[10][31] ; SW[17]       ; SW[17]      ; 1.000        ; 0.211      ; 19.813     ;
+; -18.544 ; processador:bloco20|countPC:alteracaoPC|pcout[4]               ; processador:bloco20|countPC:alteracaoPC|pcout[0]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 19.580     ;
+; -18.541 ; processador:bloco20|countPC:alteracaoPC|pcout[1]               ; processador:bloco20|banco:bancoRegLeitura|registradores[10][31] ; SW[17]       ; SW[17]      ; 1.000        ; 0.211      ; 19.788     ;
+; -18.518 ; processador:bloco20|countPC:alteracaoPC|pcout[0]               ; processador:bloco20|countPC:alteracaoPC|pcout[0]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 19.554     ;
+; -18.507 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][0] ; processador:bloco20|countPC:alteracaoPC|pcout[2]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.249     ; 19.294     ;
+; -18.507 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][0] ; processador:bloco20|countPC:alteracaoPC|pcout[3]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.249     ; 19.294     ;
+; -18.493 ; processador:bloco20|countPC:alteracaoPC|pcout[1]               ; processador:bloco20|countPC:alteracaoPC|pcout[0]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 19.529     ;
+; -18.490 ; processador:bloco20|countPC:alteracaoPC|pcout[3]               ; processador:bloco20|banco:bancoRegLeitura|registradores[10][31] ; SW[17]       ; SW[17]      ; 1.000        ; 0.236      ; 19.762     ;
+; -18.481 ; processador:bloco20|countPC:alteracaoPC|pcout[4]               ; processador:bloco20|banco:bancoRegLeitura|registradores[16][30] ; SW[17]       ; SW[17]      ; 1.000        ; 0.224      ; 19.741     ;
+; -18.480 ; processador:bloco20|countPC:alteracaoPC|pcout[4]               ; processador:bloco20|banco:bancoRegLeitura|registradores[10][29] ; SW[17]       ; SW[17]      ; 1.000        ; 0.167      ; 19.683     ;
+; -18.455 ; processador:bloco20|countPC:alteracaoPC|pcout[0]               ; processador:bloco20|banco:bancoRegLeitura|registradores[16][30] ; SW[17]       ; SW[17]      ; 1.000        ; 0.224      ; 19.715     ;
+; -18.454 ; processador:bloco20|countPC:alteracaoPC|pcout[0]               ; processador:bloco20|banco:bancoRegLeitura|registradores[10][29] ; SW[17]       ; SW[17]      ; 1.000        ; 0.167      ; 19.657     ;
+; -18.448 ; processador:bloco20|countPC:alteracaoPC|pcout[2]               ; processador:bloco20|banco:bancoRegLeitura|registradores[10][31] ; SW[17]       ; SW[17]      ; 1.000        ; 0.236      ; 19.720     ;
+; -18.442 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0]  ; processador:bloco20|countPC:alteracaoPC|pcout[2]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.235     ; 19.243     ;
+; -18.442 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0]  ; processador:bloco20|countPC:alteracaoPC|pcout[3]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.235     ; 19.243     ;
+; -18.442 ; processador:bloco20|countPC:alteracaoPC|pcout[3]               ; processador:bloco20|countPC:alteracaoPC|pcout[0]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.025      ; 19.503     ;
+; -18.430 ; processador:bloco20|countPC:alteracaoPC|pcout[1]               ; processador:bloco20|banco:bancoRegLeitura|registradores[16][30] ; SW[17]       ; SW[17]      ; 1.000        ; 0.224      ; 19.690     ;
+; -18.429 ; processador:bloco20|countPC:alteracaoPC|pcout[1]               ; processador:bloco20|banco:bancoRegLeitura|registradores[10][29] ; SW[17]       ; SW[17]      ; 1.000        ; 0.167      ; 19.632     ;
+; -18.400 ; processador:bloco20|countPC:alteracaoPC|pcout[2]               ; processador:bloco20|countPC:alteracaoPC|pcout[0]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.025      ; 19.461     ;
+; -18.379 ; processador:bloco20|countPC:alteracaoPC|pcout[3]               ; processador:bloco20|banco:bancoRegLeitura|registradores[16][30] ; SW[17]       ; SW[17]      ; 1.000        ; 0.249      ; 19.664     ;
+; -18.378 ; processador:bloco20|countPC:alteracaoPC|pcout[3]               ; processador:bloco20|banco:bancoRegLeitura|registradores[10][29] ; SW[17]       ; SW[17]      ; 1.000        ; 0.192      ; 19.606     ;
+; -18.337 ; processador:bloco20|countPC:alteracaoPC|pcout[2]               ; processador:bloco20|banco:bancoRegLeitura|registradores[16][30] ; SW[17]       ; SW[17]      ; 1.000        ; 0.249      ; 19.622     ;
+; -18.336 ; processador:bloco20|countPC:alteracaoPC|pcout[2]               ; processador:bloco20|banco:bancoRegLeitura|registradores[10][29] ; SW[17]       ; SW[17]      ; 1.000        ; 0.192      ; 19.564     ;
+; -18.278 ; processador:bloco20|countPC:alteracaoPC|pcout[4]               ; processador:bloco20|banco:bancoRegLeitura|registradores[8][30]  ; SW[17]       ; SW[17]      ; 1.000        ; 0.232      ; 19.546     ;
+; -18.271 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][0] ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.224     ; 19.083     ;
+; -18.269 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][0] ; processador:bloco20|countPC:alteracaoPC|pcout[4]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.224     ; 19.081     ;
+; -18.252 ; processador:bloco20|countPC:alteracaoPC|pcout[0]               ; processador:bloco20|banco:bancoRegLeitura|registradores[8][30]  ; SW[17]       ; SW[17]      ; 1.000        ; 0.232      ; 19.520     ;
+; -18.243 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][1]  ; processador:bloco20|countPC:alteracaoPC|pcout[2]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.234     ; 19.045     ;
+; -18.243 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][1]  ; processador:bloco20|countPC:alteracaoPC|pcout[3]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.234     ; 19.045     ;
+; -18.234 ; processador:bloco20|countPC:alteracaoPC|pcout[4]               ; processador:bloco20|banco:bancoRegLeitura|registradores[8][29]  ; SW[17]       ; SW[17]      ; 1.000        ; 0.168      ; 19.438     ;
+; -18.227 ; processador:bloco20|countPC:alteracaoPC|pcout[1]               ; processador:bloco20|banco:bancoRegLeitura|registradores[8][30]  ; SW[17]       ; SW[17]      ; 1.000        ; 0.232      ; 19.495     ;
+; -18.208 ; processador:bloco20|countPC:alteracaoPC|pcout[0]               ; processador:bloco20|banco:bancoRegLeitura|registradores[8][29]  ; SW[17]       ; SW[17]      ; 1.000        ; 0.168      ; 19.412     ;
+; -18.206 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0]  ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.210     ; 19.032     ;
+; -18.204 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0]  ; processador:bloco20|countPC:alteracaoPC|pcout[4]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.210     ; 19.030     ;
+; -18.183 ; processador:bloco20|countPC:alteracaoPC|pcout[1]               ; processador:bloco20|banco:bancoRegLeitura|registradores[8][29]  ; SW[17]       ; SW[17]      ; 1.000        ; 0.168      ; 19.387     ;
+; -18.176 ; processador:bloco20|countPC:alteracaoPC|pcout[3]               ; processador:bloco20|banco:bancoRegLeitura|registradores[8][30]  ; SW[17]       ; SW[17]      ; 1.000        ; 0.257      ; 19.469     ;
+; -18.134 ; processador:bloco20|countPC:alteracaoPC|pcout[2]               ; processador:bloco20|banco:bancoRegLeitura|registradores[8][30]  ; SW[17]       ; SW[17]      ; 1.000        ; 0.257      ; 19.427     ;
+; -18.132 ; processador:bloco20|countPC:alteracaoPC|pcout[3]               ; processador:bloco20|banco:bancoRegLeitura|registradores[8][29]  ; SW[17]       ; SW[17]      ; 1.000        ; 0.193      ; 19.361     ;
+; -18.102 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][1]  ; processador:bloco20|countPC:alteracaoPC|pcout[2]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.235     ; 18.903     ;
+; -18.102 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][1]  ; processador:bloco20|countPC:alteracaoPC|pcout[3]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.235     ; 18.903     ;
+; -18.093 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2]  ; processador:bloco20|countPC:alteracaoPC|pcout[2]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.029     ; 19.100     ;
+; -18.093 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2]  ; processador:bloco20|countPC:alteracaoPC|pcout[3]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.029     ; 19.100     ;
+; -18.090 ; processador:bloco20|countPC:alteracaoPC|pcout[2]               ; processador:bloco20|banco:bancoRegLeitura|registradores[8][29]  ; SW[17]       ; SW[17]      ; 1.000        ; 0.193      ; 19.319     ;
+; -18.054 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[16][31] ; SW[17]       ; SW[17]      ; 1.000        ; -0.062     ; 19.028     ;
+; -18.007 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][1]  ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.209     ; 18.834     ;
+; -18.005 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][1]  ; processador:bloco20|countPC:alteracaoPC|pcout[4]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.209     ; 18.832     ;
+; -17.989 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0]  ; processador:bloco20|banco:bancoRegLeitura|registradores[16][31] ; SW[17]       ; SW[17]      ; 1.000        ; -0.048     ; 18.977     ;
+; -17.970 ; processador:bloco20|countPC:alteracaoPC|pcout[4]               ; processador:bloco20|banco:bancoRegLeitura|registradores[8][31]  ; SW[17]       ; SW[17]      ; 1.000        ; 0.083      ; 19.089     ;
+; -17.944 ; processador:bloco20|countPC:alteracaoPC|pcout[0]               ; processador:bloco20|banco:bancoRegLeitura|registradores[8][31]  ; SW[17]       ; SW[17]      ; 1.000        ; 0.083      ; 19.063     ;
+; -17.919 ; processador:bloco20|countPC:alteracaoPC|pcout[1]               ; processador:bloco20|banco:bancoRegLeitura|registradores[8][31]  ; SW[17]       ; SW[17]      ; 1.000        ; 0.083      ; 19.038     ;
+; -17.917 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][0] ; processador:bloco20|countPC:alteracaoPC|pcout[2]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.235     ; 18.718     ;
+; -17.917 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][0] ; processador:bloco20|countPC:alteracaoPC|pcout[3]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.235     ; 18.718     ;
+; -17.913 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[10][31] ; SW[17]       ; SW[17]      ; 1.000        ; -0.013     ; 18.936     ;
+; -17.868 ; processador:bloco20|countPC:alteracaoPC|pcout[3]               ; processador:bloco20|banco:bancoRegLeitura|registradores[8][31]  ; SW[17]       ; SW[17]      ; 1.000        ; 0.108      ; 19.012     ;
+; -17.866 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][1]  ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.210     ; 18.692     ;
+; -17.865 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][0] ; processador:bloco20|countPC:alteracaoPC|pcout[0]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.224     ; 18.677     ;
+; -17.864 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][1]  ; processador:bloco20|countPC:alteracaoPC|pcout[4]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.210     ; 18.690     ;
+; -17.857 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2]  ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.004     ; 18.889     ;
+; -17.855 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2]  ; processador:bloco20|countPC:alteracaoPC|pcout[4]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.004     ; 18.887     ;
+; -17.848 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0]  ; processador:bloco20|banco:bancoRegLeitura|registradores[10][31] ; SW[17]       ; SW[17]      ; 1.000        ; 0.001      ; 18.885     ;
+; -17.826 ; processador:bloco20|countPC:alteracaoPC|pcout[2]               ; processador:bloco20|banco:bancoRegLeitura|registradores[8][31]  ; SW[17]       ; SW[17]      ; 1.000        ; 0.108      ; 18.970     ;
+; -17.802 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[16][30] ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 18.838     ;
+; -17.801 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[10][29] ; SW[17]       ; SW[17]      ; 1.000        ; -0.057     ; 18.780     ;
+; -17.800 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0]  ; processador:bloco20|countPC:alteracaoPC|pcout[0]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.210     ; 18.626     ;
+; -17.790 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][1]  ; processador:bloco20|banco:bancoRegLeitura|registradores[16][31] ; SW[17]       ; SW[17]      ; 1.000        ; -0.047     ; 18.779     ;
+; -17.772 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][0]  ; processador:bloco20|countPC:alteracaoPC|pcout[2]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.225     ; 18.583     ;
+; -17.772 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][0]  ; processador:bloco20|countPC:alteracaoPC|pcout[3]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.225     ; 18.583     ;
+; -17.750 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][2] ; processador:bloco20|countPC:alteracaoPC|pcout[2]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.249     ; 18.537     ;
+; -17.750 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][2] ; processador:bloco20|countPC:alteracaoPC|pcout[3]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.249     ; 18.537     ;
+; -17.739 ; processador:bloco20|countPC:alteracaoPC|pcout[4]               ; processador:bloco20|banco:bancoRegLeitura|registradores[10][30] ; SW[17]       ; SW[17]      ; 1.000        ; 0.234      ; 19.009     ;
+; -17.737 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0]  ; processador:bloco20|banco:bancoRegLeitura|registradores[16][30] ; SW[17]       ; SW[17]      ; 1.000        ; 0.014      ; 18.787     ;
+; -17.736 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0]  ; processador:bloco20|banco:bancoRegLeitura|registradores[10][29] ; SW[17]       ; SW[17]      ; 1.000        ; -0.043     ; 18.729     ;
+; -17.715 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][1] ; processador:bloco20|countPC:alteracaoPC|pcout[2]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.249     ; 18.502     ;
+; -17.715 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][1] ; processador:bloco20|countPC:alteracaoPC|pcout[3]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.249     ; 18.502     ;
++---------+----------------------------------------------------------------+-----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'SW[17]'                                                                                                                                                                                                                                                            ;
++-------+-----------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                       ; To Node                                                                                                                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; processador:bloco20|countPC:alteracaoPC|pcout[0]                ; processador:bloco20|countPC:alteracaoPC|pcout[0]                                                                                     ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; processador:bloco20|countPC:alteracaoPC|pcout[1]                                                                                     ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; processador:bloco20|countPC:alteracaoPC|pcout[4]                ; processador:bloco20|countPC:alteracaoPC|pcout[4]                                                                                     ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.657      ;
+; 1.164 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[8][21]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.978      ; 2.408      ;
+; 1.176 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[8][31]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.834      ; 2.276      ;
+; 1.240 ; processador:bloco20|countPC:alteracaoPC|pcout[3]                ; processador:bloco20|countPC:alteracaoPC|pcout[4]                                                                                     ; SW[17]       ; SW[17]      ; 0.000        ; 0.025      ; 1.531      ;
+; 1.322 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][30]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.985      ; 2.573      ;
+; 1.325 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[16][22]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.972      ; 2.563      ;
+; 1.329 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[16][24]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.972      ; 2.567      ;
+; 1.349 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][27]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.985      ; 2.600      ;
+; 1.407 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][7]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.985      ; 2.658      ;
+; 1.418 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][21]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.997      ; 2.681      ;
+; 1.418 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][17]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.997      ; 2.681      ;
+; 1.430 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[8][2]                                                                        ; SW[17]       ; SW[17]      ; 0.000        ; 0.997      ; 2.693      ;
+; 1.433 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[8][10]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.997      ; 2.696      ;
+; 1.463 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[8][25]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.850      ; 2.579      ;
+; 1.463 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[8][23]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.850      ; 2.579      ;
+; 1.533 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[16][26]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.992      ; 2.791      ;
+; 1.534 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[8][19]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.997      ; 2.797      ;
+; 1.537 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[8][15]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.980      ; 2.783      ;
+; 1.548 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][0]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.961      ; 2.775      ;
+; 1.548 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][4]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.961      ; 2.775      ;
+; 1.579 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[8][8]                                                                        ; SW[17]       ; SW[17]      ; 0.000        ; 0.960      ; 2.805      ;
+; 1.583 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[8][1]                                                                        ; SW[17]       ; SW[17]      ; 0.000        ; 0.960      ; 2.809      ;
+; 1.584 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[8][3]                                                                        ; SW[17]       ; SW[17]      ; 0.000        ; 0.960      ; 2.810      ;
+; 1.610 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][10]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.976      ; 2.852      ;
+; 1.659 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][19]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.996      ; 2.921      ;
+; 1.659 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][9]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.996      ; 2.921      ;
+; 1.662 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][20]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.869      ; 2.797      ;
+; 1.685 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][3]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.977      ; 2.928      ;
+; 1.714 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][16]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.911      ; 2.891      ;
+; 1.714 ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][10]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.246      ; 2.226      ;
+; 1.720 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][5]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.973      ; 2.959      ;
+; 1.730 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][16] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][16]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; -0.011     ; 1.985      ;
+; 1.736 ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][2]                                                                        ; SW[17]       ; SW[17]      ; 0.000        ; 0.246      ; 2.248      ;
+; 1.798 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][31]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.962      ; 3.026      ;
+; 1.802 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][26]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.869      ; 2.937      ;
+; 1.802 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][13]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.869      ; 2.937      ;
+; 1.821 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[16][17]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.995      ; 3.082      ;
+; 1.827 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][16] ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg16 ; SW[17]       ; SW[17]      ; 0.000        ; 0.023      ; 2.084      ;
+; 1.831 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][18] ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg18 ; SW[17]       ; SW[17]      ; 0.000        ; 0.016      ; 2.081      ;
+; 1.861 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[8][30]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.983      ; 3.110      ;
+; 1.873 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][22] ; processador:bloco20|banco:bancoRegLeitura|registradores[16][22]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 2.139      ;
+; 1.874 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][22] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][22]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 2.140      ;
+; 1.882 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[16][21]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.995      ; 3.143      ;
+; 1.894 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[8][27]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.983      ; 3.143      ;
+; 1.894 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][10] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][10]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.022      ; 2.182      ;
+; 1.911 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][14] ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg14 ; SW[17]       ; SW[17]      ; 0.000        ; -0.028     ; 2.117      ;
+; 1.917 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][15] ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg15 ; SW[17]       ; SW[17]      ; 0.000        ; -0.050     ; 2.101      ;
+; 1.923 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][0]   ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0]                                                                        ; SW[17]       ; SW[17]      ; 0.000        ; 0.010      ; 2.199      ;
+; 1.938 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[8][26]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.992      ; 3.196      ;
+; 1.939 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[16][31]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.913      ; 3.118      ;
+; 1.941 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][14] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][14]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 2.207      ;
+; 1.949 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[8][16]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.900      ; 3.115      ;
+; 1.967 ; processador:bloco20|countPC:alteracaoPC|pcout[0]                ; processador:bloco20|countPC:alteracaoPC|pcout[1]                                                                                     ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 2.233      ;
+; 1.978 ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2]                                                                        ; SW[17]       ; SW[17]      ; 0.000        ; 0.004      ; 2.248      ;
+; 1.978 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][11] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][11]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.075      ; 2.319      ;
+; 1.981 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][11] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][11]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.073      ; 2.320      ;
+; 1.981 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][11]  ; processador:bloco20|banco:bancoRegLeitura|registradores[0][11]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 2.247      ;
+; 1.983 ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][10]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.004      ; 2.253      ;
+; 1.984 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][11]  ; processador:bloco20|banco:bancoRegLeitura|registradores[8][11]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; -0.002     ; 2.248      ;
+; 2.014 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][17] ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg17 ; SW[17]       ; SW[17]      ; 0.000        ; -0.063     ; 2.185      ;
+; 2.017 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][24]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.962      ; 3.245      ;
+; 2.017 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][23]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.962      ; 3.245      ;
+; 2.017 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][22]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.962      ; 3.245      ;
+; 2.017 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][14]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.962      ; 3.245      ;
+; 2.027 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[8][9]                                                                        ; SW[17]       ; SW[17]      ; 0.000        ; 0.997      ; 3.290      ;
+; 2.046 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][16] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][16]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.009      ; 2.321      ;
+; 2.052 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][25] ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg25 ; SW[17]       ; SW[17]      ; 0.000        ; -0.050     ; 2.236      ;
+; 2.054 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][24] ; processador:bloco20|banco:bancoRegLeitura|registradores[16][24]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 2.320      ;
+; 2.055 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][24] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][24]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 2.321      ;
+; 2.057 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][7]  ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg7  ; SW[17]       ; SW[17]      ; 0.000        ; -0.051     ; 2.240      ;
+; 2.060 ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][9]                                                                        ; SW[17]       ; SW[17]      ; 0.000        ; 0.246      ; 2.572      ;
+; 2.061 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[16][25]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.972      ; 3.299      ;
+; 2.061 ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][19]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.246      ; 2.573      ;
+; 2.064 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[16][30]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.975      ; 3.305      ;
+; 2.069 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[16][14]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.972      ; 3.307      ;
+; 2.072 ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[16][26]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.241      ; 2.579      ;
+; 2.074 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][11] ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg11 ; SW[17]       ; SW[17]      ; 0.000        ; 0.016      ; 2.324      ;
+; 2.079 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][13] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][13]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; -0.129     ; 2.216      ;
+; 2.082 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[16][27]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.977      ; 3.325      ;
+; 2.100 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][6]  ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg6  ; SW[17]       ; SW[17]      ; 0.000        ; 0.016      ; 2.350      ;
+; 2.103 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][17] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][17]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; -0.002     ; 2.367      ;
+; 2.106 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][1]  ; processador:bloco20|banco:bancoRegLeitura|registradores[0][1]                                                                        ; SW[17]       ; SW[17]      ; 0.000        ; -0.011     ; 2.361      ;
+; 2.114 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][29] ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg29 ; SW[17]       ; SW[17]      ; 0.000        ; 0.016      ; 2.364      ;
+; 2.120 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][31] ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg31 ; SW[17]       ; SW[17]      ; 0.000        ; -0.028     ; 2.326      ;
+; 2.120 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][28] ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg28 ; SW[17]       ; SW[17]      ; 0.000        ; 0.016      ; 2.370      ;
+; 2.120 ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][9]                                                                        ; SW[17]       ; SW[17]      ; 0.000        ; 0.115      ; 2.501      ;
+; 2.126 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][20]  ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg20 ; SW[17]       ; SW[17]      ; 0.000        ; -0.060     ; 2.300      ;
+; 2.126 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][10] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][10]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.021      ; 2.413      ;
+; 2.129 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[16][29]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.907      ; 3.302      ;
+; 2.136 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][10] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][10]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; -0.220     ; 2.182      ;
+; 2.140 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[16][19]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.995      ; 3.401      ;
+; 2.151 ; processador:bloco20|countPC:alteracaoPC|pcout[2]                ; processador:bloco20|countPC:alteracaoPC|pcout[0]                                                                                     ; SW[17]       ; SW[17]      ; 0.000        ; 0.025      ; 2.442      ;
+; 2.155 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][5]  ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5]                                                                        ; SW[17]       ; SW[17]      ; 0.000        ; -0.057     ; 2.364      ;
+; 2.156 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][5]  ; processador:bloco20|banco:bancoRegLeitura|registradores[8][5]                                                                        ; SW[17]       ; SW[17]      ; 0.000        ; -0.058     ; 2.364      ;
+; 2.162 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][29]  ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg29 ; SW[17]       ; SW[17]      ; 0.000        ; 0.015      ; 2.411      ;
+; 2.167 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][16]  ; processador:bloco20|banco:bancoRegLeitura|registradores[8][16]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 2.433      ;
+; 2.174 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][0]  ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0]                                                                        ; SW[17]       ; SW[17]      ; 0.000        ; -0.014     ; 2.426      ;
+; 2.180 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][13] ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg13 ; SW[17]       ; SW[17]      ; 0.000        ; 0.065      ; 2.479      ;
++-------+-----------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'SW[17]'                                                                                                                                                                               ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------------------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                                                                                                                               ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------------------------------------------------------------------------------------------------------------------+
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg1  ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg1  ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg10 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg10 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg11 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg11 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg12 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg12 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg13 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg13 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg14 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg14 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg15 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg15 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg16 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg16 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg17 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg17 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg18 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg18 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg19 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg19 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg2  ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg2  ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg20 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg20 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg21 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg21 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg22 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg22 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg23 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg23 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg24 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg24 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg25 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg25 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg26 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg26 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg27 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg27 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg28 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg28 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg29 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg29 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg3  ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg3  ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg30 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg30 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg31 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg31 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg4  ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg4  ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg5  ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg5  ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg6  ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg6  ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg7  ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg7  ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg8  ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg8  ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg9  ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg9  ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_memory_reg0  ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_memory_reg0  ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_we_reg       ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_we_reg       ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Fall       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~portb_address_reg0 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Fall       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~portb_address_reg0 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Fall       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~portb_address_reg1 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Fall       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~portb_address_reg1 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Fall       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~portb_address_reg2 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Fall       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~portb_address_reg2 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Fall       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~portb_address_reg3 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Fall       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~portb_address_reg3 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Fall       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~portb_address_reg4 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Fall       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~portb_address_reg4 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a10~porta_memory_reg0 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a10~porta_memory_reg0 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a11~porta_memory_reg0 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a11~porta_memory_reg0 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a12~porta_memory_reg0 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a12~porta_memory_reg0 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a13~porta_memory_reg0 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a13~porta_memory_reg0 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a14~porta_memory_reg0 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a14~porta_memory_reg0 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a15~porta_memory_reg0 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a15~porta_memory_reg0 ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; HEX0[*]   ; SW[17]     ; 26.613 ; 26.613 ; Rise       ; SW[17]          ;
+;  HEX0[0]  ; SW[17]     ; 26.161 ; 26.161 ; Rise       ; SW[17]          ;
+;  HEX0[1]  ; SW[17]     ; 26.367 ; 26.367 ; Rise       ; SW[17]          ;
+;  HEX0[2]  ; SW[17]     ; 26.369 ; 26.369 ; Rise       ; SW[17]          ;
+;  HEX0[3]  ; SW[17]     ; 26.404 ; 26.404 ; Rise       ; SW[17]          ;
+;  HEX0[4]  ; SW[17]     ; 26.393 ; 26.393 ; Rise       ; SW[17]          ;
+;  HEX0[5]  ; SW[17]     ; 26.613 ; 26.613 ; Rise       ; SW[17]          ;
+;  HEX0[6]  ; SW[17]     ; 26.611 ; 26.611 ; Rise       ; SW[17]          ;
+; HEX2[*]   ; SW[17]     ; 25.865 ; 25.865 ; Rise       ; SW[17]          ;
+;  HEX2[0]  ; SW[17]     ; 25.865 ; 25.865 ; Rise       ; SW[17]          ;
+;  HEX2[1]  ; SW[17]     ; 25.621 ; 25.621 ; Rise       ; SW[17]          ;
+;  HEX2[2]  ; SW[17]     ; 25.081 ; 25.081 ; Rise       ; SW[17]          ;
+;  HEX2[3]  ; SW[17]     ; 25.433 ; 25.433 ; Rise       ; SW[17]          ;
+;  HEX2[4]  ; SW[17]     ; 25.798 ; 25.798 ; Rise       ; SW[17]          ;
+;  HEX2[5]  ; SW[17]     ; 25.377 ; 25.377 ; Rise       ; SW[17]          ;
+;  HEX2[6]  ; SW[17]     ; 25.809 ; 25.809 ; Rise       ; SW[17]          ;
+; HEX4[*]   ; SW[17]     ; 25.019 ; 25.019 ; Rise       ; SW[17]          ;
+;  HEX4[0]  ; SW[17]     ; 24.975 ; 24.975 ; Rise       ; SW[17]          ;
+;  HEX4[1]  ; SW[17]     ; 24.976 ; 24.976 ; Rise       ; SW[17]          ;
+;  HEX4[2]  ; SW[17]     ; 24.987 ; 24.987 ; Rise       ; SW[17]          ;
+;  HEX4[3]  ; SW[17]     ; 25.019 ; 25.019 ; Rise       ; SW[17]          ;
+;  HEX4[4]  ; SW[17]     ; 24.993 ; 24.993 ; Rise       ; SW[17]          ;
+;  HEX4[5]  ; SW[17]     ; 24.999 ; 24.999 ; Rise       ; SW[17]          ;
+;  HEX4[6]  ; SW[17]     ; 25.009 ; 25.009 ; Rise       ; SW[17]          ;
+; LEDG[*]   ; SW[17]     ; 28.131 ; 28.131 ; Rise       ; SW[17]          ;
+;  LEDG[0]  ; SW[17]     ; 9.317  ; 9.317  ; Rise       ; SW[17]          ;
+;  LEDG[1]  ; SW[17]     ; 8.554  ; 8.554  ; Rise       ; SW[17]          ;
+;  LEDG[2]  ; SW[17]     ; 8.883  ; 8.883  ; Rise       ; SW[17]          ;
+;  LEDG[3]  ; SW[17]     ; 9.087  ; 9.087  ; Rise       ; SW[17]          ;
+;  LEDG[4]  ; SW[17]     ; 8.917  ; 8.917  ; Rise       ; SW[17]          ;
+;  LEDG[7]  ; SW[17]     ; 28.131 ; 28.131 ; Rise       ; SW[17]          ;
+; LEDR[*]   ; SW[17]     ; 11.886 ; 11.886 ; Rise       ; SW[17]          ;
+;  LEDR[0]  ; SW[17]     ; 10.484 ; 10.484 ; Rise       ; SW[17]          ;
+;  LEDR[1]  ; SW[17]     ; 11.886 ; 11.886 ; Rise       ; SW[17]          ;
+;  LEDR[5]  ; SW[17]     ; 9.747  ; 9.747  ; Rise       ; SW[17]          ;
+;  LEDR[14] ; SW[17]     ; 9.287  ; 9.287  ; Rise       ; SW[17]          ;
+;  LEDR[16] ; SW[17]     ; 9.524  ; 9.524  ; Rise       ; SW[17]          ;
+;  LEDR[17] ; SW[17]     ; 9.287  ; 9.287  ; Rise       ; SW[17]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; HEX0[*]   ; SW[17]     ; 9.916  ; 9.916  ; Rise       ; SW[17]          ;
+;  HEX0[0]  ; SW[17]     ; 9.916  ; 9.916  ; Rise       ; SW[17]          ;
+;  HEX0[1]  ; SW[17]     ; 10.122 ; 10.122 ; Rise       ; SW[17]          ;
+;  HEX0[2]  ; SW[17]     ; 10.124 ; 10.124 ; Rise       ; SW[17]          ;
+;  HEX0[3]  ; SW[17]     ; 10.159 ; 10.159 ; Rise       ; SW[17]          ;
+;  HEX0[4]  ; SW[17]     ; 10.148 ; 10.148 ; Rise       ; SW[17]          ;
+;  HEX0[5]  ; SW[17]     ; 10.368 ; 10.368 ; Rise       ; SW[17]          ;
+;  HEX0[6]  ; SW[17]     ; 10.366 ; 10.366 ; Rise       ; SW[17]          ;
+; HEX2[*]   ; SW[17]     ; 10.518 ; 10.518 ; Rise       ; SW[17]          ;
+;  HEX2[0]  ; SW[17]     ; 11.302 ; 11.302 ; Rise       ; SW[17]          ;
+;  HEX2[1]  ; SW[17]     ; 11.058 ; 11.058 ; Rise       ; SW[17]          ;
+;  HEX2[2]  ; SW[17]     ; 10.518 ; 10.518 ; Rise       ; SW[17]          ;
+;  HEX2[3]  ; SW[17]     ; 10.870 ; 10.870 ; Rise       ; SW[17]          ;
+;  HEX2[4]  ; SW[17]     ; 11.235 ; 11.235 ; Rise       ; SW[17]          ;
+;  HEX2[5]  ; SW[17]     ; 10.814 ; 10.814 ; Rise       ; SW[17]          ;
+;  HEX2[6]  ; SW[17]     ; 11.246 ; 11.246 ; Rise       ; SW[17]          ;
+; HEX4[*]   ; SW[17]     ; 9.599  ; 9.599  ; Rise       ; SW[17]          ;
+;  HEX4[0]  ; SW[17]     ; 9.600  ; 9.600  ; Rise       ; SW[17]          ;
+;  HEX4[1]  ; SW[17]     ; 9.599  ; 9.599  ; Rise       ; SW[17]          ;
+;  HEX4[2]  ; SW[17]     ; 9.609  ; 9.609  ; Rise       ; SW[17]          ;
+;  HEX4[3]  ; SW[17]     ; 9.644  ; 9.644  ; Rise       ; SW[17]          ;
+;  HEX4[4]  ; SW[17]     ; 9.618  ; 9.618  ; Rise       ; SW[17]          ;
+;  HEX4[5]  ; SW[17]     ; 9.624  ; 9.624  ; Rise       ; SW[17]          ;
+;  HEX4[6]  ; SW[17]     ; 9.634  ; 9.634  ; Rise       ; SW[17]          ;
+; LEDG[*]   ; SW[17]     ; 8.554  ; 8.554  ; Rise       ; SW[17]          ;
+;  LEDG[0]  ; SW[17]     ; 9.317  ; 9.317  ; Rise       ; SW[17]          ;
+;  LEDG[1]  ; SW[17]     ; 8.554  ; 8.554  ; Rise       ; SW[17]          ;
+;  LEDG[2]  ; SW[17]     ; 8.883  ; 8.883  ; Rise       ; SW[17]          ;
+;  LEDG[3]  ; SW[17]     ; 9.087  ; 9.087  ; Rise       ; SW[17]          ;
+;  LEDG[4]  ; SW[17]     ; 8.917  ; 8.917  ; Rise       ; SW[17]          ;
+;  LEDG[7]  ; SW[17]     ; 12.350 ; 12.350 ; Rise       ; SW[17]          ;
+; LEDR[*]   ; SW[17]     ; 8.518  ; 8.518  ; Rise       ; SW[17]          ;
+;  LEDR[0]  ; SW[17]     ; 10.092 ; 10.092 ; Rise       ; SW[17]          ;
+;  LEDR[1]  ; SW[17]     ; 11.200 ; 11.200 ; Rise       ; SW[17]          ;
+;  LEDR[5]  ; SW[17]     ; 8.978  ; 8.978  ; Rise       ; SW[17]          ;
+;  LEDR[14] ; SW[17]     ; 8.518  ; 8.518  ; Rise       ; SW[17]          ;
+;  LEDR[16] ; SW[17]     ; 9.132  ; 9.132  ; Rise       ; SW[17]          ;
+;  LEDR[17] ; SW[17]     ; 8.518  ; 8.518  ; Rise       ; SW[17]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------+
+; Fast Model Setup Summary        ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; SW[17] ; -7.590 ; -728.988      ;
++--------+--------+---------------+
+
+
++--------------------------------+
+; Fast Model Hold Summary        ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; SW[17] ; 0.215 ; 0.000         ;
++--------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; SW[17] ; -1.880 ; -417.222             ;
++--------+--------+----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'SW[17]'                                                                                                                                                                                      ;
++--------+----------------------------------------------------------------+-----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                      ; To Node                                                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------------------------------+-----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -7.590 ; processador:bloco20|countPC:alteracaoPC|pcout[4]               ; processador:bloco20|countPC:alteracaoPC|pcout[2]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.021     ; 8.601      ;
+; -7.590 ; processador:bloco20|countPC:alteracaoPC|pcout[4]               ; processador:bloco20|countPC:alteracaoPC|pcout[3]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.021     ; 8.601      ;
+; -7.575 ; processador:bloco20|countPC:alteracaoPC|pcout[1]               ; processador:bloco20|countPC:alteracaoPC|pcout[2]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.021     ; 8.586      ;
+; -7.575 ; processador:bloco20|countPC:alteracaoPC|pcout[1]               ; processador:bloco20|countPC:alteracaoPC|pcout[3]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.021     ; 8.586      ;
+; -7.569 ; processador:bloco20|countPC:alteracaoPC|pcout[0]               ; processador:bloco20|countPC:alteracaoPC|pcout[2]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.021     ; 8.580      ;
+; -7.569 ; processador:bloco20|countPC:alteracaoPC|pcout[0]               ; processador:bloco20|countPC:alteracaoPC|pcout[3]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.021     ; 8.580      ;
+; -7.525 ; processador:bloco20|countPC:alteracaoPC|pcout[3]               ; processador:bloco20|countPC:alteracaoPC|pcout[2]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 8.557      ;
+; -7.525 ; processador:bloco20|countPC:alteracaoPC|pcout[3]               ; processador:bloco20|countPC:alteracaoPC|pcout[3]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 8.557      ;
+; -7.509 ; processador:bloco20|countPC:alteracaoPC|pcout[2]               ; processador:bloco20|countPC:alteracaoPC|pcout[2]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 8.541      ;
+; -7.509 ; processador:bloco20|countPC:alteracaoPC|pcout[2]               ; processador:bloco20|countPC:alteracaoPC|pcout[3]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 8.541      ;
+; -7.478 ; processador:bloco20|countPC:alteracaoPC|pcout[4]               ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 8.510      ;
+; -7.475 ; processador:bloco20|countPC:alteracaoPC|pcout[4]               ; processador:bloco20|countPC:alteracaoPC|pcout[4]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 8.507      ;
+; -7.463 ; processador:bloco20|countPC:alteracaoPC|pcout[1]               ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 8.495      ;
+; -7.460 ; processador:bloco20|countPC:alteracaoPC|pcout[1]               ; processador:bloco20|countPC:alteracaoPC|pcout[4]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 8.492      ;
+; -7.457 ; processador:bloco20|countPC:alteracaoPC|pcout[0]               ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 8.489      ;
+; -7.454 ; processador:bloco20|countPC:alteracaoPC|pcout[0]               ; processador:bloco20|countPC:alteracaoPC|pcout[4]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 8.486      ;
+; -7.413 ; processador:bloco20|countPC:alteracaoPC|pcout[3]               ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.021      ; 8.466      ;
+; -7.410 ; processador:bloco20|countPC:alteracaoPC|pcout[3]               ; processador:bloco20|countPC:alteracaoPC|pcout[4]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.021      ; 8.463      ;
+; -7.397 ; processador:bloco20|countPC:alteracaoPC|pcout[2]               ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.021      ; 8.450      ;
+; -7.395 ; processador:bloco20|countPC:alteracaoPC|pcout[4]               ; processador:bloco20|banco:bancoRegLeitura|registradores[16][31] ; SW[17]       ; SW[17]      ; 1.000        ; 0.054      ; 8.481      ;
+; -7.394 ; processador:bloco20|countPC:alteracaoPC|pcout[2]               ; processador:bloco20|countPC:alteracaoPC|pcout[4]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.021      ; 8.447      ;
+; -7.380 ; processador:bloco20|countPC:alteracaoPC|pcout[1]               ; processador:bloco20|banco:bancoRegLeitura|registradores[16][31] ; SW[17]       ; SW[17]      ; 1.000        ; 0.054      ; 8.466      ;
+; -7.374 ; processador:bloco20|countPC:alteracaoPC|pcout[0]               ; processador:bloco20|banco:bancoRegLeitura|registradores[16][31] ; SW[17]       ; SW[17]      ; 1.000        ; 0.054      ; 8.460      ;
+; -7.344 ; processador:bloco20|countPC:alteracaoPC|pcout[4]               ; processador:bloco20|banco:bancoRegLeitura|registradores[10][31] ; SW[17]       ; SW[17]      ; 1.000        ; 0.085      ; 8.461      ;
+; -7.340 ; processador:bloco20|countPC:alteracaoPC|pcout[4]               ; processador:bloco20|banco:bancoRegLeitura|registradores[10][29] ; SW[17]       ; SW[17]      ; 1.000        ; 0.063      ; 8.435      ;
+; -7.330 ; processador:bloco20|countPC:alteracaoPC|pcout[3]               ; processador:bloco20|banco:bancoRegLeitura|registradores[16][31] ; SW[17]       ; SW[17]      ; 1.000        ; 0.075      ; 8.437      ;
+; -7.329 ; processador:bloco20|countPC:alteracaoPC|pcout[1]               ; processador:bloco20|banco:bancoRegLeitura|registradores[10][31] ; SW[17]       ; SW[17]      ; 1.000        ; 0.085      ; 8.446      ;
+; -7.326 ; processador:bloco20|countPC:alteracaoPC|pcout[4]               ; processador:bloco20|banco:bancoRegLeitura|registradores[16][30] ; SW[17]       ; SW[17]      ; 1.000        ; 0.090      ; 8.448      ;
+; -7.325 ; processador:bloco20|countPC:alteracaoPC|pcout[1]               ; processador:bloco20|banco:bancoRegLeitura|registradores[10][29] ; SW[17]       ; SW[17]      ; 1.000        ; 0.063      ; 8.420      ;
+; -7.323 ; processador:bloco20|countPC:alteracaoPC|pcout[0]               ; processador:bloco20|banco:bancoRegLeitura|registradores[10][31] ; SW[17]       ; SW[17]      ; 1.000        ; 0.085      ; 8.440      ;
+; -7.319 ; processador:bloco20|countPC:alteracaoPC|pcout[0]               ; processador:bloco20|banco:bancoRegLeitura|registradores[10][29] ; SW[17]       ; SW[17]      ; 1.000        ; 0.063      ; 8.414      ;
+; -7.314 ; processador:bloco20|countPC:alteracaoPC|pcout[2]               ; processador:bloco20|banco:bancoRegLeitura|registradores[16][31] ; SW[17]       ; SW[17]      ; 1.000        ; 0.075      ; 8.421      ;
+; -7.311 ; processador:bloco20|countPC:alteracaoPC|pcout[1]               ; processador:bloco20|banco:bancoRegLeitura|registradores[16][30] ; SW[17]       ; SW[17]      ; 1.000        ; 0.090      ; 8.433      ;
+; -7.305 ; processador:bloco20|countPC:alteracaoPC|pcout[0]               ; processador:bloco20|banco:bancoRegLeitura|registradores[16][30] ; SW[17]       ; SW[17]      ; 1.000        ; 0.090      ; 8.427      ;
+; -7.304 ; processador:bloco20|countPC:alteracaoPC|pcout[4]               ; processador:bloco20|countPC:alteracaoPC|pcout[0]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 8.336      ;
+; -7.289 ; processador:bloco20|countPC:alteracaoPC|pcout[1]               ; processador:bloco20|countPC:alteracaoPC|pcout[0]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 8.321      ;
+; -7.285 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][0] ; processador:bloco20|countPC:alteracaoPC|pcout[2]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.111     ; 8.206      ;
+; -7.285 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][0] ; processador:bloco20|countPC:alteracaoPC|pcout[3]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.111     ; 8.206      ;
+; -7.283 ; processador:bloco20|countPC:alteracaoPC|pcout[0]               ; processador:bloco20|countPC:alteracaoPC|pcout[0]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 8.315      ;
+; -7.279 ; processador:bloco20|countPC:alteracaoPC|pcout[3]               ; processador:bloco20|banco:bancoRegLeitura|registradores[10][31] ; SW[17]       ; SW[17]      ; 1.000        ; 0.106      ; 8.417      ;
+; -7.278 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0]  ; processador:bloco20|countPC:alteracaoPC|pcout[2]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.106     ; 8.204      ;
+; -7.278 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0]  ; processador:bloco20|countPC:alteracaoPC|pcout[3]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.106     ; 8.204      ;
+; -7.275 ; processador:bloco20|countPC:alteracaoPC|pcout[3]               ; processador:bloco20|banco:bancoRegLeitura|registradores[10][29] ; SW[17]       ; SW[17]      ; 1.000        ; 0.084      ; 8.391      ;
+; -7.263 ; processador:bloco20|countPC:alteracaoPC|pcout[2]               ; processador:bloco20|banco:bancoRegLeitura|registradores[10][31] ; SW[17]       ; SW[17]      ; 1.000        ; 0.106      ; 8.401      ;
+; -7.261 ; processador:bloco20|countPC:alteracaoPC|pcout[3]               ; processador:bloco20|banco:bancoRegLeitura|registradores[16][30] ; SW[17]       ; SW[17]      ; 1.000        ; 0.111      ; 8.404      ;
+; -7.259 ; processador:bloco20|countPC:alteracaoPC|pcout[2]               ; processador:bloco20|banco:bancoRegLeitura|registradores[10][29] ; SW[17]       ; SW[17]      ; 1.000        ; 0.084      ; 8.375      ;
+; -7.245 ; processador:bloco20|countPC:alteracaoPC|pcout[2]               ; processador:bloco20|banco:bancoRegLeitura|registradores[16][30] ; SW[17]       ; SW[17]      ; 1.000        ; 0.111      ; 8.388      ;
+; -7.239 ; processador:bloco20|countPC:alteracaoPC|pcout[3]               ; processador:bloco20|countPC:alteracaoPC|pcout[0]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.021      ; 8.292      ;
+; -7.223 ; processador:bloco20|countPC:alteracaoPC|pcout[2]               ; processador:bloco20|countPC:alteracaoPC|pcout[0]                ; SW[17]       ; SW[17]      ; 1.000        ; 0.021      ; 8.276      ;
+; -7.221 ; processador:bloco20|countPC:alteracaoPC|pcout[4]               ; processador:bloco20|banco:bancoRegLeitura|registradores[8][29]  ; SW[17]       ; SW[17]      ; 1.000        ; 0.070      ; 8.323      ;
+; -7.219 ; processador:bloco20|countPC:alteracaoPC|pcout[4]               ; processador:bloco20|banco:bancoRegLeitura|registradores[8][30]  ; SW[17]       ; SW[17]      ; 1.000        ; 0.097      ; 8.348      ;
+; -7.206 ; processador:bloco20|countPC:alteracaoPC|pcout[1]               ; processador:bloco20|banco:bancoRegLeitura|registradores[8][29]  ; SW[17]       ; SW[17]      ; 1.000        ; 0.070      ; 8.308      ;
+; -7.204 ; processador:bloco20|countPC:alteracaoPC|pcout[1]               ; processador:bloco20|banco:bancoRegLeitura|registradores[8][30]  ; SW[17]       ; SW[17]      ; 1.000        ; 0.097      ; 8.333      ;
+; -7.200 ; processador:bloco20|countPC:alteracaoPC|pcout[0]               ; processador:bloco20|banco:bancoRegLeitura|registradores[8][29]  ; SW[17]       ; SW[17]      ; 1.000        ; 0.070      ; 8.302      ;
+; -7.198 ; processador:bloco20|countPC:alteracaoPC|pcout[0]               ; processador:bloco20|banco:bancoRegLeitura|registradores[8][30]  ; SW[17]       ; SW[17]      ; 1.000        ; 0.097      ; 8.327      ;
+; -7.194 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][1]  ; processador:bloco20|countPC:alteracaoPC|pcout[2]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.109     ; 8.117      ;
+; -7.194 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][1]  ; processador:bloco20|countPC:alteracaoPC|pcout[3]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.109     ; 8.117      ;
+; -7.173 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][0] ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.090     ; 8.115      ;
+; -7.170 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][0] ; processador:bloco20|countPC:alteracaoPC|pcout[4]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.090     ; 8.112      ;
+; -7.166 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0]  ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.085     ; 8.113      ;
+; -7.163 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0]  ; processador:bloco20|countPC:alteracaoPC|pcout[4]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.085     ; 8.110      ;
+; -7.156 ; processador:bloco20|countPC:alteracaoPC|pcout[3]               ; processador:bloco20|banco:bancoRegLeitura|registradores[8][29]  ; SW[17]       ; SW[17]      ; 1.000        ; 0.091      ; 8.279      ;
+; -7.154 ; processador:bloco20|countPC:alteracaoPC|pcout[3]               ; processador:bloco20|banco:bancoRegLeitura|registradores[8][30]  ; SW[17]       ; SW[17]      ; 1.000        ; 0.118      ; 8.304      ;
+; -7.140 ; processador:bloco20|countPC:alteracaoPC|pcout[2]               ; processador:bloco20|banco:bancoRegLeitura|registradores[8][29]  ; SW[17]       ; SW[17]      ; 1.000        ; 0.091      ; 8.263      ;
+; -7.139 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2]  ; processador:bloco20|countPC:alteracaoPC|pcout[2]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.023     ; 8.148      ;
+; -7.139 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2]  ; processador:bloco20|countPC:alteracaoPC|pcout[3]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.023     ; 8.148      ;
+; -7.138 ; processador:bloco20|countPC:alteracaoPC|pcout[2]               ; processador:bloco20|banco:bancoRegLeitura|registradores[8][30]  ; SW[17]       ; SW[17]      ; 1.000        ; 0.118      ; 8.288      ;
+; -7.109 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][1]  ; processador:bloco20|countPC:alteracaoPC|pcout[2]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.109     ; 8.032      ;
+; -7.109 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][1]  ; processador:bloco20|countPC:alteracaoPC|pcout[3]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.109     ; 8.032      ;
+; -7.090 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[16][31] ; SW[17]       ; SW[17]      ; 1.000        ; -0.036     ; 8.086      ;
+; -7.083 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0]  ; processador:bloco20|banco:bancoRegLeitura|registradores[16][31] ; SW[17]       ; SW[17]      ; 1.000        ; -0.031     ; 8.084      ;
+; -7.082 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][1]  ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.088     ; 8.026      ;
+; -7.079 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][1]  ; processador:bloco20|countPC:alteracaoPC|pcout[4]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.088     ; 8.023      ;
+; -7.044 ; processador:bloco20|countPC:alteracaoPC|pcout[4]               ; processador:bloco20|banco:bancoRegLeitura|registradores[8][31]  ; SW[17]       ; SW[17]      ; 1.000        ; 0.035      ; 8.111      ;
+; -7.039 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[10][31] ; SW[17]       ; SW[17]      ; 1.000        ; -0.005     ; 8.066      ;
+; -7.035 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][0] ; processador:bloco20|countPC:alteracaoPC|pcout[2]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.106     ; 7.961      ;
+; -7.035 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][0] ; processador:bloco20|countPC:alteracaoPC|pcout[3]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.106     ; 7.961      ;
+; -7.035 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[10][29] ; SW[17]       ; SW[17]      ; 1.000        ; -0.027     ; 8.040      ;
+; -7.032 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0]  ; processador:bloco20|banco:bancoRegLeitura|registradores[10][31] ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 8.064      ;
+; -7.029 ; processador:bloco20|countPC:alteracaoPC|pcout[1]               ; processador:bloco20|banco:bancoRegLeitura|registradores[8][31]  ; SW[17]       ; SW[17]      ; 1.000        ; 0.035      ; 8.096      ;
+; -7.028 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0]  ; processador:bloco20|banco:bancoRegLeitura|registradores[10][29] ; SW[17]       ; SW[17]      ; 1.000        ; -0.022     ; 8.038      ;
+; -7.027 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2]  ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.002     ; 8.057      ;
+; -7.024 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2]  ; processador:bloco20|countPC:alteracaoPC|pcout[4]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.002     ; 8.054      ;
+; -7.023 ; processador:bloco20|countPC:alteracaoPC|pcout[0]               ; processador:bloco20|banco:bancoRegLeitura|registradores[8][31]  ; SW[17]       ; SW[17]      ; 1.000        ; 0.035      ; 8.090      ;
+; -7.021 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][0] ; processador:bloco20|banco:bancoRegLeitura|registradores[16][30] ; SW[17]       ; SW[17]      ; 1.000        ; 0.000      ; 8.053      ;
+; -7.014 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0]  ; processador:bloco20|banco:bancoRegLeitura|registradores[16][30] ; SW[17]       ; SW[17]      ; 1.000        ; 0.005      ; 8.051      ;
+; -6.999 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][1]  ; processador:bloco20|banco:bancoRegLeitura|registradores[16][31] ; SW[17]       ; SW[17]      ; 1.000        ; -0.034     ; 7.997      ;
+; -6.999 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][0] ; processador:bloco20|countPC:alteracaoPC|pcout[0]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.090     ; 7.941      ;
+; -6.997 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][1]  ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.088     ; 7.941      ;
+; -6.994 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][1]  ; processador:bloco20|countPC:alteracaoPC|pcout[4]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.088     ; 7.938      ;
+; -6.992 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0]  ; processador:bloco20|countPC:alteracaoPC|pcout[0]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.085     ; 7.939      ;
+; -6.989 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][2] ; processador:bloco20|countPC:alteracaoPC|pcout[2]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.111     ; 7.910      ;
+; -6.989 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][2] ; processador:bloco20|countPC:alteracaoPC|pcout[3]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.111     ; 7.910      ;
+; -6.979 ; processador:bloco20|countPC:alteracaoPC|pcout[3]               ; processador:bloco20|banco:bancoRegLeitura|registradores[8][31]  ; SW[17]       ; SW[17]      ; 1.000        ; 0.056      ; 8.067      ;
+; -6.971 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][0]  ; processador:bloco20|countPC:alteracaoPC|pcout[2]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.095     ; 7.908      ;
+; -6.971 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][0]  ; processador:bloco20|countPC:alteracaoPC|pcout[3]                ; SW[17]       ; SW[17]      ; 1.000        ; -0.095     ; 7.908      ;
+; -6.969 ; processador:bloco20|countPC:alteracaoPC|pcout[4]               ; processador:bloco20|banco:bancoRegLeitura|registradores[10][30] ; SW[17]       ; SW[17]      ; 1.000        ; 0.098      ; 8.099      ;
+; -6.965 ; processador:bloco20|countPC:alteracaoPC|pcout[4]               ; processador:bloco20|banco:bancoRegLeitura|registradores[16][28] ; SW[17]       ; SW[17]      ; 1.000        ; 0.059      ; 8.056      ;
+; -6.963 ; processador:bloco20|countPC:alteracaoPC|pcout[2]               ; processador:bloco20|banco:bancoRegLeitura|registradores[8][31]  ; SW[17]       ; SW[17]      ; 1.000        ; 0.056      ; 8.051      ;
+; -6.957 ; processador:bloco20|countPC:alteracaoPC|pcout[4]               ; processador:bloco20|banco:bancoRegLeitura|registradores[10][28] ; SW[17]       ; SW[17]      ; 1.000        ; 0.067      ; 8.056      ;
++--------+----------------------------------------------------------------+-----------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'SW[17]'                                                                                                                                                                                                                                                            ;
++-------+-----------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                       ; To Node                                                                                                                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; processador:bloco20|countPC:alteracaoPC|pcout[0]                ; processador:bloco20|countPC:alteracaoPC|pcout[0]                                                                                     ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; processador:bloco20|countPC:alteracaoPC|pcout[1]                                                                                     ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; processador:bloco20|countPC:alteracaoPC|pcout[4]                ; processador:bloco20|countPC:alteracaoPC|pcout[4]                                                                                     ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.525 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[8][31]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.413      ; 1.090      ;
+; 0.527 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[8][21]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.481      ; 1.160      ;
+; 0.549 ; processador:bloco20|countPC:alteracaoPC|pcout[3]                ; processador:bloco20|countPC:alteracaoPC|pcout[4]                                                                                     ; SW[17]       ; SW[17]      ; 0.000        ; 0.021      ; 0.722      ;
+; 0.582 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[16][22]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.477      ; 1.211      ;
+; 0.584 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[16][24]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.477      ; 1.213      ;
+; 0.610 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][30]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.476      ; 1.238      ;
+; 0.612 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][27]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.476      ; 1.240      ;
+; 0.641 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[8][23]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.428      ; 1.221      ;
+; 0.642 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[8][25]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.428      ; 1.222      ;
+; 0.650 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[8][10]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.490      ; 1.292      ;
+; 0.667 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[8][19]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.493      ; 1.312      ;
+; 0.668 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[8][2]                                                                        ; SW[17]       ; SW[17]      ; 0.000        ; 0.490      ; 1.310      ;
+; 0.675 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[8][15]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.483      ; 1.310      ;
+; 0.682 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[16][26]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.484      ; 1.318      ;
+; 0.704 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[8][8]                                                                        ; SW[17]       ; SW[17]      ; 0.000        ; 0.466      ; 1.322      ;
+; 0.705 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[8][3]                                                                        ; SW[17]       ; SW[17]      ; 0.000        ; 0.466      ; 1.323      ;
+; 0.708 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[8][1]                                                                        ; SW[17]       ; SW[17]      ; 0.000        ; 0.466      ; 1.326      ;
+; 0.710 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][21]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.489      ; 1.351      ;
+; 0.710 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][17]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.489      ; 1.351      ;
+; 0.719 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][20]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.451      ; 1.322      ;
+; 0.731 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][7]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.476      ; 1.359      ;
+; 0.772 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][16] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][16]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; -0.014     ; 0.910      ;
+; 0.788 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][0]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.463      ; 1.403      ;
+; 0.792 ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][2]                                                                        ; SW[17]       ; SW[17]      ; 0.000        ; 0.112      ; 1.056      ;
+; 0.794 ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][10]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.112      ; 1.058      ;
+; 0.801 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][4]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.463      ; 1.416      ;
+; 0.803 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][18] ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg18 ; SW[17]       ; SW[17]      ; 0.000        ; 0.047      ; 0.988      ;
+; 0.810 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[16][17]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.490      ; 1.452      ;
+; 0.810 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][10] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][10]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.015      ; 0.977      ;
+; 0.812 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][22] ; processador:bloco20|banco:bancoRegLeitura|registradores[16][22]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.964      ;
+; 0.813 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][22] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][22]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.965      ;
+; 0.814 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][19]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.493      ; 1.459      ;
+; 0.814 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][9]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.493      ; 1.459      ;
+; 0.818 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][10]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.475      ; 1.445      ;
+; 0.821 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][16] ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg16 ; SW[17]       ; SW[17]      ; 0.000        ; 0.044      ; 1.003      ;
+; 0.825 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][31]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.463      ; 1.440      ;
+; 0.832 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][3]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.476      ; 1.460      ;
+; 0.834 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][16]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.444      ; 1.430      ;
+; 0.838 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][15] ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg15 ; SW[17]       ; SW[17]      ; 0.000        ; 0.028      ; 1.004      ;
+; 0.840 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][11] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][11]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.050      ; 1.042      ;
+; 0.840 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][11] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][11]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.051      ; 1.043      ;
+; 0.840 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][14] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][14]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 0.992      ;
+; 0.848 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][5]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.478      ; 1.478      ;
+; 0.850 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][14] ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg14 ; SW[17]       ; SW[17]      ; 0.000        ; 0.025      ; 1.013      ;
+; 0.850 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[8][26]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.485      ; 1.487      ;
+; 0.857 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[16][21]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.490      ; 1.499      ;
+; 0.858 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][0]   ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0]                                                                        ; SW[17]       ; SW[17]      ; 0.000        ; 0.011      ; 1.021      ;
+; 0.860 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[8][30]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.475      ; 1.487      ;
+; 0.863 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][11]  ; processador:bloco20|banco:bancoRegLeitura|registradores[0][11]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 1.015      ;
+; 0.863 ; processador:bloco20|banco:bancoRegLeitura|registradores[0][11]  ; processador:bloco20|banco:bancoRegLeitura|registradores[8][11]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.001      ; 1.016      ;
+; 0.866 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[8][27]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.475      ; 1.493      ;
+; 0.866 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][26]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.451      ; 1.469      ;
+; 0.866 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[10][13]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.451      ; 1.469      ;
+; 0.873 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][7]  ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg7  ; SW[17]       ; SW[17]      ; 0.000        ; 0.012      ; 1.023      ;
+; 0.876 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[16][31]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.432      ; 1.460      ;
+; 0.886 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[8][9]                                                                        ; SW[17]       ; SW[17]      ; 0.000        ; 0.493      ; 1.531      ;
+; 0.887 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][13] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][13]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; -0.040     ; 0.999      ;
+; 0.891 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][24] ; processador:bloco20|banco:bancoRegLeitura|registradores[16][24]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 1.043      ;
+; 0.893 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[8][16]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.430      ; 1.475      ;
+; 0.895 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][24] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][24]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 1.047      ;
+; 0.903 ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][2]                                                                        ; SW[17]       ; SW[17]      ; 0.000        ; 0.002      ; 1.057      ;
+; 0.904 ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][10]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.002      ; 1.058      ;
+; 0.906 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][17] ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg17 ; SW[17]       ; SW[17]      ; 0.000        ; -0.001     ; 1.043      ;
+; 0.906 ; processador:bloco20|countPC:alteracaoPC|pcout[0]                ; processador:bloco20|countPC:alteracaoPC|pcout[1]                                                                                     ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 1.058      ;
+; 0.908 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][29] ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg29 ; SW[17]       ; SW[17]      ; 0.000        ; 0.047      ; 1.093      ;
+; 0.917 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][11] ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg11 ; SW[17]       ; SW[17]      ; 0.000        ; 0.043      ; 1.098      ;
+; 0.918 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][25] ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg25 ; SW[17]       ; SW[17]      ; 0.000        ; 0.028      ; 1.084      ;
+; 0.920 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][16] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][16]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.004      ; 1.076      ;
+; 0.920 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][10] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][10]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; -0.095     ; 0.977      ;
+; 0.926 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][16]  ; processador:bloco20|banco:bancoRegLeitura|registradores[8][16]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 1.078      ;
+; 0.927 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][31] ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg31 ; SW[17]       ; SW[17]      ; 0.000        ; 0.025      ; 1.090      ;
+; 0.929 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[16][14]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.477      ; 1.558      ;
+; 0.931 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][6]  ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg6  ; SW[17]       ; SW[17]      ; 0.000        ; 0.047      ; 1.116      ;
+; 0.932 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[16][19]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.490      ; 1.574      ;
+; 0.936 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][17] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][17]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.001      ; 1.089      ;
+; 0.936 ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][9]                                                                        ; SW[17]       ; SW[17]      ; 0.000        ; 0.115      ; 1.203      ;
+; 0.937 ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[8][19]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.115      ; 1.204      ;
+; 0.939 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[16][25]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.477      ; 1.568      ;
+; 0.939 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][5]  ; processador:bloco20|banco:bancoRegLeitura|registradores[8][5]                                                                        ; SW[17]       ; SW[17]      ; 0.000        ; -0.030     ; 1.061      ;
+; 0.939 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][5]  ; processador:bloco20|banco:bancoRegLeitura|registradores[0][5]                                                                        ; SW[17]       ; SW[17]      ; 0.000        ; -0.030     ; 1.061      ;
+; 0.940 ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[16][26]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.106      ; 1.198      ;
+; 0.941 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][1]  ; processador:bloco20|banco:bancoRegLeitura|registradores[0][1]                                                                        ; SW[17]       ; SW[17]      ; 0.000        ; -0.001     ; 1.092      ;
+; 0.944 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][10] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][10]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.015      ; 1.111      ;
+; 0.944 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][29]  ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg29 ; SW[17]       ; SW[17]      ; 0.000        ; 0.040      ; 1.122      ;
+; 0.945 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[16][27]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.476      ; 1.573      ;
+; 0.952 ; processador:bloco20|countPC:alteracaoPC|pcout[2]                ; processador:bloco20|countPC:alteracaoPC|pcout[0]                                                                                     ; SW[17]       ; SW[17]      ; 0.000        ; 0.021      ; 1.125      ;
+; 0.953 ; processador:bloco20|countPC:alteracaoPC|pcout[1]                ; processador:bloco20|banco:bancoRegLeitura|registradores[0][9]                                                                        ; SW[17]       ; SW[17]      ; 0.000        ; 0.073      ; 1.178      ;
+; 0.957 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][0]  ; processador:bloco20|banco:bancoRegLeitura|registradores[0][0]                                                                        ; SW[17]       ; SW[17]      ; 0.000        ; -0.005     ; 1.104      ;
+; 0.960 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][11]  ; processador:bloco20|banco:bancoRegLeitura|registradores[0][11]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; -0.001     ; 1.111      ;
+; 0.960 ; processador:bloco20|banco:bancoRegLeitura|registradores[8][11]  ; processador:bloco20|banco:bancoRegLeitura|registradores[8][11]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; 0.000      ; 1.112      ;
+; 0.962 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][28] ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg28 ; SW[17]       ; SW[17]      ; 0.000        ; 0.043      ; 1.143      ;
+; 0.967 ; processador:bloco20|banco:bancoRegLeitura|inicializa            ; processador:bloco20|banco:bancoRegLeitura|registradores[16][30]                                                                      ; SW[17]       ; SW[17]      ; 0.000        ; 0.468      ; 1.587      ;
+; 0.968 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][3]  ; processador:bloco20|banco:bancoRegLeitura|registradores[0][3]                                                                        ; SW[17]       ; SW[17]      ; 0.000        ; -0.010     ; 1.110      ;
+; 0.968 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][18] ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg18 ; SW[17]       ; SW[17]      ; 0.000        ; 0.045      ; 1.151      ;
+; 0.970 ; processador:bloco20|banco:bancoRegLeitura|registradores[10][3]  ; processador:bloco20|banco:bancoRegLeitura|registradores[8][3]                                                                        ; SW[17]       ; SW[17]      ; 0.000        ; -0.010     ; 1.112      ;
+; 0.970 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][16] ; processador:bloco20|banco:bancoRegLeitura|registradores[8][16]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; -0.013     ; 1.109      ;
+; 0.972 ; processador:bloco20|banco:bancoRegLeitura|registradores[16][23] ; processador:bloco20|banco:bancoRegLeitura|registradores[0][23]                                                                       ; SW[17]       ; SW[17]      ; 0.000        ; -0.049     ; 1.075      ;
++-------+-----------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'SW[17]'                                                                                                                                                                               ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------------------------------------------------------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                                                                                                                               ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------------------------------------------------------------------------------------------------------------------+
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_address_reg0 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_address_reg1 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_address_reg2 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_address_reg3 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_address_reg4 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg0  ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg1  ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg1  ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg10 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg10 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg11 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg11 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg12 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg12 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg13 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg13 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg14 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg14 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg15 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg15 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg16 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg16 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg17 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg17 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg18 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg18 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg19 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg19 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg2  ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg2  ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg20 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg20 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg21 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg21 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg22 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg22 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg23 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg23 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg24 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg24 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg25 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg25 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg26 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg26 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg27 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg27 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg28 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg28 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg29 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg29 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg3  ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg3  ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg30 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg30 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg31 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg31 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg4  ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg4  ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg5  ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg5  ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg6  ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg6  ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg7  ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg7  ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg8  ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg8  ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg9  ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_datain_reg9  ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_memory_reg0  ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_memory_reg0  ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_we_reg       ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~porta_we_reg       ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Fall       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~portb_address_reg0 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Fall       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~portb_address_reg0 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Fall       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~portb_address_reg1 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Fall       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~portb_address_reg1 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Fall       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~portb_address_reg2 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Fall       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~portb_address_reg2 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Fall       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~portb_address_reg3 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Fall       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~portb_address_reg3 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Fall       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~portb_address_reg4 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Fall       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a0~portb_address_reg4 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a10~porta_memory_reg0 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a10~porta_memory_reg0 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a11~porta_memory_reg0 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a11~porta_memory_reg0 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a12~porta_memory_reg0 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a12~porta_memory_reg0 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a13~porta_memory_reg0 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a13~porta_memory_reg0 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a14~porta_memory_reg0 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a14~porta_memory_reg0 ;
+; -1.880 ; 0.500        ; 2.380          ; High Pulse Width ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a15~porta_memory_reg0 ;
+; -1.880 ; 0.500        ; 2.380          ; Low Pulse Width  ; SW[17] ; Rise       ; processador:bloco20|memoriaDados:bancoMemoria|altsyncram:memory_rtl_0|altsyncram_2uj1:auto_generated|ram_block1a15~porta_memory_reg0 ;
++--------+--------------+----------------+------------------+--------+------------+--------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; HEX0[*]   ; SW[17]     ; 12.212 ; 12.212 ; Rise       ; SW[17]          ;
+;  HEX0[0]  ; SW[17]     ; 12.008 ; 12.008 ; Rise       ; SW[17]          ;
+;  HEX0[1]  ; SW[17]     ; 12.089 ; 12.089 ; Rise       ; SW[17]          ;
+;  HEX0[2]  ; SW[17]     ; 12.093 ; 12.093 ; Rise       ; SW[17]          ;
+;  HEX0[3]  ; SW[17]     ; 12.124 ; 12.124 ; Rise       ; SW[17]          ;
+;  HEX0[4]  ; SW[17]     ; 12.117 ; 12.117 ; Rise       ; SW[17]          ;
+;  HEX0[5]  ; SW[17]     ; 12.212 ; 12.212 ; Rise       ; SW[17]          ;
+;  HEX0[6]  ; SW[17]     ; 12.210 ; 12.210 ; Rise       ; SW[17]          ;
+; HEX2[*]   ; SW[17]     ; 11.892 ; 11.892 ; Rise       ; SW[17]          ;
+;  HEX2[0]  ; SW[17]     ; 11.892 ; 11.892 ; Rise       ; SW[17]          ;
+;  HEX2[1]  ; SW[17]     ; 11.780 ; 11.780 ; Rise       ; SW[17]          ;
+;  HEX2[2]  ; SW[17]     ; 11.573 ; 11.573 ; Rise       ; SW[17]          ;
+;  HEX2[3]  ; SW[17]     ; 11.727 ; 11.727 ; Rise       ; SW[17]          ;
+;  HEX2[4]  ; SW[17]     ; 11.854 ; 11.854 ; Rise       ; SW[17]          ;
+;  HEX2[5]  ; SW[17]     ; 11.675 ; 11.675 ; Rise       ; SW[17]          ;
+;  HEX2[6]  ; SW[17]     ; 11.857 ; 11.857 ; Rise       ; SW[17]          ;
+; HEX4[*]   ; SW[17]     ; 11.568 ; 11.568 ; Rise       ; SW[17]          ;
+;  HEX4[0]  ; SW[17]     ; 11.538 ; 11.538 ; Rise       ; SW[17]          ;
+;  HEX4[1]  ; SW[17]     ; 11.542 ; 11.542 ; Rise       ; SW[17]          ;
+;  HEX4[2]  ; SW[17]     ; 11.545 ; 11.545 ; Rise       ; SW[17]          ;
+;  HEX4[3]  ; SW[17]     ; 11.567 ; 11.567 ; Rise       ; SW[17]          ;
+;  HEX4[4]  ; SW[17]     ; 11.554 ; 11.554 ; Rise       ; SW[17]          ;
+;  HEX4[5]  ; SW[17]     ; 11.558 ; 11.558 ; Rise       ; SW[17]          ;
+;  HEX4[6]  ; SW[17]     ; 11.568 ; 11.568 ; Rise       ; SW[17]          ;
+; LEDG[*]   ; SW[17]     ; 12.877 ; 12.877 ; Rise       ; SW[17]          ;
+;  LEDG[0]  ; SW[17]     ; 4.918  ; 4.918  ; Rise       ; SW[17]          ;
+;  LEDG[1]  ; SW[17]     ; 4.564  ; 4.564  ; Rise       ; SW[17]          ;
+;  LEDG[2]  ; SW[17]     ; 4.666  ; 4.666  ; Rise       ; SW[17]          ;
+;  LEDG[3]  ; SW[17]     ; 4.747  ; 4.747  ; Rise       ; SW[17]          ;
+;  LEDG[4]  ; SW[17]     ; 4.737  ; 4.737  ; Rise       ; SW[17]          ;
+;  LEDG[7]  ; SW[17]     ; 12.877 ; 12.877 ; Rise       ; SW[17]          ;
+; LEDR[*]   ; SW[17]     ; 6.050  ; 6.050  ; Rise       ; SW[17]          ;
+;  LEDR[0]  ; SW[17]     ; 5.492  ; 5.492  ; Rise       ; SW[17]          ;
+;  LEDR[1]  ; SW[17]     ; 6.050  ; 6.050  ; Rise       ; SW[17]          ;
+;  LEDR[5]  ; SW[17]     ; 5.100  ; 5.100  ; Rise       ; SW[17]          ;
+;  LEDR[14] ; SW[17]     ; 4.848  ; 4.848  ; Rise       ; SW[17]          ;
+;  LEDR[16] ; SW[17]     ; 4.929  ; 4.929  ; Rise       ; SW[17]          ;
+;  LEDR[17] ; SW[17]     ; 4.848  ; 4.848  ; Rise       ; SW[17]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; SW[17]     ; 5.050 ; 5.050 ; Rise       ; SW[17]          ;
+;  HEX0[0]  ; SW[17]     ; 5.050 ; 5.050 ; Rise       ; SW[17]          ;
+;  HEX0[1]  ; SW[17]     ; 5.131 ; 5.131 ; Rise       ; SW[17]          ;
+;  HEX0[2]  ; SW[17]     ; 5.135 ; 5.135 ; Rise       ; SW[17]          ;
+;  HEX0[3]  ; SW[17]     ; 5.166 ; 5.166 ; Rise       ; SW[17]          ;
+;  HEX0[4]  ; SW[17]     ; 5.159 ; 5.159 ; Rise       ; SW[17]          ;
+;  HEX0[5]  ; SW[17]     ; 5.254 ; 5.254 ; Rise       ; SW[17]          ;
+;  HEX0[6]  ; SW[17]     ; 5.252 ; 5.252 ; Rise       ; SW[17]          ;
+; HEX2[*]   ; SW[17]     ; 5.320 ; 5.320 ; Rise       ; SW[17]          ;
+;  HEX2[0]  ; SW[17]     ; 5.639 ; 5.639 ; Rise       ; SW[17]          ;
+;  HEX2[1]  ; SW[17]     ; 5.527 ; 5.527 ; Rise       ; SW[17]          ;
+;  HEX2[2]  ; SW[17]     ; 5.320 ; 5.320 ; Rise       ; SW[17]          ;
+;  HEX2[3]  ; SW[17]     ; 5.474 ; 5.474 ; Rise       ; SW[17]          ;
+;  HEX2[4]  ; SW[17]     ; 5.601 ; 5.601 ; Rise       ; SW[17]          ;
+;  HEX2[5]  ; SW[17]     ; 5.422 ; 5.422 ; Rise       ; SW[17]          ;
+;  HEX2[6]  ; SW[17]     ; 5.604 ; 5.604 ; Rise       ; SW[17]          ;
+; HEX4[*]   ; SW[17]     ; 4.834 ; 4.834 ; Rise       ; SW[17]          ;
+;  HEX4[0]  ; SW[17]     ; 4.834 ; 4.834 ; Rise       ; SW[17]          ;
+;  HEX4[1]  ; SW[17]     ; 4.838 ; 4.838 ; Rise       ; SW[17]          ;
+;  HEX4[2]  ; SW[17]     ; 4.841 ; 4.841 ; Rise       ; SW[17]          ;
+;  HEX4[3]  ; SW[17]     ; 4.863 ; 4.863 ; Rise       ; SW[17]          ;
+;  HEX4[4]  ; SW[17]     ; 4.850 ; 4.850 ; Rise       ; SW[17]          ;
+;  HEX4[5]  ; SW[17]     ; 4.854 ; 4.854 ; Rise       ; SW[17]          ;
+;  HEX4[6]  ; SW[17]     ; 4.864 ; 4.864 ; Rise       ; SW[17]          ;
+; LEDG[*]   ; SW[17]     ; 4.564 ; 4.564 ; Rise       ; SW[17]          ;
+;  LEDG[0]  ; SW[17]     ; 4.918 ; 4.918 ; Rise       ; SW[17]          ;
+;  LEDG[1]  ; SW[17]     ; 4.564 ; 4.564 ; Rise       ; SW[17]          ;
+;  LEDG[2]  ; SW[17]     ; 4.666 ; 4.666 ; Rise       ; SW[17]          ;
+;  LEDG[3]  ; SW[17]     ; 4.747 ; 4.747 ; Rise       ; SW[17]          ;
+;  LEDG[4]  ; SW[17]     ; 4.737 ; 4.737 ; Rise       ; SW[17]          ;
+;  LEDG[7]  ; SW[17]     ; 6.250 ; 6.250 ; Rise       ; SW[17]          ;
+; LEDR[*]   ; SW[17]     ; 4.485 ; 4.485 ; Rise       ; SW[17]          ;
+;  LEDR[0]  ; SW[17]     ; 5.290 ; 5.290 ; Rise       ; SW[17]          ;
+;  LEDR[1]  ; SW[17]     ; 5.709 ; 5.709 ; Rise       ; SW[17]          ;
+;  LEDR[5]  ; SW[17]     ; 4.737 ; 4.737 ; Rise       ; SW[17]          ;
+;  LEDR[14] ; SW[17]     ; 4.485 ; 4.485 ; Rise       ; SW[17]          ;
+;  LEDR[16] ; SW[17]     ; 4.727 ; 4.727 ; Rise       ; SW[17]          ;
+;  LEDR[17] ; SW[17]     ; 4.485 ; 4.485 ; Rise       ; SW[17]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                             ;
++------------------+-----------+-------+----------+---------+---------------------+
+; Clock            ; Setup     ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -19.186   ; 0.215 ; N/A      ; N/A     ; -1.880              ;
+;  SW[17]          ; -19.186   ; 0.215 ; N/A      ; N/A     ; -1.880              ;
+; Design-wide TNS  ; -1849.919 ; 0.0   ; 0.0      ; 0.0     ; -417.222            ;
+;  SW[17]          ; -1849.919 ; 0.000 ; N/A      ; N/A     ; -417.222            ;
++------------------+-----------+-------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; HEX0[*]   ; SW[17]     ; 26.613 ; 26.613 ; Rise       ; SW[17]          ;
+;  HEX0[0]  ; SW[17]     ; 26.161 ; 26.161 ; Rise       ; SW[17]          ;
+;  HEX0[1]  ; SW[17]     ; 26.367 ; 26.367 ; Rise       ; SW[17]          ;
+;  HEX0[2]  ; SW[17]     ; 26.369 ; 26.369 ; Rise       ; SW[17]          ;
+;  HEX0[3]  ; SW[17]     ; 26.404 ; 26.404 ; Rise       ; SW[17]          ;
+;  HEX0[4]  ; SW[17]     ; 26.393 ; 26.393 ; Rise       ; SW[17]          ;
+;  HEX0[5]  ; SW[17]     ; 26.613 ; 26.613 ; Rise       ; SW[17]          ;
+;  HEX0[6]  ; SW[17]     ; 26.611 ; 26.611 ; Rise       ; SW[17]          ;
+; HEX2[*]   ; SW[17]     ; 25.865 ; 25.865 ; Rise       ; SW[17]          ;
+;  HEX2[0]  ; SW[17]     ; 25.865 ; 25.865 ; Rise       ; SW[17]          ;
+;  HEX2[1]  ; SW[17]     ; 25.621 ; 25.621 ; Rise       ; SW[17]          ;
+;  HEX2[2]  ; SW[17]     ; 25.081 ; 25.081 ; Rise       ; SW[17]          ;
+;  HEX2[3]  ; SW[17]     ; 25.433 ; 25.433 ; Rise       ; SW[17]          ;
+;  HEX2[4]  ; SW[17]     ; 25.798 ; 25.798 ; Rise       ; SW[17]          ;
+;  HEX2[5]  ; SW[17]     ; 25.377 ; 25.377 ; Rise       ; SW[17]          ;
+;  HEX2[6]  ; SW[17]     ; 25.809 ; 25.809 ; Rise       ; SW[17]          ;
+; HEX4[*]   ; SW[17]     ; 25.019 ; 25.019 ; Rise       ; SW[17]          ;
+;  HEX4[0]  ; SW[17]     ; 24.975 ; 24.975 ; Rise       ; SW[17]          ;
+;  HEX4[1]  ; SW[17]     ; 24.976 ; 24.976 ; Rise       ; SW[17]          ;
+;  HEX4[2]  ; SW[17]     ; 24.987 ; 24.987 ; Rise       ; SW[17]          ;
+;  HEX4[3]  ; SW[17]     ; 25.019 ; 25.019 ; Rise       ; SW[17]          ;
+;  HEX4[4]  ; SW[17]     ; 24.993 ; 24.993 ; Rise       ; SW[17]          ;
+;  HEX4[5]  ; SW[17]     ; 24.999 ; 24.999 ; Rise       ; SW[17]          ;
+;  HEX4[6]  ; SW[17]     ; 25.009 ; 25.009 ; Rise       ; SW[17]          ;
+; LEDG[*]   ; SW[17]     ; 28.131 ; 28.131 ; Rise       ; SW[17]          ;
+;  LEDG[0]  ; SW[17]     ; 9.317  ; 9.317  ; Rise       ; SW[17]          ;
+;  LEDG[1]  ; SW[17]     ; 8.554  ; 8.554  ; Rise       ; SW[17]          ;
+;  LEDG[2]  ; SW[17]     ; 8.883  ; 8.883  ; Rise       ; SW[17]          ;
+;  LEDG[3]  ; SW[17]     ; 9.087  ; 9.087  ; Rise       ; SW[17]          ;
+;  LEDG[4]  ; SW[17]     ; 8.917  ; 8.917  ; Rise       ; SW[17]          ;
+;  LEDG[7]  ; SW[17]     ; 28.131 ; 28.131 ; Rise       ; SW[17]          ;
+; LEDR[*]   ; SW[17]     ; 11.886 ; 11.886 ; Rise       ; SW[17]          ;
+;  LEDR[0]  ; SW[17]     ; 10.484 ; 10.484 ; Rise       ; SW[17]          ;
+;  LEDR[1]  ; SW[17]     ; 11.886 ; 11.886 ; Rise       ; SW[17]          ;
+;  LEDR[5]  ; SW[17]     ; 9.747  ; 9.747  ; Rise       ; SW[17]          ;
+;  LEDR[14] ; SW[17]     ; 9.287  ; 9.287  ; Rise       ; SW[17]          ;
+;  LEDR[16] ; SW[17]     ; 9.524  ; 9.524  ; Rise       ; SW[17]          ;
+;  LEDR[17] ; SW[17]     ; 9.287  ; 9.287  ; Rise       ; SW[17]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; SW[17]     ; 5.050 ; 5.050 ; Rise       ; SW[17]          ;
+;  HEX0[0]  ; SW[17]     ; 5.050 ; 5.050 ; Rise       ; SW[17]          ;
+;  HEX0[1]  ; SW[17]     ; 5.131 ; 5.131 ; Rise       ; SW[17]          ;
+;  HEX0[2]  ; SW[17]     ; 5.135 ; 5.135 ; Rise       ; SW[17]          ;
+;  HEX0[3]  ; SW[17]     ; 5.166 ; 5.166 ; Rise       ; SW[17]          ;
+;  HEX0[4]  ; SW[17]     ; 5.159 ; 5.159 ; Rise       ; SW[17]          ;
+;  HEX0[5]  ; SW[17]     ; 5.254 ; 5.254 ; Rise       ; SW[17]          ;
+;  HEX0[6]  ; SW[17]     ; 5.252 ; 5.252 ; Rise       ; SW[17]          ;
+; HEX2[*]   ; SW[17]     ; 5.320 ; 5.320 ; Rise       ; SW[17]          ;
+;  HEX2[0]  ; SW[17]     ; 5.639 ; 5.639 ; Rise       ; SW[17]          ;
+;  HEX2[1]  ; SW[17]     ; 5.527 ; 5.527 ; Rise       ; SW[17]          ;
+;  HEX2[2]  ; SW[17]     ; 5.320 ; 5.320 ; Rise       ; SW[17]          ;
+;  HEX2[3]  ; SW[17]     ; 5.474 ; 5.474 ; Rise       ; SW[17]          ;
+;  HEX2[4]  ; SW[17]     ; 5.601 ; 5.601 ; Rise       ; SW[17]          ;
+;  HEX2[5]  ; SW[17]     ; 5.422 ; 5.422 ; Rise       ; SW[17]          ;
+;  HEX2[6]  ; SW[17]     ; 5.604 ; 5.604 ; Rise       ; SW[17]          ;
+; HEX4[*]   ; SW[17]     ; 4.834 ; 4.834 ; Rise       ; SW[17]          ;
+;  HEX4[0]  ; SW[17]     ; 4.834 ; 4.834 ; Rise       ; SW[17]          ;
+;  HEX4[1]  ; SW[17]     ; 4.838 ; 4.838 ; Rise       ; SW[17]          ;
+;  HEX4[2]  ; SW[17]     ; 4.841 ; 4.841 ; Rise       ; SW[17]          ;
+;  HEX4[3]  ; SW[17]     ; 4.863 ; 4.863 ; Rise       ; SW[17]          ;
+;  HEX4[4]  ; SW[17]     ; 4.850 ; 4.850 ; Rise       ; SW[17]          ;
+;  HEX4[5]  ; SW[17]     ; 4.854 ; 4.854 ; Rise       ; SW[17]          ;
+;  HEX4[6]  ; SW[17]     ; 4.864 ; 4.864 ; Rise       ; SW[17]          ;
+; LEDG[*]   ; SW[17]     ; 4.564 ; 4.564 ; Rise       ; SW[17]          ;
+;  LEDG[0]  ; SW[17]     ; 4.918 ; 4.918 ; Rise       ; SW[17]          ;
+;  LEDG[1]  ; SW[17]     ; 4.564 ; 4.564 ; Rise       ; SW[17]          ;
+;  LEDG[2]  ; SW[17]     ; 4.666 ; 4.666 ; Rise       ; SW[17]          ;
+;  LEDG[3]  ; SW[17]     ; 4.747 ; 4.747 ; Rise       ; SW[17]          ;
+;  LEDG[4]  ; SW[17]     ; 4.737 ; 4.737 ; Rise       ; SW[17]          ;
+;  LEDG[7]  ; SW[17]     ; 6.250 ; 6.250 ; Rise       ; SW[17]          ;
+; LEDR[*]   ; SW[17]     ; 4.485 ; 4.485 ; Rise       ; SW[17]          ;
+;  LEDR[0]  ; SW[17]     ; 5.290 ; 5.290 ; Rise       ; SW[17]          ;
+;  LEDR[1]  ; SW[17]     ; 5.709 ; 5.709 ; Rise       ; SW[17]          ;
+;  LEDR[5]  ; SW[17]     ; 4.737 ; 4.737 ; Rise       ; SW[17]          ;
+;  LEDR[14] ; SW[17]     ; 4.485 ; 4.485 ; Rise       ; SW[17]          ;
+;  LEDR[16] ; SW[17]     ; 4.727 ; 4.727 ; Rise       ; SW[17]          ;
+;  LEDR[17] ; SW[17]     ; 4.485 ; 4.485 ; Rise       ; SW[17]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; SW[17]     ; SW[17]   ; 295109   ; 640      ; 1036     ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; SW[17]     ; SW[17]   ; 295109   ; 640      ; 1036     ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 5     ; 5    ;
+; Unconstrained Output Ports      ; 33    ; 33   ;
+; Unconstrained Output Port Paths ; 336   ; 336  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Feb 14 17:48:12 2025
+Info: Command: quartus_sta processadorPinagem -c processadorPinagem
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'processadorPinagem.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name SW[17] SW[17]
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -19.186
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):   -19.186     -1849.919 SW[17] 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 SW[17] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.880
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.880      -417.222 SW[17] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -7.590
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -7.590      -728.988 SW[17] 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 SW[17] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.880
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.880      -417.222 SW[17] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4562 megabytes
+    Info: Processing ended: Fri Feb 14 17:48:13 2025
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

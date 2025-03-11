@@ -1,0 +1,343 @@
+# Reading C:/Users/lanza/Desktop/cefet/aoc/laoc/modelsim_ase/tcl/vsim/pref.tcl 
+# do processadorPinagem_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\Users\lanza\Desktop\cefet\aoc\laoc\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\Users\lanza\Desktop\cefet\aoc\laoc\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/processadorPinagem.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module processadorPinagem
+# 
+# Top level modules:
+# 	processadorPinagem
+# vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/processador.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module processador
+# 
+# Top level modules:
+# 	processador
+# vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/countpc.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module countPC
+# 
+# Top level modules:
+# 	countPC
+# vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/somador5bits.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module somador5bits
+# 
+# Top level modules:
+# 	somador5bits
+# vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/somador1bit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module somador1bit
+# 
+# Top level modules:
+# 	somador1bit
+# vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/memoriainstrucoes.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module memoriaInstrucoes
+# 
+# Top level modules:
+# 	memoriaInstrucoes
+# vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/controleprincipal.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module controlePrincipal
+# 
+# Top level modules:
+# 	controlePrincipal
+# vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/multiplexador.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module multiplexador
+# 
+# Top level modules:
+# 	multiplexador
+# vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/deslocador.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module deslocador
+# 
+# Top level modules:
+# 	deslocador
+# vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/extensor.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module extensor
+# 
+# Top level modules:
+# 	extensor
+# vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/banco.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module banco
+# 
+# Top level modules:
+# 	banco
+# vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/multiplexador32.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module multiplexador32
+# 
+# Top level modules:
+# 	multiplexador32
+# vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/alucontrol.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALUcontrol
+# 
+# Top level modules:
+# 	ALUcontrol
+# vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/ula32bits.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ULA32bits
+# 
+# Top level modules:
+# 	ULA32bits
+# vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/muxbinvert.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module muxBinvert
+# 
+# Top level modules:
+# 	muxBinvert
+# vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/ula.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ULA
+# 
+# Top level modules:
+# 	ULA
+# vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/mux2.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux2
+# 
+# Top level modules:
+# 	mux2
+# vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/muxula.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module muxULA
+# 
+# Top level modules:
+# 	muxULA
+# vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/overflow.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module overflow
+# 
+# Top level modules:
+# 	overflow
+# vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/muxaddress.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module muxAddress
+# 
+# Top level modules:
+# 	muxAddress
+# vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/memoriadados.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module memoriaDados
+# 
+# Top level modules:
+# 	memoriaDados
+# vlog -vlog01compat -work work +incdir+C:/Users/lanza/Documents/pratica6 {C:/Users/lanza/Documents/pratica6/decod.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module decod
+# 
+# Top level modules:
+# 	decod
+# 
+vsim work.processador
+# vsim work.processador 
+# Loading work.processador
+# Loading work.countPC
+# Loading work.somador5bits
+# Loading work.memoriaInstrucoes
+# Loading work.controlePrincipal
+# Loading work.multiplexador
+# Loading work.deslocador
+# Loading work.extensor
+# Loading work.banco
+# Loading work.multiplexador32
+# Loading work.ALUcontrol
+# Loading work.ULA32bits
+# Loading work.muxBinvert
+# Loading work.ULA
+# Loading work.mux2
+# Loading work.somador1bit
+# Loading work.muxULA
+# Loading work.overflow
+# Loading work.muxAddress
+# Loading work.memoriaDados
+# ** Warning: (vsim-3015) C:/Users/lanza/Documents/pratica6/processador.v(22): [PCDPC] - Port size (6 or 6) does not match connection size (5) for port 's'. The port definition is at: C:/Users/lanza/Documents/pratica6/somador5bits.v(1).
+# 
+#         Region: /processador/incrementaPC
+# ** Warning: (vsim-3015) C:/Users/lanza/Documents/pratica6/ula32bits.v(25): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'less'. The port definition is at: C:/Users/lanza/Documents/pratica6/ula.v(3).
+# 
+#         Region: /processador/blocoula/loopULA[1]/bloco
+# ** Warning: (vsim-3015) C:/Users/lanza/Documents/pratica6/ula32bits.v(25): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'less'. The port definition is at: C:/Users/lanza/Documents/pratica6/ula.v(3).
+# 
+#         Region: /processador/blocoula/loopULA[2]/bloco
+# ** Warning: (vsim-3015) C:/Users/lanza/Documents/pratica6/ula32bits.v(25): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'less'. The port definition is at: C:/Users/lanza/Documents/pratica6/ula.v(3).
+# 
+#         Region: /processador/blocoula/loopULA[3]/bloco
+# ** Warning: (vsim-3015) C:/Users/lanza/Documents/pratica6/ula32bits.v(25): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'less'. The port definition is at: C:/Users/lanza/Documents/pratica6/ula.v(3).
+# 
+#         Region: /processador/blocoula/loopULA[4]/bloco
+# ** Warning: (vsim-3015) C:/Users/lanza/Documents/pratica6/ula32bits.v(25): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'less'. The port definition is at: C:/Users/lanza/Documents/pratica6/ula.v(3).
+# 
+#         Region: /processador/blocoula/loopULA[5]/bloco
+# ** Warning: (vsim-3015) C:/Users/lanza/Documents/pratica6/ula32bits.v(25): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'less'. The port definition is at: C:/Users/lanza/Documents/pratica6/ula.v(3).
+# 
+#         Region: /processador/blocoula/loopULA[6]/bloco
+# ** Warning: (vsim-3015) C:/Users/lanza/Documents/pratica6/ula32bits.v(25): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'less'. The port definition is at: C:/Users/lanza/Documents/pratica6/ula.v(3).
+# 
+#         Region: /processador/blocoula/loopULA[7]/bloco
+# ** Warning: (vsim-3015) C:/Users/lanza/Documents/pratica6/ula32bits.v(25): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'less'. The port definition is at: C:/Users/lanza/Documents/pratica6/ula.v(3).
+# 
+#         Region: /processador/blocoula/loopULA[8]/bloco
+# ** Warning: (vsim-3015) C:/Users/lanza/Documents/pratica6/ula32bits.v(25): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'less'. The port definition is at: C:/Users/lanza/Documents/pratica6/ula.v(3).
+# 
+#         Region: /processador/blocoula/loopULA[9]/bloco
+# ** Warning: (vsim-3015) C:/Users/lanza/Documents/pratica6/ula32bits.v(25): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'less'. The port definition is at: C:/Users/lanza/Documents/pratica6/ula.v(3).
+# 
+#         Region: /processador/blocoula/loopULA[10]/bloco
+# ** Warning: (vsim-3015) C:/Users/lanza/Documents/pratica6/ula32bits.v(25): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'less'. The port definition is at: C:/Users/lanza/Documents/pratica6/ula.v(3).
+# 
+#         Region: /processador/blocoula/loopULA[11]/bloco
+# ** Warning: (vsim-3015) C:/Users/lanza/Documents/pratica6/ula32bits.v(25): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'less'. The port definition is at: C:/Users/lanza/Documents/pratica6/ula.v(3).
+# 
+#         Region: /processador/blocoula/loopULA[12]/bloco
+# ** Warning: (vsim-3015) C:/Users/lanza/Documents/pratica6/ula32bits.v(25): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'less'. The port definition is at: C:/Users/lanza/Documents/pratica6/ula.v(3).
+# 
+#         Region: /processador/blocoula/loopULA[13]/bloco
+# ** Warning: (vsim-3015) C:/Users/lanza/Documents/pratica6/ula32bits.v(25): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'less'. The port definition is at: C:/Users/lanza/Documents/pratica6/ula.v(3).
+# 
+#         Region: /processador/blocoula/loopULA[14]/bloco
+# ** Warning: (vsim-3015) C:/Users/lanza/Documents/pratica6/ula32bits.v(25): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'less'. The port definition is at: C:/Users/lanza/Documents/pratica6/ula.v(3).
+# 
+#         Region: /processador/blocoula/loopULA[15]/bloco
+# ** Warning: (vsim-3015) C:/Users/lanza/Documents/pratica6/ula32bits.v(25): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'less'. The port definition is at: C:/Users/lanza/Documents/pratica6/ula.v(3).
+# 
+#         Region: /processador/blocoula/loopULA[16]/bloco
+# ** Warning: (vsim-3015) C:/Users/lanza/Documents/pratica6/ula32bits.v(25): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'less'. The port definition is at: C:/Users/lanza/Documents/pratica6/ula.v(3).
+# 
+#         Region: /processador/blocoula/loopULA[17]/bloco
+# ** Warning: (vsim-3015) C:/Users/lanza/Documents/pratica6/ula32bits.v(25): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'less'. The port definition is at: C:/Users/lanza/Documents/pratica6/ula.v(3).
+# 
+#         Region: /processador/blocoula/loopULA[18]/bloco
+# ** Warning: (vsim-3015) C:/Users/lanza/Documents/pratica6/ula32bits.v(25): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'less'. The port definition is at: C:/Users/lanza/Documents/pratica6/ula.v(3).
+# 
+#         Region: /processador/blocoula/loopULA[19]/bloco
+# ** Warning: (vsim-3015) C:/Users/lanza/Documents/pratica6/ula32bits.v(25): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'less'. The port definition is at: C:/Users/lanza/Documents/pratica6/ula.v(3).
+# 
+#         Region: /processador/blocoula/loopULA[20]/bloco
+# ** Warning: (vsim-3015) C:/Users/lanza/Documents/pratica6/ula32bits.v(25): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'less'. The port definition is at: C:/Users/lanza/Documents/pratica6/ula.v(3).
+# 
+#         Region: /processador/blocoula/loopULA[21]/bloco
+# ** Warning: (vsim-3015) C:/Users/lanza/Documents/pratica6/ula32bits.v(25): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'less'. The port definition is at: C:/Users/lanza/Documents/pratica6/ula.v(3).
+# 
+#         Region: /processador/blocoula/loopULA[22]/bloco
+# ** Warning: (vsim-3015) C:/Users/lanza/Documents/pratica6/ula32bits.v(25): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'less'. The port definition is at: C:/Users/lanza/Documents/pratica6/ula.v(3).
+# 
+#         Region: /processador/blocoula/loopULA[23]/bloco
+# ** Warning: (vsim-3015) C:/Users/lanza/Documents/pratica6/ula32bits.v(25): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'less'. The port definition is at: C:/Users/lanza/Documents/pratica6/ula.v(3).
+# 
+#         Region: /processador/blocoula/loopULA[24]/bloco
+# ** Warning: (vsim-3015) C:/Users/lanza/Documents/pratica6/ula32bits.v(25): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'less'. The port definition is at: C:/Users/lanza/Documents/pratica6/ula.v(3).
+# 
+#         Region: /processador/blocoula/loopULA[25]/bloco
+# ** Warning: (vsim-3015) C:/Users/lanza/Documents/pratica6/ula32bits.v(25): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'less'. The port definition is at: C:/Users/lanza/Documents/pratica6/ula.v(3).
+# 
+#         Region: /processador/blocoula/loopULA[26]/bloco
+# ** Warning: (vsim-3015) C:/Users/lanza/Documents/pratica6/ula32bits.v(25): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'less'. The port definition is at: C:/Users/lanza/Documents/pratica6/ula.v(3).
+# 
+#         Region: /processador/blocoula/loopULA[27]/bloco
+# ** Warning: (vsim-3015) C:/Users/lanza/Documents/pratica6/ula32bits.v(25): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'less'. The port definition is at: C:/Users/lanza/Documents/pratica6/ula.v(3).
+# 
+#         Region: /processador/blocoula/loopULA[28]/bloco
+# ** Warning: (vsim-3015) C:/Users/lanza/Documents/pratica6/ula32bits.v(25): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'less'. The port definition is at: C:/Users/lanza/Documents/pratica6/ula.v(3).
+# 
+#         Region: /processador/blocoula/loopULA[29]/bloco
+# ** Warning: (vsim-3015) C:/Users/lanza/Documents/pratica6/ula32bits.v(25): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'less'. The port definition is at: C:/Users/lanza/Documents/pratica6/ula.v(3).
+# 
+#         Region: /processador/blocoula/loopULA[30]/bloco
+# ** Warning: (vsim-3015) C:/Users/lanza/Documents/pratica6/ula32bits.v(30): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'less'. The port definition is at: C:/Users/lanza/Documents/pratica6/ula.v(3).
+# 
+#         Region: /processador/blocoula/bloco31
+# ** Warning: (vsim-3015) C:/Users/lanza/Documents/pratica6/processador.v(71): [PCDPC] - Port size (6 or 6) does not match connection size (5) for port 's'. The port definition is at: C:/Users/lanza/Documents/pratica6/somador5bits.v(1).
+# 
+#         Region: /processador/calculoBranchAddress
+wave create -driver freeze -pattern clock -initialvalue 0 -period 200ps -dutycycle 50 -starttime 0ps -endtime 5000ps sim:/processador/clock
+wave create -driver freeze -pattern constant -value 0 -starttime 0ps -endtime 5000ps sim:/processador/reset
+add wave -position end  sim:/processador/result
+add wave -position end  sim:/processador/zero
+add wave -position end  sim:/processador/overflow
+add wave -position end  sim:/processador/PC
+add wave -position end  sim:/processador/registrador8
+add wave -position end  sim:/processador/registrador9
+add wave -position end  sim:/processador/registrador10
+add wave -position end  sim:/processador/registrador12
+add wave -position end  sim:/processador/registrador16
+add wave -position end  sim:/processador/proxPC
+add wave -position end  sim:/processador/auxPC
+add wave -position end  sim:/processador/maisPC
+add wave -position end  sim:/processador/branchAddress
+add wave -position end  sim:/processador/instruction
+add wave -position end  sim:/processador/RegDst
+add wave -position end  sim:/processador/RegWrite
+add wave -position end  sim:/processador/AluSrc
+add wave -position end  sim:/processador/jump
+add wave -position end  sim:/processador/selZeroBranch
+add wave -position end  sim:/processador/AluOp
+add wave -position end  sim:/processador/Data1
+add wave -position end  sim:/processador/saidaMUX
+add wave -position end  sim:/processador/Data2
+add wave -position end  sim:/processador/WriteRegister
+add wave -position end  sim:/processador/ReadReg1
+add wave -position end  sim:/processador/ReadReg2
+add wave -position end  sim:/processador/WriteData
+add wave -position end  sim:/processador/saidaExtensor
+add wave -position end  sim:/processador/readData
+add wave -position end  sim:/processador/immediate
+add wave -position end  sim:/processador/operation
+add wave -position end  sim:/processador/MemparaReg
+add wave -position end  sim:/processador/LeMem
+add wave -position end  sim:/processador/MemWrite
+add wave -position end  sim:/processador/Branch
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: lanza  Hostname: DESKTOP-72R9QOB  ProcessID: 3732
+# 
+#           Attempting to use alternate WLF file "./wlft8txb0f".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlft8txb0f
+# 
+run
+# Lendo o registrador  0:          x
+# Lendo o registrador  0:          x
+# Lendo o registrador  0:          x
+# Lendo o registrador  0:          x
+# Lendo o registrador  8:          5
+# Lendo o registrador  9:          5
+run
+run
+run
+# Lendo o registrador 12:          4
+# Lendo o registrador  8:          5
+run
+run
+# Lendo o registrador 12:          4
+# Lendo o registrador 16:          1
+run
+# Lendo endereÃƒÆ’Ã‚Â§o:          4, valor:          x
+run
+# Lendo o registrador 12:          4
+# Lendo o registrador 16:          5
+# Lendo o registrador 16:          5
+# Lendo o registrador 10:          1
+run
+run
+# Lendo o registrador 16:          5
+# Lendo o registrador 10:          1
+# Lendo o registrador  0:          x
+# Lendo o registrador  0:          x
+run
+run
